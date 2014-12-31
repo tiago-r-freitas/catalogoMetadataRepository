@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface filenameHash="1ea5cbbd4a2920636abc0aa76bb15ed" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.searchOnDatabase">
+  <guid>{a626fdbc-4995-4616-b78a-98fea9699c0b}</guid>
+  <label>Search On Database</label>
+  <metaVersion>4</metaVersion>
+  <operationList>
+    <operation name="searchItem" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemSearchDS</input>
+      <label>Search Item</label>
+      <output>dstruct_cwt_pcmaintapi.itemList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchAttribute" type="oper">
+      <input>dstruct_cwt_pcmaintapi.attributeSearchDS</input>
+      <label>Search Attribute</label>
+      <output>dstruct_cwt_pcmaintapi.attributeList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchCatalogRule" type="oper">
+      <input>dstruct_cwt_pcmaintapi.catalogRuleSearchDS</input>
+      <label>Search Catalog Rule</label>
+      <output>dstruct_cwt_pcmaintapi.catalogRuleList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchChargeType" type="oper">
+      <input>dstruct_cwt_pcmaintapi.chargeTypeSearchDS</input>
+      <label>Search Charge Type</label>
+      <output>dstruct_cwt_pcmaintapi.chargeTypeList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchChargeTypeVersion" type="oper">
+      <input>dstruct_cwt_pcmaintapi.chargeTypeVersionSearchDS</input>
+      <label>Search Charge Type Version</label>
+      <output>dstruct_cwt_pcmaintapi.chargeTypeVersionList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchContextAttribute" type="oper">
+      <input>dstruct_cwt_pcmaintapi.contextAttributeSearchDS</input>
+      <label>Search Context Attribute</label>
+      <output>dstruct_cwt_pcmaintapi.contextAttributeList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchContext" type="oper">
+      <input>dstruct_cwt_pcmaintapi.contextSearchDS</input>
+      <label>Search Context</label>
+      <output>dstruct_cwt_pcmaintapi.contextList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchInfoModelAttribute" type="oper">
+      <input>dstruct_cwt_pcmaintapi.infoModelAttributeSearchDS</input>
+      <label>Search Info Model Attribute</label>
+      <output>dstruct_cwt_pcmaintapi.infoModelAttributeList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchInfoModel" type="oper">
+      <input>dstruct_cwt_pcmaintapi.infoModelSearchDS</input>
+      <label>Search Info Model</label>
+      <output>dstruct_cwt_pcmaintapi.infoModelList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchInfoTable" type="oper">
+      <input>dstruct_cwt_pcmaintapi.infoTableSearchDS</input>
+      <label>Search Info Table</label>
+      <output>dstruct_cwt_pcmaintapi.infoTableList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchItemAttachment" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemAttachmentSearchDS</input>
+      <label>Search Item Attachment</label>
+      <output>dstruct_cwt_pcmaintapi.itemAttachmentList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchItemAttribute" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemAttributeSearchDS</input>
+      <label>Search Item Attribute</label>
+      <output>dstruct_cwt_pcmaintapi.itemAttributeList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchItemChargeVersion" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemChargeVersionSearchDS</input>
+      <label>Search Item Charge Version</label>
+      <output>dstruct_cwt_pcmaintapi.itemChargeVersionList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchItemDescription" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemDescriptionSearchDS</input>
+      <label>Search item Description</label>
+      <output>dstruct_cwt_pcmaintapi.itemDescriptionList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchItemGroup" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemGroupSearchDS</input>
+      <label>Search Item Group</label>
+      <output>dstruct_cwt_pcmaintapi.itemGroupList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchItemGroupTarget" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemGroupTargetSearchDS</input>
+      <label>Search Item Group Target</label>
+      <output>dstruct_cwt_pcmaintapi.itemGroupTargetList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchItemHierarchy" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemHierarchySearchDS</input>
+      <label>Search Item Hierarchy</label>
+      <output>dstruct_cwt_pcmaintapi.itemHierarchyList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchItemImage" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemImageSearchDS</input>
+      <label>Search Item Image</label>
+      <output>dstruct_cwt_pcmaintapi.itemImageList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchItemRelation" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemRelationSearchDS</input>
+      <label>Search Item Relation</label>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchItemRule" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemRuleSearchDS</input>
+      <label>Search Item Rule</label>
+      <output>dstruct_cwt_pcmaintapi.itemRuleList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchBaseItem" type="oper">
+      <label>Search Base Item</label>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchProjectAssignment" type="oper">
+      <input>dstruct_cwt_pcmaintapi.projectAssignmentSearchDS</input>
+      <label>Search Project Assignment</label>
+      <output>dstruct_cwt_pcmaintapi.projectAssignmentList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchProject" type="oper">
+      <input>dstruct_cwt_pcmaintapi.projectSearchDS</input>
+      <label>Search Project</label>
+      <output>dstruct_cwt_pcmaintapi.projectList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchRelationAttribute" type="oper">
+      <input>dstruct_cwt_pcmaintapi.relationAttributeSearchDS</input>
+      <label>Search Relation Attribute</label>
+      <output>dstruct_cwt_pcmaintapi.relationAttributeList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchRelationTypeAttribute" type="oper">
+      <input>dstruct_cwt_pcmaintapi.relationTypeAttributeSearchDS</input>
+      <label>Search Relation Type Attribute</label>
+      <output>dstruct_cwt_pcmaintapi.relationTypeAttributeList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchRelationType" type="oper">
+      <input>dstruct_cwt_pcmaintapi.relationTypeSearchDS</input>
+      <label>Search Relation Type</label>
+      <output>dstruct_cwt_pcmaintapi.relationTypeList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchRestriction" type="oper">
+      <input>dstruct_cwt_pcmaintapi.restrictionSearchDS</input>
+      <label>Search Restriction</label>
+      <output>dstruct_cwt_pcmaintapi.restrictionList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchRuleParameters" type="oper">
+      <input>dstruct_cwt_pcmaintapi.ruleParametersSearchDS</input>
+      <label>Search Rule Parameters</label>
+      <output>dstruct_cwt_pcmaintapi.ruleParametersList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchSystemIdentifier" type="oper">
+      <input>dstruct_cwt_pcmaintapi.systemIdentifierSearchDS</input>
+      <label>Search System Identifier</label>
+      <output>dstruct_cwt_pcmaintapi.systemIdentifierList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchTaxModelItem" type="oper">
+      <input>dstruct_cwt_pcmaintapi.taxModelItemSearchDS</input>
+      <label>Search Tax Model Item</label>
+      <output>dstruct_cwt_pcmaintapi.taxModelItemList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchTaxModel" type="oper">
+      <input>dstruct_cwt_pcmaintapi.taxModelSearchDS</input>
+      <label>Search Tax Model</label>
+      <output>dstruct_cwt_pcmaintapi.taxModelList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchTaxModelVersion" type="oper">
+      <input>dstruct_cwt_pcmaintapi.taxModelVersionSearchDS</input>
+      <label>Search Tax Model Version</label>
+      <output>dstruct_cwt_pcmaintapi.taxModelVersionList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchTax" type="oper">
+      <input>dstruct_cwt_pcmaintapi.taxSearchDS</input>
+      <label>Search Tax</label>
+      <output>dstruct_cwt_pcmaintapi.taxList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchTaxVersion" type="oper">
+      <input>dstruct_cwt_pcmaintapi.taxVersionSearchDS</input>
+      <label>Search Tax Version</label>
+      <output>dstruct_cwt_pcmaintapi.taxVersionList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchCodeTable" type="oper">
+      <input>dstruct_cwt_common.codeTableName</input>
+      <label>Search Code Table</label>
+      <output>doc_cwt_common.cwfCodeTable</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchCatalogRuleVersion" type="oper">
+      <input>dstruct_cwt_pcmaintapi.catalogRuleVersionSearchDS</input>
+      <label>Search Catalog Rule Version</label>
+      <output>dstruct_cwt_pcmaintapi.catalogRuleVersionList</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchitemimage" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemImageSearchDS</input>
+      <label>Search Item Image</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchLogFile" type="oper">
+      <input>dstruct_catalogManagement.logSearchResponseStructure</input>
+      <label>Search Log  File</label>
+      <output>dstruct_catalogManagement.logSearchResponseStructureParent</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="searchManualTasks" type="oper">
+      <input>dstruct_catalogManagement.manualTasksResponseStructure</input>
+      <label>Search Manual Tasks</label>
+      <output>dstruct_catalogManagement.manualTasksResponseStructureParent</output>
+      <type>Request-Response</type>
+    </operation>
+  </operationList>
+  <revision>13</revision>
+</interface>

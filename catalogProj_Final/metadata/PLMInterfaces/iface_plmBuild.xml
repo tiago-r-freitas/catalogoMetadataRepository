@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface filenameHash="e241a9d9b705091bec222160e81a9678" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.plmBuild">
+  <guid>{43a3cc63-b6e9-489e-b966-358e808fa901}</guid>
+  <label> PLM Build</label>
+  <metaVersion>4</metaVersion>
+  <operationList>
+    <operation name="Approve" type="oper">
+      <description>Approve</description>
+      <label>Approve</label>
+      <type>Notification</type>
+    </operation>
+    <operation name="Cancel" type="oper">
+      <description>Cancel</description>
+      <label>Cancel</label>
+      <type>Notification</type>
+    </operation>
+    <operation name="manualTaskBuild" type="oper">
+      <label>manualTaskBuild</label>
+      <type>One-Way</type>
+    </operation>
+  </operationList>
+  <revision>1</revision>
+</interface>

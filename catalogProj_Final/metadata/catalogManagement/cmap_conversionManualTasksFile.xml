@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<conversionMap filenameHash="8babf4900be567204a9c9a5db7f04754" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.conversionManualTasksFile">
+  <itemMapList>
+    <itemMap name="1" type="mapItem">
+      <sourcePath name="source" type="mapPath">
+        <pathList>
+          <path>dstruct_catalogManagement.manualTasksResponseStructure</path>
+          <path>dstruct_catalogManagement.manualTasksResponseStructure/dstruct_operation</path>
+        </pathList>
+      </sourcePath>
+      <targetPath name="target" type="mapPath">
+        <pathList>
+          <path>doc_cwf_pm.BaseWorklist</path>
+          <path>doc_cwf_pm.BaseWorklist/leaf_Operation</path>
+        </pathList>
+      </targetPath>
+    </itemMap>
+    <itemMap name="2" type="mapItem">
+      <sourcePath name="source" type="mapPath">
+        <pathList>
+          <path>dstruct_catalogManagement.manualTasksResponseStructure</path>
+          <path>dstruct_catalogManagement.manualTasksResponseStructure/dstruct_order_id</path>
+        </pathList>
+      </sourcePath>
+      <targetPath name="target" type="mapPath">
+        <pathList>
+          <path>doc_cwf_pm.BaseWorklist</path>
+          <path>doc_cwf_pm.BaseWorklist/leaf_OrderId</path>
+        </pathList>
+      </targetPath>
+    </itemMap>
+    <itemMap name="3" type="mapItem">
+      <sourcePath name="source" type="mapPath">
+        <pathList>
+          <path>dstruct_catalogManagement.manualTasksResponseStructure</path>
+          <path>dstruct_catalogManagement.manualTasksResponseStructure/dstruct_priority</path>
+        </pathList>
+      </sourcePath>
+      <targetPath name="target" type="mapPath">
+        <pathList>
+          <path>doc_cwf_pm.BaseWorklist</path>
+          <path>doc_cwf_pm.BaseWorklist/leaf_Priority</path>
+        </pathList>
+      </targetPath>
+    </itemMap>
+    <itemMap name="0" type="mapItem">
+      <sourcePath name="source" type="mapPath">
+        <pathList>
+          <path>dstruct_catalogManagement.manualTasksResponseStructure</path>
+          <path>dstruct_catalogManagement.manualTasksResponseStructure/dstruct_participant</path>
+        </pathList>
+      </sourcePath>
+      <targetPath name="target" type="mapPath">
+        <pathList>
+          <path>doc_cwf_pm.BaseWorklist</path>
+          <path>doc_cwf_pm.BaseWorklist/leaf_Participant</path>
+        </pathList>
+      </targetPath>
+    </itemMap>
+    <itemMap name="4" type="mapItem">
+      <sourcePath name="source" type="mapPath">
+        <pathList>
+          <path>dstruct_catalogManagement.manualTasksResponseStructure</path>
+          <path>dstruct_catalogManagement.manualTasksResponseStructure/dstruct_duedate</path>
+        </pathList>
+      </sourcePath>
+      <targetPath name="target" type="mapPath">
+        <pathList>
+          <path>doc_cwf_pm.BaseWorklist</path>
+          <path>doc_cwf_pm.BaseWorklist/leaf_DueDate</path>
+        </pathList>
+      </targetPath>
+    </itemMap>
+    <itemMap name="5" type="mapItem">
+      <sourcePath name="source" type="mapPath">
+        <pathList>
+          <path>dstruct_catalogManagement.manualTasksResponseStructure</path>
+          <path>dstruct_catalogManagement.manualTasksResponseStructure/dstruct_userid</path>
+        </pathList>
+      </sourcePath>
+      <targetPath name="target" type="mapPath">
+        <pathList>
+          <path>doc_cwf_pm.BaseWorklist</path>
+          <path>doc_cwf_pm.BaseWorklist/leaf_userId</path>
+        </pathList>
+      </targetPath>
+    </itemMap>
+    <itemMap name="6" type="mapItem">
+      <sourcePath name="source" type="mapPath">
+        <pathList>
+          <path>dstruct_catalogManagement.manualTasksResponseStructure</path>
+          <path>dstruct_catalogManagement.manualTasksResponseStructure/dstruct_creationDate</path>
+        </pathList>
+      </sourcePath>
+      <targetPath name="target" type="mapPath">
+        <pathList>
+          <path>doc_cwf_pm.BaseWorklist</path>
+          <path>doc_cwf_pm.BaseWorklist/leaf_createDate</path>
+        </pathList>
+      </targetPath>
+    </itemMap>
+  </itemMapList>
+  <label>conversionManualTasksFile</label>
+  <metaVersion>4</metaVersion>
+  <source>dstruct_catalogManagement.manualTasksResponseStructure</source>
+  <target>doc_cwf_pm.BaseWorklist</target>
+</conversionMap>

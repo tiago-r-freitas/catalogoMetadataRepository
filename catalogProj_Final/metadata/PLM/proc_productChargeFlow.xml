@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process filenameHash="6298b3cb2c20240d52833972dd1991dc" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.productChargeFlow">
+  <activity name="Start" type="seqActivity">
+    <guid>{ab50c1d5-8ddb-477c-bd7c-bb89215e1d06}</guid>
+    <label>Start</label>
+    <x>86.0</x>
+    <y>34.0</y>
+    <childList>
+      <child name="sendOrderToCharge" type="opActivity">
+        <element>iface_PLMInterfaces.plmCharge/oper_manualTaskCharge</element>
+        <guid>{0da2e1b4-051a-4464-83ef-9424b344d72b}</guid>
+        <label>send Order To Charge</label>
+        <participant>part_PLMInterfaces.produtCharge</participant>
+        <x>133.0</x>
+        <y>169.0</y>
+        <childList>
+          <child name="sequence" type="seqActivity">
+            <guid>{813b276d-2e9f-40f8-a9c6-e2312f1a5239}</guid>
+            <label>sequence</label>
+            <x>140.0</x>
+            <y>294.0</y>
+            <childList>
+              <child name="approveOrder" type="choiceActivity">
+                <guid>{d7319ef7-d210-4da0-84c2-1ca4acdcb82b}</guid>
+                <label>Approve Order ?</label>
+                <x>312.0</x>
+                <y>276.0</y>
+                <childList>
+                  <child name="aprrove" type="opActivity">
+                    <element>iface_PLMInterfaces.plmCharge/oper_Approve</element>
+                    <guid>{08047d06-ca0b-403f-9542-0b7e87f25e7e}</guid>
+                    <label>Aprrove</label>
+                    <participant>part_PLMInterfaces.produtCharge</participant>
+                    <x>191.0</x>
+                    <y>414.0</y>
+                    <childList>
+                      <child name="sequence" type="seqActivity">
+                        <guid>{c95c9a8c-301b-42ba-aba8-bbdb3d358569}</guid>
+                        <label>sequence</label>
+                        <x>190.0</x>
+                        <y>524.0</y>
+                      </child>
+                    </childList>
+                  </child>
+                  <child name="reject" type="opActivity">
+                    <element>iface_PLMInterfaces.plmCharge/oper_Reject</element>
+                    <guid>{6dcdfabb-656a-44c5-b137-7f96ebb3652a}</guid>
+                    <label>Reject</label>
+                    <participant>part_PLMInterfaces.produtCharge</participant>
+                    <x>436.0</x>
+                    <y>411.0</y>
+                    <childList>
+                      <child name="proceed" type="seqActivity">
+                        <guid>{86fd27dd-4f47-473a-a342-f16f11bca59a}</guid>
+                        <label>proceed</label>
+                        <x>567.0</x>
+                        <y>415.0</y>
+                        <childList>
+                          <child name="rollback" type="rollbackActivity">
+                            <guid>{2cb2d6d7-3a2d-4dfe-ac1b-76aee8e7492d}</guid>
+                            <label>rollback to Compensation</label>
+                            <x>688.0</x>
+                            <y>406.0</y>
+                            <methodList>
+                              <method name="cwOnProcActBefore" type="action">
+                                <category>before</category>
+                                <system>true</system>
+                                <script><![CDATA[
+                                  //Return to compensation point
+                                  return "CP1";
+                                ]]></script>
+                              </method>
+                            </methodList>
+                          </child>
+                        </childList>
+                      </child>
+                    </childList>
+                  </child>
+                </childList>
+              </child>
+            </childList>
+          </child>
+        </childList>
+      </child>
+      <child name="produtCharge" type="participantActivity">
+        <guid>{99ce1ccc-ac8d-4ae5-9a89-ccbef1bdaf4f}</guid>
+        <label>produtCharge</label>
+        <participant>part_PLMInterfaces.produtCharge</participant>
+        <x>517.0</x>
+        <y>70.0</y>
+      </child>
+    </childList>
+  </activity>
+  <curRevision>true</curRevision>
+  <document>doc_PLM.orderStructure</document>
+  <guid>{c3dc5dc6-0b46-46ba-a5ef-001af6af6616}</guid>
+  <label>productChargeFlow</label>
+  <metaVersion>4</metaVersion>
+  <priority>8</priority>
+  <type>User</type>
+</process>

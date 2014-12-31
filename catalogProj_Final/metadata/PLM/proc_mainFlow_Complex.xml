@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process filenameHash="3dc427116ce7092f0a1c724122f2e1ea" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.mainFlow_Complex">
+  <activity name="Start" type="seqActivity">
+    <guid>{0f4aa54a-6dc4-42d7-a70e-ffd78209b42a}</guid>
+    <label>Start</label>
+    <x>354.4362</x>
+    <y>41.0</y>
+    <childList>
+      <child name="wait" type="choiceActivity">
+        <guid>{f0231cdf-f0c4-422c-af68-9faa919d75a9}</guid>
+        <label>wait</label>
+        <x>364.4362</x>
+        <y>146.0</y>
+        <childList>
+          <child name="Approve" type="opActivity">
+            <element>iface_PLMInterfaces.plmManage/oper_approve</element>
+            <guid>{579dd79c-93fb-40be-ba33-1b2b821b6748}</guid>
+            <label>Approve</label>
+            <participant>part_PLMInterfaces.produtManager</participant>
+            <x>156.38574</x>
+            <y>296.70117</y>
+            <childList>
+              <child name="Completed" type="completeActivity">
+                <guid>{dbc2e117-6f59-4813-8ea4-857396efda38}</guid>
+                <label>Completed</label>
+                <x>151.38574</x>
+                <y>400.70117</y>
+                <methodList>
+                  <method name="cwOnProcActBefore" type="action">
+                    <category>before</category>
+                    <system>true</system>
+                    <script><![CDATA[
+                      //ptSom.proc_complete(this.process);
+                      //ptCommon.order_setCurrentStatus(this.process, constant.STAT_COMPLETE());
+
+                      return;
+                    ]]></script>
+                  </method>
+                </methodList>
+              </child>
+            </childList>
+          </child>
+          <child name="Cancel" type="opActivity">
+            <element>iface_PLMInterfaces.plmManage/oper_cancel</element>
+            <guid>{57d4e9bb-f73e-48d9-aebd-8f51a2f54754}</guid>
+            <label>Cancel</label>
+            <participant>part_PLMInterfaces.produtManager</participant>
+            <x>369.03223</x>
+            <y>319.70117</y>
+            <childList>
+              <child name="Completed" type="completeActivity">
+                <guid>{77bd665c-5b2c-4b03-9076-4c824a710b5e}</guid>
+                <label>Completed</label>
+                <x>358.03223</x>
+                <y>435.70117</y>
+                <methodList>
+                  <method name="cwOnProcActBefore" type="action">
+                    <category>before</category>
+                    <system>true</system>
+                    <script>return;</script>
+                  </method>
+                </methodList>
+              </child>
+            </childList>
+          </child>
+          <child name="Submit" type="opActivity">
+            <element>iface_PLMInterfaces.plmManage/oper_submit</element>
+            <guid>{76385a12-22ba-4e6e-baae-1d8e7dece70a}</guid>
+            <label>Submit</label>
+            <participant>part_PLMInterfaces.produtManager</participant>
+            <x>616.6846</x>
+            <y>285.70117</y>
+            <childList>
+              <child name="sequence" type="seqActivity">
+                <guid>{7cbb2752-ccd2-4698-930a-0725f48f8e4b}</guid>
+                <label>sequence</label>
+                <x>612.6846</x>
+                <y>396.70117</y>
+                <childList>
+                  <child name="getCreditApprove" type="opActivity">
+                    <element>iface_PLMInterfaces.plmCreditAnalysisInterface/oper_manualTaskCredit</element>
+                    <guid>{ddb0d8de-a09c-4b76-adfa-8dfde95df9a1}</guid>
+                    <label>getCreditApprove</label>
+                    <participant>part_PLMInterfaces.creditAnalysis</participant>
+                    <x>609.6846</x>
+                    <y>527.7012</y>
+                    <childList>
+                      <child name="sequence" type="seqActivity">
+                        <guid>{020d26a4-694e-4a96-8284-0ff318b6feee}</guid>
+                        <label>sequence</label>
+                        <x>627.6846</x>
+                        <y>645.7012</y>
+                        <childList>
+                          <child name="approveCredit" type="choiceActivity">
+                            <guid>{9c6f1e61-e301-468e-acf3-7794926780a9}</guid>
+                            <label>Approve Credit ?</label>
+                            <x>627.6846</x>
+                            <y>745.7012</y>
+                            <childList>
+                              <child name="aprrove" type="opActivity">
+                                <element>iface_PLMInterfaces.plmCreditAnalysisInterface/oper_Approve</element>
+                                <guid>{39fde194-5b83-49b0-b735-2fa273901fab}</guid>
+                                <label>approve credit</label>
+                                <participant>part_PLMInterfaces.creditAnalysis</participant>
+                                <x>487.68457</x>
+                                <y>855.7012</y>
+                              </child>
+                              <child name="rejectCredit" type="opActivity">
+                                <element>iface_PLMInterfaces.plmCreditAnalysisInterface/oper_Reject</element>
+                                <guid>{602e712d-17ad-49b2-bd9c-5f1a5e914b98}</guid>
+                                <label>Reject Credit</label>
+                                <participant>part_PLMInterfaces.creditAnalysis</participant>
+                                <x>767.6846</x>
+                                <y>856.7012</y>
+                              </child>
+                            </childList>
+                          </child>
+                        </childList>
+                      </child>
+                    </childList>
+                  </child>
+                </childList>
+              </child>
+            </childList>
+          </child>
+        </childList>
+      </child>
+      <child name="proceed" type="seqActivity">
+        <guid>{c8b38f0f-f88c-47f7-a098-321961e12f85}</guid>
+        <label>proceed</label>
+        <x>261.43616</x>
+        <y>860.0</y>
+      </child>
+      <child name="repeat" type="repeatActivity">
+        <element>proc_PLM.mainFlow_Complex/seqActivity_Start</element>
+        <guid>{0470529b-31b9-411f-b6be-1a0a720dd393}</guid>
+        <label>repeat</label>
+        <x>270.4362</x>
+        <y>540.0</y>
+      </child>
+      <child name="produtManager" type="participantActivity">
+        <guid>{4c8addb3-c64a-4182-b0c2-3cc9910ec209}</guid>
+        <label>produtManager</label>
+        <participant>part_PLMInterfaces.produtManager</participant>
+        <x>584.0</x>
+        <y>35.0</y>
+      </child>
+      <child name="creditAnalysis" type="participantActivity">
+        <guid>{7b3f6b7b-d816-4174-b305-adab078aaf63}</guid>
+        <label>creditAnalysis</label>
+        <participant>part_PLMInterfaces.creditAnalysis</participant>
+        <x>793.0</x>
+        <y>610.0</y>
+      </child>
+    </childList>
+  </activity>
+  <curRevision>true</curRevision>
+  <document>doc_com.conceptwave.system.Document</document>
+  <guid>{827a9b7b-4ca4-4234-b6d7-dc0e124eb9ad}</guid>
+  <label>main process</label>
+  <metaVersion>4</metaVersion>
+  <priority>8</priority>
+  <revision>2</revision>
+  <type>User</type>
+</process>

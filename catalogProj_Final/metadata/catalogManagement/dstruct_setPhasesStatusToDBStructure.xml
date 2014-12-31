@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataStructure filenameHash="430da436ad32325a13148a9c25d62f3a" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.setPhasesStatusToDBStructure">
+  <container>true</container>
+  <guid>{14df583b-a220-4d80-aeb4-af9c4fced85a}</guid>
+  <label>setPhasesStatusToDBStructure</label>
+  <metaVersion>4</metaVersion>
+  <childList>
+    <child name="projectId" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.String</element>
+      <guid>{f9e43e6b-9de3-48b1-a6d8-03d69a5dd67d}</guid>
+      <label>projectId</label>
+    </child>
+    <child name="getConceptionStatus" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_PLM.statusConception</element>
+      <guid>{a46c9c59-b4a4-4ea6-ba6f-d49eedc82da1}</guid>
+      <label>getConceptionStatus</label>
+    </child>
+    <child name="getEvaluationStatus" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_PLM.statusEvaluation</element>
+      <guid>{c5020b7b-d96c-43a1-bbe0-53f53523b501}</guid>
+      <label>getEvaluationStatus</label>
+    </child>
+    <child name="getDefinitionStatus" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_PLM.statusDefinition</element>
+      <guid>{26436f49-10b7-4cee-85ff-10fa53a725f4}</guid>
+      <label>getDefinitionStatus</label>
+    </child>
+    <child name="getBuildStatus" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_PLM.statusBuild</element>
+      <guid>{dc13bd8f-677b-4374-b89a-72af857915e1}</guid>
+      <label>getBuildStatus</label>
+    </child>
+    <child name="getTestingStatus" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_PLM.statusTesting</element>
+      <guid>{c9fb7fe2-f068-470a-9608-3bd99c0cf6df}</guid>
+      <label>getTestingStatus</label>
+    </child>
+    <child name="getLaunchProductStatus" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_PLM.statusLaunchProduct</element>
+      <guid>{1d49022e-507c-49e0-b1eb-fc86976e5823}</guid>
+      <label>getLaunchProductStatus</label>
+    </child>
+  </childList>
+  <UserInterface name="UserInterface" type="tree">
+    <defaultFolderImage>undefined</defaultFolderImage>
+    <defaultLeafImage>undefined</defaultLeafImage>
+    <element>dstruct_catalogManagement.setPhasesStatusToDBStructure</element>
+    <extends>tree_com.conceptwave.system.DataStructureUserInterface</extends>
+    <tableDoc>doc_com.conceptwave.system.TreeDocument</tableDoc>
+    <variableList>
+      <variable name="model" type="uivar">
+        <label>model</label>
+        <valueType>dstruct_catalogManagement.setPhasesStatusToDBStructure</valueType>
+      </variable>
+    </variableList>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>tree_com.conceptwave.system.DataStructureUserInterface/frmui_Forms</extends>
+      </vform>
+    </vformList>
+  </UserInterface>
+</dataStructure>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process filenameHash="e9fefa14165f843d54cb7e6be12fffbd" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.launchFlow">
+  <activity name="Start" type="seqActivity">
+    <guid>{0d4f06df-2b15-4ec9-96e0-635ae46fdda6}</guid>
+    <label>Start</label>
+    <x>105.0</x>
+    <y>35.0</y>
+    <childList>
+      <child name="manualTask" type="opActivity">
+        <element>iface_PLMInterfaces.plmLaunchProduct/oper_manualTaskLaunchProduct</element>
+        <guid>{1dc1fc9a-00d4-44b8-87a1-3aa9d2b567e7}</guid>
+        <label>manualTask</label>
+        <participant>part_PLMInterfaces.launchProductUser</participant>
+        <x>107.0</x>
+        <y>167.0</y>
+        <childList>
+          <child name="proceed" type="seqActivity">
+            <guid>{ff7c87a7-19e0-4e91-86b6-a3764e9abc93}</guid>
+            <label>proceed</label>
+            <x>117.0</x>
+            <y>266.0</y>
+            <childList>
+              <child name="launchProduct" type="choiceActivity">
+                <guid>{4531c02c-dc2b-442e-8ef7-0a341b6883d8}</guid>
+                <label> Ready Launch Product ?</label>
+                <x>250.0</x>
+                <y>257.0</y>
+                <childList>
+                  <child name="yes" type="opActivity">
+                    <element>iface_PLMInterfaces.plmLaunchProduct/oper_Approve</element>
+                    <guid>{ccf45e9c-dbda-47c4-ae52-48f54f9e10fb}</guid>
+                    <label>yes</label>
+                    <participant>part_PLMInterfaces.launchProductUser</participant>
+                    <x>174.0</x>
+                    <y>401.0</y>
+                    <childList>
+                      <child name="complete" type="completeActivity">
+                        <guid>{13ac44f7-2692-4a65-ad7b-c37ffea270c1}</guid>
+                        <label>complete</label>
+                        <x>174.0</x>
+                        <y>501.0</y>
+                      </child>
+                    </childList>
+                  </child>
+                  <child name="cancel" type="opActivity">
+                    <element>iface_PLMInterfaces.plmLaunchProduct/oper_Cancel</element>
+                    <guid>{fd4e32c3-4174-41c9-b9e4-c549fa12a40f}</guid>
+                    <label>cancel</label>
+                    <participant>part_PLMInterfaces.launchProductUser</participant>
+                    <x>391.0</x>
+                    <y>365.0</y>
+                    <childList>
+                      <child name="complete" type="completeActivity">
+                        <guid>{013f3942-eb3b-4093-81c9-2702270954c1}</guid>
+                        <label>complete</label>
+                        <x>391.0</x>
+                        <y>465.0</y>
+                      </child>
+                    </childList>
+                  </child>
+                </childList>
+              </child>
+            </childList>
+          </child>
+        </childList>
+      </child>
+      <child name="launchProductUser" type="participantActivity">
+        <guid>{9b6dcb6b-6c3f-49e7-84c8-3ad883eb79cf}</guid>
+        <label>launchProductUser</label>
+        <participant>part_PLMInterfaces.launchProductUser</participant>
+        <x>238.0</x>
+        <y>10.0</y>
+      </child>
+    </childList>
+  </activity>
+  <curRevision>true</curRevision>
+  <document>doc_com.conceptwave.system.Document</document>
+  <guid>{827680a6-1f69-4397-a9e1-a5d60747dbd0}</guid>
+  <label>Launch</label>
+  <metaVersion>4</metaVersion>
+  <priority>8</priority>
+  <type>User</type>
+</process>

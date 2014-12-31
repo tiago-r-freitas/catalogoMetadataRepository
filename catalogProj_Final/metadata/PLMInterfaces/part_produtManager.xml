@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<participant filenameHash="1f39c88b78c640ffae13c1fd4515bdd7" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.produtManager">
+  <distributionType>Shared</distributionType>
+  <duration type="dur">
+    <length>P0Y0M100DT0H0M0S</length>
+  </duration>
+  <guid>{da4f7e59-5a0e-4e9c-9d75-6fea84dfff0e}</guid>
+  <interface>iface_PLMInterfaces.plmManage</interface>
+  <label>produtManager</label>
+  <metaVersion>4</metaVersion>
+  <operationConditionsList>
+    <operationConditions type="opco">
+      <operation>iface_PLMInterfaces.plmManage/oper_approve</operation>
+      <methodList>
+        <method name="cwOnPartOpCond" type="action">
+          <system>true</system>
+          <script>return true;</script>
+        </method>
+      </methodList>
+    </operationConditions>
+    <operationConditions type="opco">
+      <operation>iface_PLMInterfaces.plmManage/oper_cancel</operation>
+      <methodList>
+        <method name="cwOnPartOpCond" type="action">
+          <system>true</system>
+          <script>return true;</script>
+        </method>
+      </methodList>
+    </operationConditions>
+    <operationConditions type="opco">
+      <operation>iface_PLMInterfaces.plmManage/oper_submit</operation>
+      <methodList>
+        <method name="cwOnPartOpCond" type="action">
+          <system>true</system>
+          <script>return true;</script>
+        </method>
+      </methodList>
+    </operationConditions>
+  </operationConditionsList>
+  <privilege>productManager</privilege>
+  <UserInterface name="UserInterface" type="ui">
+    <extends>ui_com.conceptwave.system.WLTaskUserInterface</extends>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>ui_com.conceptwave.system.WLTaskUserInterface/frmui_Forms</extends>
+      </vform>
+    </vformList>
+    <methodList>
+      <method name="productManagerUsersOnlyPerm" type="permMethod">
+        <privilegesList>
+          <privileges type="ppriv">
+            <privilege>productManager</privilege>
+          </privileges>
+          <privileges type="ppriv">
+            <privilege>WTakeOn</privilege>
+          </privileges>
+          <privileges type="ppriv">
+            <privilege>WLAdmin</privilege>
+          </privileges>
+        </privilegesList>
+        <privilegesType>SOME</privilegesType>
+      </method>
+    </methodList>
+  </UserInterface>
+</participant>

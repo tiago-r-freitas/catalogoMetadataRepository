@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<participant filenameHash="93d6e76fb9412d098749f7a3a0ddd15b" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.creditAnalysis">
+  <distributionType>Shared</distributionType>
+  <duration type="dur">
+    <length>P0Y0M1DT1H1M0S</length>
+  </duration>
+  <guid>{b0150065-8f2f-49da-9cfe-324de30e2fad}</guid>
+  <interface>iface_PLMInterfaces.plmCreditAnalysisInterface</interface>
+  <label>creditAnalysis</label>
+  <metaVersion>4</metaVersion>
+  <operationConditionsList>
+    <operationConditions type="opco">
+      <operation>iface_PLMInterfaces.plmCreditAnalysisInterface/oper_Approve</operation>
+      <methodList>
+        <method name="cwOnPartOpCond" type="action">
+          <system>true</system>
+          <script>return true;</script>
+        </method>
+      </methodList>
+    </operationConditions>
+    <operationConditions type="opco">
+      <operation>iface_PLMInterfaces.plmCreditAnalysisInterface/oper_Reject</operation>
+      <methodList>
+        <method name="cwOnPartOpCond" type="action">
+          <system>true</system>
+          <script>return true;</script>
+        </method>
+      </methodList>
+    </operationConditions>
+  </operationConditionsList>
+  <privilege>pricingEconomics</privilege>
+  <UserInterface name="UserInterface" type="ui">
+    <extends>ui_com.conceptwave.system.WLTaskUserInterface</extends>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>ui_com.conceptwave.system.WLTaskUserInterface/frmui_Forms</extends>
+        <overlayList>
+          <overlay name="Menu" type="exov">
+            <base>ui_com.conceptwave.system.WLTaskUserInterface/frmui_Forms/exov_Menu</base>
+            <extends>ui_com.conceptwave.system.WLTaskUserInterface/frmui_Forms/exov_Menu</extends>
+            <label>Menu</label>
+          </overlay>
+        </overlayList>
+      </vform>
+    </vformList>
+    <methodList>
+      <method name="creditAnalysisUserOnly" type="permMethod">
+        <privilegesList>
+          <privileges type="ppriv">
+            <privilege>pricingEconomics</privilege>
+          </privileges>
+          <privileges type="ppriv">
+            <privilege>WTakeOn</privilege>
+          </privileges>
+          <privileges type="ppriv">
+            <privilege>WLAdmin</privilege>
+          </privileges>
+        </privilegesList>
+        <privilegesType>SOME</privilegesType>
+      </method>
+    </methodList>
+  </UserInterface>
+</participant>

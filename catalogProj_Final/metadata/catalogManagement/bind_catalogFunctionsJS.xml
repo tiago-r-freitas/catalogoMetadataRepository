@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<binding filenameHash="55d363a453c347e2525810fe5703dfda" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.catalogFunctionsJS">
+  <extensionList>
+    <extension name="importCatalog" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          catalogManagement.dummy();
+          var res = cwt_pcmaintapi.importCatalog(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="exportCatalog" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          catalogManagement.dummy();
+          var res = cwt_pcmaintapi.exportAllCatalogDoc(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+  </extensionList>
+  <interface>iface_catalogManagement.catalogFunctions</interface>
+  <label>Catalog Functions JS</label>
+  <metaVersion>4</metaVersion>
+  <provider>prov_cwf.jsprov</provider>
+</binding>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<participant filenameHash="ebe31f7279c87da10933600133053fab" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.produtCharge">
+  <distributionType>Shared</distributionType>
+  <duration type="dur">
+    <length>P0Y0M100DT0H0M0S</length>
+  </duration>
+  <guid>{4f462415-f1b5-46ed-bc6f-d1a6c0e5a0c9}</guid>
+  <interface>iface_PLMInterfaces.plmCharge</interface>
+  <label>produtCharge</label>
+  <metaVersion>4</metaVersion>
+  <operationConditionsList>
+    <operationConditions type="opco">
+      <operation>iface_PLMInterfaces.plmCharge/oper_Approve</operation>
+      <methodList>
+        <method name="cwOnPartOpCond" type="action">
+          <system>true</system>
+          <script>return true;</script>
+        </method>
+      </methodList>
+    </operationConditions>
+    <operationConditions type="opco">
+      <operation>iface_PLMInterfaces.plmCharge/oper_Reject</operation>
+      <methodList>
+        <method name="cwOnPartOpCond" type="action">
+          <system>true</system>
+          <script>return true;</script>
+        </method>
+      </methodList>
+    </operationConditions>
+  </operationConditionsList>
+  <privilege>cwpc_iCrgManager</privilege>
+  <UserInterface name="UserInterface" type="ui">
+    <extends>ui_com.conceptwave.system.WLTaskUserInterface</extends>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>ui_com.conceptwave.system.WLTaskUserInterface/frmui_Forms</extends>
+      </vform>
+    </vformList>
+  </UserInterface>
+</participant>

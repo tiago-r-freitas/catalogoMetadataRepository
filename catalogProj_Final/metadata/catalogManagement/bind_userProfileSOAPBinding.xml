@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<binding filenameHash="b569b236a2e4e623b7fb5dbfd55b8248" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.userProfileSOAPBinding">
+  <interface>iface_catalogManagement.userProfileFunctions</interface>
+  <label>User Profile SOAP Binding</label>
+  <metaVersion>4</metaVersion>
+  <provider>prov_cwf.soapprov</provider>
+</binding>

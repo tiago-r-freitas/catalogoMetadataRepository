@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataStructure filenameHash="8792c62cdd3d22313c7dae41eb221698" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.plmManageStruct">
+  <container>true</container>
+  <guid>{148fccff-68c3-4dc3-bdba-6bfb38bc7f4e}</guid>
+  <label>plmManageStruct</label>
+  <metaVersion>4</metaVersion>
+  <childList>
+    <child name="approveValue" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.String</element>
+      <guid>{6272e145-ef71-4ea8-acfa-f19110656f7c}</guid>
+      <label>approveValue</label>
+    </child>
+    <child name="cancelValue" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.String</element>
+      <guid>{b86fd24a-efea-42a9-9bf8-5664d0d1450b}</guid>
+      <label>cancelValue</label>
+    </child>
+    <child name="submitValue" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.String</element>
+      <guid>{2af8ed6f-acb3-426c-91b2-63aad643323e}</guid>
+      <label>submitValue</label>
+    </child>
+  </childList>
+  <UserInterface name="UserInterface" type="tree">
+    <defaultFolderImage>undefined</defaultFolderImage>
+    <defaultLeafImage>undefined</defaultLeafImage>
+    <element>dstruct_PLMInterfaces.plmManageStruct</element>
+    <extends>tree_com.conceptwave.system.DataStructureUserInterface</extends>
+    <tableDoc>doc_com.conceptwave.system.TreeDocument</tableDoc>
+    <variableList>
+      <variable name="model" type="uivar">
+        <label>model</label>
+        <valueType>dstruct_PLMInterfaces.plmManageStruct</valueType>
+      </variable>
+    </variableList>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>tree_com.conceptwave.system.DataStructureUserInterface/frmui_Forms</extends>
+      </vform>
+    </vformList>
+  </UserInterface>
+</dataStructure>

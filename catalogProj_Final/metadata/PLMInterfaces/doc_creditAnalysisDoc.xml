@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document filenameHash="9b7bd67850d8b6575dd312b6e5a0fe9d" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.creditAnalysisDoc">
+  <extends>doc_com.conceptwave.system.Document</extends>
+  <guid>{5fe8541d-926c-4ff2-bb54-5cacbc1467c8}</guid>
+  <label>creditAnalysisDoc</label>
+  <metaVersion>4</metaVersion>
+  <methodList>
+    <method name="creditAnalysisUserOnly" type="permMethod">
+      <privilegesList>
+        <privileges type="ppriv">
+          <privilege>pricingEconomics</privilege>
+        </privileges>
+        <privileges type="ppriv">
+          <privilege>WTakeOn</privilege>
+        </privileges>
+        <privileges type="ppriv">
+          <privilege>WLAdmin</privilege>
+        </privileges>
+      </privilegesList>
+      <privilegesType>SOME</privilegesType>
+    </method>
+  </methodList>
+  <UserInterface name="UserInterface" type="ui">
+    <extends>doc_com.conceptwave.system.Document/ui_UserInterface</extends>
+    <variableList>
+      <variable name="model" type="uivar">
+        <label>model</label>
+        <valueType>doc_PLMInterfaces.creditAnalysisDoc</valueType>
+      </variable>
+    </variableList>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>doc_com.conceptwave.system.Document/ui_UserInterface/frmui_Forms</extends>
+      </vform>
+    </vformList>
+  </UserInterface>
+</document>

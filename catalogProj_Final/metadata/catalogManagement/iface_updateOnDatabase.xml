@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface filenameHash="18ff3bfddbd089eb56be876a2a7bd921" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.updateOnDatabase">
+  <guid>{fe23b7dd-8664-4800-b051-ede71bccbf4f}</guid>
+  <label>Update On Database</label>
+  <metaVersion>4</metaVersion>
+  <operationList>
+    <operation name="updateTax" type="oper">
+      <input>dstruct_cwt_pcmaintapi.tax</input>
+      <label>Update Tax</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="updateProject" type="oper">
+      <input>dstruct_cwt_pcmaintapi.project</input>
+      <label>Update Project</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="updateItemCharge" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemChargeVersion</input>
+      <label>Update Item Charge</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="updateChargeType" type="oper">
+      <input>dstruct_cwt_pcmaintapi.chargeType</input>
+      <label>Update Charge Type</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="updateChargeTypeVersion" type="oper">
+      <input>dstruct_cwt_pcmaintapi.chargeTypeVersion</input>
+      <label>Update Charge Type Version</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="updateCodeTable" type="oper">
+      <input>dstruct_cwt_common.cTable</input>
+      <label>Update Code Table</label>
+      <output>dstruct_cwt_common.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="updateRules" type="oper">
+      <input>dstruct_cwt_pcmaintapi.catalogRule</input>
+      <label>Update Rules</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="updateRelations" type="oper">
+      <input>dstruct_cwt_pcmaintapi.relationType</input>
+      <label>Update Relations</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="updateitemimage" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemImage</input>
+      <label>Update Item Image</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="updateItem" type="oper">
+      <input>dstruct_cwt_pcmaintapi.item</input>
+      <label>Update Item</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="updateAttribute" type="oper">
+      <input>dstruct_cwt_pcmaintapi.attribute</input>
+      <label>Update Attribute</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="updateItemRelation" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemRelation</input>
+      <label>Update Item Relation</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="updateItemRelationVersion" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemRelation</input>
+      <label>Update Item Relation Version</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="updateItemAttribute" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemAttribute</input>
+      <label>Update Item Attribute</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+  </operationList>
+  <revision>7</revision>
+</interface>

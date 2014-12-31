@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataStructure filenameHash="d47585a0b641cb1d6c07fdeaaf6d65b" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.logSearchResponseStructure">
+  <container>true</container>
+  <guid>{2e6b646a-b2d6-4f48-adf9-59866afa475f}</guid>
+  <label>logSearchResponseStructure</label>
+  <metaVersion>4</metaVersion>
+  <childList>
+    <child name="eventID" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.Integer</element>
+      <guid>{e62151ad-b0ae-4a12-aaf1-d1324f60b64b}</guid>
+      <label>eventID</label>
+    </child>
+    <child name="nodeID" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.String</element>
+      <guid>{6dad9712-fb8a-4da2-bbd6-ed4268514425}</guid>
+      <label>nodeID</label>
+    </child>
+    <child name="description" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_catalogManagement.String10000</element>
+      <guid>{d70daa26-2c34-4949-86d9-25a696e68e8d}</guid>
+      <label>description</label>
+    </child>
+    <child name="SOURCE" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.Integer</element>
+      <guid>{89e012b7-da02-4f6b-b799-01211bb507f9}</guid>
+      <label>SOURCE</label>
+    </child>
+    <child name="SEVERITY" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.Integer</element>
+      <guid>{5b5e9984-e436-44b5-869f-d92140465856}</guid>
+      <label>SEVERITY</label>
+    </child>
+    <child name="logTime" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.DateTime</element>
+      <guid>{92d243e7-9853-410f-93fe-7db728d3d235}</guid>
+      <label>logTime</label>
+    </child>
+  </childList>
+  <UserInterface name="UserInterface" type="tree">
+    <defaultFolderImage>undefined</defaultFolderImage>
+    <defaultLeafImage>undefined</defaultLeafImage>
+    <element>dstruct_catalogManagement.logSearchResponseStructure</element>
+    <extends>tree_com.conceptwave.system.DataStructureUserInterface</extends>
+    <tableDoc>doc_com.conceptwave.system.TreeDocument</tableDoc>
+    <variableList>
+      <variable name="model" type="uivar">
+        <label>model</label>
+        <valueType>dstruct_catalogManagement.logSearchResponseStructure</valueType>
+      </variable>
+    </variableList>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>tree_com.conceptwave.system.DataStructureUserInterface/frmui_Forms</extends>
+      </vform>
+    </vformList>
+  </UserInterface>
+</dataStructure>

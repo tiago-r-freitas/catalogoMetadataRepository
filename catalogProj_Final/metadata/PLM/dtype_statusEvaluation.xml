@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataType filenameHash="14c9c7e9a4a683f2d31a74fc98526707" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.statusEvaluation">
+  <extends>dtype_com.conceptwave.system.Boolean</extends>
+  <label>statusEvaluation</label>
+  <metaVersion>4</metaVersion>
+</dataType>

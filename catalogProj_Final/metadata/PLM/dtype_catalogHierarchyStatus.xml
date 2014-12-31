@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataType filenameHash="1df8062d4c0f5f4f1276e127e91ad69d" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.catalogHierarchyStatus">
+  <enumeration type="enum">
+    <valueList>
+      <value name="Definition" type="enumItem" code="DEF"/>
+      <value name="Active" type="enumItem" code="ACT"/>
+    </valueList>
+  </enumeration>
+  <extends>dtype_com.conceptwave.system.String</extends>
+  <label>catalogHierarchyStatus</label>
+  <length>3</length>
+  <metaVersion>4</metaVersion>
+</dataType>

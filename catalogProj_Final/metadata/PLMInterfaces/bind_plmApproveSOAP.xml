@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<binding filenameHash="e06d8b42f8e68b44845ac509a0db5dac" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.plmApproveSOAP">
+  <interface>iface_PLMInterfaces.plmApprove</interface>
+  <label>PLM Approve SOAP</label>
+  <metaVersion>4</metaVersion>
+  <provider>prov_cwf.soapprov</provider>
+</binding>

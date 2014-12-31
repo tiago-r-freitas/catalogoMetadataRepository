@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface filenameHash="b863c16c7343ff00be40dca7aa628711" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="refreshDB2OE.refreshDB2OE">
+  <guid>{1ee52d05-2da9-4bd7-9882-0c06141ea95e}</guid>
+  <label>refreshDB2OE</label>
+  <metaVersion>4</metaVersion>
+  <operationList>
+    <operation name="sendNotificationRefreshDB" type="oper">
+      <input>dstruct_refreshDB2OE.refreshDB</input>
+      <label>sendNotificationRefreshDB</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+  </operationList>
+  <revision>1</revision>
+</interface>

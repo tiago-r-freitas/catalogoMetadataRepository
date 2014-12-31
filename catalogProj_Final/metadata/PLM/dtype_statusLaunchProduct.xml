@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataType filenameHash="dac867dcd1ef99287d25159191bcc632" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.statusLaunchProduct">
+  <extends>dtype_com.conceptwave.system.Boolean</extends>
+  <label>statusLaunchProduct</label>
+  <metaVersion>4</metaVersion>
+</dataType>

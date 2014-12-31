@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataType filenameHash="d4a24316b3db5fcd7d92388241c821d" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.chargeTypeStatus">
+  <enumeration type="enum">
+    <valueList>
+      <value name="Definition" type="enumItem" code="DEF"/>
+      <value name="Active" type="enumItem" code="ACT"/>
+    </valueList>
+  </enumeration>
+  <extends>dtype_com.conceptwave.system.String</extends>
+  <label>chargeTypeStatus</label>
+  <length>3</length>
+  <metaVersion>4</metaVersion>
+</dataType>

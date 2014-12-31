@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<script filenameHash="4c0f2e9dfc28b8828eab14b168071f46" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.login">
+  <label>login</label>
+  <metaVersion>4</metaVersion>
+  <overrides>script_cwf_up.preLogin</overrides>
+  <script><![CDATA[
+    //return "upadmin";
+
+    var order = new Order("PLMInterfaces.orderPLM");
+
+    Process.startProcess("PLMInterfaces.PLMCycleII",order.id);
+
+    order.save();
+  ]]></script>
+</script>

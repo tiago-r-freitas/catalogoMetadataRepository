@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<binding filenameHash="6429c97e269bbbf3fb2c80ddc000302d" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.createSOAP">
+  <interface>iface_catalogManagement.createOnDatabase</interface>
+  <label>Create SOAP</label>
+  <metaVersion>4</metaVersion>
+  <provider>prov_cwf.soapprov</provider>
+</binding>

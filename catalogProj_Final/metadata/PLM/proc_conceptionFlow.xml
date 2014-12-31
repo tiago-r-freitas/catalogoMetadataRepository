@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process filenameHash="9f7a8eb8aefe08d998a0d59461cda496" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.conceptionFlow">
+  <activity name="Start" type="seqActivity">
+    <guid>{64b97432-ea35-4701-a280-ceb7d040d6da}</guid>
+    <label>Start</label>
+    <x>177.6875</x>
+    <y>6.3530273</y>
+    <childList>
+      <child name="createBussinesCaseProductManager" type="spawnActivity">
+        <element>proc_PLM.createBussinessCaseProductManager</element>
+        <guid>{f22443ef-7203-40b2-aff2-546fabb4a8ec}</guid>
+        <label>createBussinesCase ProductManager</label>
+        <x>383.04492</x>
+        <y>130.35303</y>
+      </child>
+      <child name="Wait" type="allActivity">
+        <guid>{22d24fb4-ba80-4230-a7e8-1b9659528619}</guid>
+        <label>Wait</label>
+        <x>416.21347</x>
+        <y>257.0</y>
+        <childList>
+          <child name="Analize" type="spawnActivity">
+            <element>proc_PLM.AnalysePrice</element>
+            <guid>{850bd46d-6db9-46c4-8fa1-bc2b95a4cc1d}</guid>
+            <label>Analize Pricing Model to be Accepted</label>
+            <syc>true</syc>
+            <x>611.4072</x>
+            <y>368.2378</y>
+          </child>
+          <child name="provide" type="spawnActivity">
+            <element>proc_PLM.productFeasiability</element>
+            <guid>{10105680-2df4-4e24-9f11-95db11ccc1ab}</guid>
+            <label>Provide Product Feasibility</label>
+            <syc>true</syc>
+            <x>411.61328</x>
+            <y>388.58838</y>
+          </child>
+          <child name="AnalyseMarketing" type="spawnActivity">
+            <element>proc_PLM.Marketing</element>
+            <guid>{b843bd04-84da-4f92-9373-eb518a75b902}</guid>
+            <label>Analyse and Create Marketing Synopsis</label>
+            <syc>true</syc>
+            <x>230.66895</x>
+            <y>469.2378</y>
+          </child>
+        </childList>
+      </child>
+      <child name="approval" type="seqActivity">
+        <guid>{51d74bb2-aba4-49a9-beb0-38ec60f32fef}</guid>
+        <label>approval</label>
+        <x>416.2881</x>
+        <y>568.0425</y>
+      </child>
+      <child name="AnalyseProductConception" type="spawnActivity">
+        <element>proc_PLM.AnalyseConception</element>
+        <guid>{b38d9877-e60c-4774-8d22-56c0725c4c93}</guid>
+        <label>Analyse Product Conception Provide Synopsis</label>
+        <x>410.92578</x>
+        <y>666.0425</y>
+      </child>
+      <child name="approveConception" type="spawnActivity">
+        <element>proc_PLM.ApproveConception</element>
+        <guid>{82dc3a35-c81d-4092-874e-e70cbb469474}</guid>
+        <label>approveConception</label>
+        <x>386.25098</x>
+        <y>835.54834</y>
+      </child>
+      <child name="stateChangeConception" type="spawnActivity">
+        <element>proc_PLM.ChangeConception</element>
+        <guid>{3a6261e9-5f22-44ca-b353-c4eed48722d5}</guid>
+        <label>stateChangeConception</label>
+        <x>379.9082</x>
+        <y>961.2495</y>
+      </child>
+      <child name="ApproveResult" type="switchActivity">
+        <guid>{4189aa32-58b5-4998-8b12-fbaeb4912c5f}</guid>
+        <label>ApproveResult</label>
+        <x>425.92578</x>
+        <y>1124.9507</y>
+        <childList>
+          <child name="Rejected" type="caseActivity">
+            <guid>{c602a8e8-9cd5-4e71-80f2-4b5143afe80a}</guid>
+            <label>Rejected</label>
+            <x>129.25684</x>
+            <y>998.353</y>
+            <childList>
+              <child name="StopTheFlow" type="completeActivity">
+                <guid>{f48080f6-0808-4bb8-acd0-3d2807c8344d}</guid>
+                <label>StopTheFlow</label>
+                <x>228.75977</x>
+                <y>1124.6519</y>
+                <methodList>
+                  <method name="cwOnProcActBefore" type="action">
+                    <category>before</category>
+                    <system>true</system>
+                    <script>return;</script>
+                  </method>
+                </methodList>
+              </child>
+            </childList>
+          </child>
+          <child name="Approved" type="caseActivity">
+            <guid>{2ac308a3-7a51-4a35-a769-789eaa7df9c0}</guid>
+            <label>Approved</label>
+            <x>438.375</x>
+            <y>1245.6519</y>
+            <methodList>
+              <method name="cwOnProcActCond" type="action">
+                <category>cond</category>
+                <system>true</system>
+                <script>return true;</script>
+              </method>
+            </methodList>
+          </child>
+          <child name="Change" type="caseActivity">
+            <guid>{193e8d79-25e3-4164-8051-8d5ae0167492}</guid>
+            <label>Change</label>
+            <x>319.25684</x>
+            <y>951.353</y>
+            <childList>
+              <child name="RejectedWithComments" type="repeatActivity">
+                <element>proc_PLM.conceptionFlow/seqActivity_Start</element>
+                <guid>{fee32d8d-b51d-4c2e-90e5-a0aca78d171f}</guid>
+                <label>RejectedWithComments</label>
+                <x>647.0</x>
+                <y>1124.6519</y>
+              </child>
+            </childList>
+            <methodList>
+              <method name="cwOnProcActCond" type="action">
+                <category>cond</category>
+                <system>true</system>
+                <script>return true;</script>
+              </method>
+            </methodList>
+          </child>
+        </childList>
+      </child>
+    </childList>
+    <methodList>
+      <method name="cwOnProcActBefore" type="action">
+        <category>before</category>
+        <system>true</system>
+        <script><![CDATA[
+          PLM.dummy();
+          //Estou no Processo
+        ]]></script>
+      </method>
+    </methodList>
+  </activity>
+  <curRevision>true</curRevision>
+  <document>doc_com.conceptwave.system.Document</document>
+  <guid>{96b62fd3-97f0-405c-b7fe-77a9a29c980d}</guid>
+  <label>Conception</label>
+  <metaVersion>4</metaVersion>
+  <priority>8</priority>
+  <type>User</type>
+</process>

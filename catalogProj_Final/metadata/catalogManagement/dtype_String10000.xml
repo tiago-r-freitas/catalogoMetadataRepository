@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataType filenameHash="35df6de7072c601fa8d1cb347c660795" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.String10000">
+  <extends>dtype_com.conceptwave.system.String</extends>
+  <label>String10000</label>
+  <length>1000</length>
+  <metaVersion>4</metaVersion>
+</dataType>

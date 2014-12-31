@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<externalService filenameHash="309e8de333762542a9a0bc5fea45388e" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.plmApproveES">
+  <label>PLM Approve ES</label>
+  <metaVersion>4</metaVersion>
+  <portList>
+    <port name="plmApproveSOAPPort" type="port">
+      <binding>bind_PLMInterfaces.plmApproveSOAP</binding>
+      <label>PLM Approve SOAP Port</label>
+      <listener>true</listener>
+      <recover>5</recover>
+    </port>
+    <port name="plmApproveJSPort" type="port">
+      <binding>bind_PLMInterfaces.plmApproveJS</binding>
+      <label>PLM Approve JS Port</label>
+      <recover>5</recover>
+    </port>
+  </portList>
+</externalService>

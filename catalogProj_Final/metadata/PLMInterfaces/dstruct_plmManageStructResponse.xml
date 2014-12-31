@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataStructure filenameHash="28f6580831a1035b266ac70161714c7a" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.plmManageStructResponse">
+  <container>true</container>
+  <guid>{a55cb83d-2c57-4001-a176-2592f4851957}</guid>
+  <label>plmManageStructResponse</label>
+  <metaVersion>4</metaVersion>
+  <childList>
+    <child name="response" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.String</element>
+      <guid>{f1cdf85f-1d76-48bc-a1b1-ee2b6f5362b1}</guid>
+      <label>response</label>
+    </child>
+    <child name="dateResponse" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.Date</element>
+      <guid>{7bc53862-d60f-4e4d-a4e7-de5186f6a756}</guid>
+      <label>dateResponse</label>
+    </child>
+  </childList>
+  <UserInterface name="UserInterface" type="tree">
+    <defaultFolderImage>undefined</defaultFolderImage>
+    <defaultLeafImage>undefined</defaultLeafImage>
+    <element>dstruct_PLMInterfaces.plmManageStructResponse</element>
+    <extends>tree_com.conceptwave.system.DataStructureUserInterface</extends>
+    <tableDoc>doc_com.conceptwave.system.TreeDocument</tableDoc>
+    <variableList>
+      <variable name="model" type="uivar">
+        <label>model</label>
+        <valueType>dstruct_PLMInterfaces.plmManageStructResponse</valueType>
+      </variable>
+    </variableList>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>tree_com.conceptwave.system.DataStructureUserInterface/frmui_Forms</extends>
+      </vform>
+    </vformList>
+  </UserInterface>
+</dataStructure>

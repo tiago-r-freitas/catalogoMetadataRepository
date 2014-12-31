@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<externalService filenameHash="77bfaac811f1b512e6f8875a25459a7" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.userProfileFunctionsES">
+  <label>User Profile Functions ES</label>
+  <metaVersion>4</metaVersion>
+  <portList>
+    <port name="UPSOAPPort" type="port">
+      <binding>bind_catalogManagement.userProfileSOAPBinding</binding>
+      <label>User Profile SOAP Port</label>
+      <listener>true</listener>
+      <recover>5</recover>
+    </port>
+    <port name="UPJSPort" type="port">
+      <binding>bind_catalogManagement.userProfileJSBinding</binding>
+      <label>User Profile JS Port</label>
+      <recover>5</recover>
+    </port>
+  </portList>
+</externalService>

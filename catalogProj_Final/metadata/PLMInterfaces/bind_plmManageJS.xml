@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<binding filenameHash="318d8f250c2bac6a38854f9e84b1861b" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.plmManageJS">
+  <extensionList>
+    <extension name="approve" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          PLMInterfaces.dummy();
+
+          var res = PLMInterfaces.plmManageScript(input,null,null);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="submit" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          catalogManagement.dummy();
+
+          //Despoletar os fluxos aqui?
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+  </extensionList>
+  <interface>iface_PLMInterfaces.plmManage</interface>
+  <label>PLM Manage JS</label>
+  <metaVersion>4</metaVersion>
+  <provider>prov_cwf.jsprov</provider>
+</binding>

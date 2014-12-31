@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<script filenameHash="861eba8abd8c04001ca255b74e328cb5" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.insertUserOnDB">
+  <label>Insert User On DB</label>
+  <metaVersion>4</metaVersion>
+  <parameterList>
+    <parameter name="userProfile" type="rifp">
+      <type>doc_cwf_up.userProfile</type>
+    </parameter>
+  </parameterList>
+  <script><![CDATA[
+    /**
+     *
+     * Created: 10 Dez 2014 - Tiago Freitas
+     *
+     * */
+
+    var faultDS = new DataStructure("cwt_pcmaintapi:Fault");
+
+    if (userProfile == null) {
+          faultDS.code = "DATA_NOT_FOUND";
+          faultDS.message = "Please check your request. \n ";
+          return faultDS;
+    }
+
+    try {
+          if(userProfile.externalUser == 0) {
+              userProfile.externalUserPWD = null;
+          }
+
+          userProfile.save();
+
+          var response = new DataStructure("cwt_pcmaintapi:response");
+          response.id = userProfile.userId;
+          response.message = "User " + userProfile.userId + " successfully created";
+          return response;
+
+    } catch(e) {
+          faultDS.code ="INTERNAL_EXCEPTION";
+          faultDS.message = e.message;
+          return faultDS;
+    }
+  ]]></script>
+</script>

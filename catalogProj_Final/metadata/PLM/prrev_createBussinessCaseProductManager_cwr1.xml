@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process__revision filenameHash="c7599ed29c6ca75ff68bf90f94bed3c3" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.createBussinessCaseProductManager_cwr1">
+  <activity name="Start" type="seqActivity">
+    <guid>{6bf8b5f3-4def-4c64-ac2e-0290439f30a1}</guid>
+    <label>Start</label>
+    <x>0.0</x>
+    <y>0.0</y>
+    <childList>
+      <child name="End" type="completeActivity">
+        <guid>{29ba24d4-ee04-4dcb-af9f-c193a7dcc7ac}</guid>
+        <label>End</label>
+        <x>0.0</x>
+        <y>100.0</y>
+      </child>
+    </childList>
+  </activity>
+  <curRevision>true</curRevision>
+  <label>createBussinessCaseProductManager</label>
+  <metaVersion>4</metaVersion>
+  <priority>8</priority>
+  <process>proc_PLM.createBussinessCaseProductManager</process>
+  <type>User</type>
+</process__revision>

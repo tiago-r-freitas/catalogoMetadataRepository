@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataType filenameHash="ef0229b03674acae8a26f04d12b6e65" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.taxStatus">
+  <enumeration type="enum">
+    <valueList>
+      <value name="Definition" type="enumItem" code="DEF"/>
+      <value name="Active" type="enumItem" code="ACT"/>
+    </valueList>
+  </enumeration>
+  <extends>dtype_com.conceptwave.system.String</extends>
+  <length>3</length>
+  <metaVersion>4</metaVersion>
+</dataType>

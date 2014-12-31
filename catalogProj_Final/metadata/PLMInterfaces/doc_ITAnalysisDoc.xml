@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document filenameHash="5f6fe8aa156a1233c831f7fca363a8ee" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.ITAnalysisDoc">
+  <extends>doc_com.conceptwave.system.Document</extends>
+  <guid>{91bcb4ca-d0a1-454f-93a5-bd7c53802409}</guid>
+  <label>ITAnalysisDoc</label>
+  <metaVersion>4</metaVersion>
+  <methodList>
+    <method name="ITusersOnly" type="permMethod">
+      <privilegesList>
+        <privileges type="ppriv">
+          <privilege>itSupport</privilege>
+        </privileges>
+      </privilegesList>
+      <privilegesType>SOME</privilegesType>
+    </method>
+  </methodList>
+  <UserInterface name="UserInterface" type="ui">
+    <extends>doc_com.conceptwave.system.Document/ui_UserInterface</extends>
+    <variableList>
+      <variable name="model" type="uivar">
+        <label>model</label>
+        <valueType>doc_PLMInterfaces.ITAnalysisDoc</valueType>
+      </variable>
+    </variableList>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>doc_com.conceptwave.system.Document/ui_UserInterface/frmui_Forms</extends>
+      </vform>
+    </vformList>
+  </UserInterface>
+</document>

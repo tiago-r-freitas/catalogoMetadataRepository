@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process filenameHash="33f65a7ed46b6aa10f1ea175cc14c8ed" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.ChangeConception">
+  <activity name="Start" type="seqActivity">
+    <guid>{e60d1dc6-b33e-4f5b-8205-e70ad5f3a4b1}</guid>
+    <label>Start</label>
+    <x>86.0</x>
+    <y>25.0</y>
+    <childList>
+      <child name="End" type="completeActivity">
+        <guid>{29ba24d4-ee04-4dcb-af9f-c193a7dcc7ac}</guid>
+        <label>End</label>
+        <x>164.0</x>
+        <y>131.0</y>
+      </child>
+    </childList>
+  </activity>
+  <curRevision>true</curRevision>
+  <guid>{11ff2e31-e52d-4000-9810-66defcb0c44f}</guid>
+  <label>ChangeConception</label>
+  <metaVersion>4</metaVersion>
+  <priority>8</priority>
+  <type>User</type>
+</process>

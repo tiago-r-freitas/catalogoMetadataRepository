@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface filenameHash="788cd7f2b3cc274448ffeb4f95addc28" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.plmCharge">
+  <guid>{004f0328-a7cb-4960-bee6-6a433c8cc72e}</guid>
+  <label>PLM Charge </label>
+  <metaVersion>4</metaVersion>
+  <operationList>
+    <operation name="Approve" type="oper">
+      <description>Approve</description>
+      <label>Approve</label>
+      <type>Notification</type>
+    </operation>
+    <operation name="Reject" type="oper">
+      <description>Reject</description>
+      <label>Reject</label>
+      <type>Notification</type>
+    </operation>
+    <operation name="manualTaskCharge" type="oper">
+      <label>Product Charge Manual Task</label>
+      <type>One-Way</type>
+    </operation>
+  </operationList>
+  <revision>3</revision>
+</interface>

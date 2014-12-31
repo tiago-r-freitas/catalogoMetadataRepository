@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<externalService filenameHash="87f5bacda7e269d0859cd7f2d2a49f6c" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.plmITAnalysisES">
+  <label>plmITAnalysisES</label>
+  <metaVersion>4</metaVersion>
+  <portList>
+    <port name="plmITAnalysisJSPort" type="port">
+      <binding>bind_PLMInterfaces.ITAnalysisJS</binding>
+      <label>plmITAnalysisJSPort</label>
+      <recover>5</recover>
+    </port>
+    <port name="plmAnalysisSOAPPort" type="port">
+      <binding>bind_PLMInterfaces.ITAnalysisSOAP</binding>
+      <label>plmAnalysisSOAPPort</label>
+      <listener>true</listener>
+      <recover>5</recover>
+    </port>
+  </portList>
+</externalService>

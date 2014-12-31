@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<header filenameHash="b2d87d565abd036d8073084ea5fa2661" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="ConceptWaveMetadata">
+  <APIVersion>2</APIVersion>
+  <DebugUIPath>true</DebugUIPath>
+  <author>Unknown</author>
+  <availableList>
+    <available type="loc">
+      <locale>en</locale>
+      <rightToLeft>false</rightToLeft>
+    </available>
+  </availableList>
+  <created>Fri Oct 17 10:32:04 BST 2014</created>
+  <internalSysVersion>5.1.15.13</internalSysVersion>
+  <label>ConceptWave Metadata</label>
+  <locale type="loc">
+    <locale>en</locale>
+    <rightToLeft>false</rightToLeft>
+  </locale>
+  <metaVersion>4</metaVersion>
+  <metadataVersion>20120801</metadataVersion>
+  <templateList>
+    <template>catalog</template>
+    <template>catalogClient</template>
+    <template>serviceOrchestrationFramework</template>
+    <template>SIDCommon</template>
+  </templateList>
+  <updated>Tue Dec 30 17:50:55 GMT 2014</updated>
+</header>

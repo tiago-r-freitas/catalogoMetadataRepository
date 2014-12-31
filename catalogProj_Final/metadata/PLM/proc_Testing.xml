@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process filenameHash="8360ce9b664e0e86f6e4d4d68be29b83" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.Testing">
+  <activity name="Start" type="seqActivity">
+    <guid>{4c52712e-d18a-4895-a316-5524878ace4f}</guid>
+    <label>Start</label>
+    <x>68.0</x>
+    <y>30.0</y>
+    <childList>
+      <child name="sendOrder" type="opActivity">
+        <element>iface_PLMInterfaces.plmApprove/oper_Approve</element>
+        <guid>{0cd64409-5a27-48e6-98ee-be338dfd79a5}</guid>
+        <label>sendOrder</label>
+        <participant>part_PLMInterfaces.produtApproval</participant>
+        <x>428.0</x>
+        <y>166.0</y>
+      </child>
+      <child name="produtApproval" type="participantActivity">
+        <guid>{dac39707-840d-453e-9f9b-795ce4f4dd52}</guid>
+        <label>produtApproval</label>
+        <participant>part_PLMInterfaces.produtApproval</participant>
+        <x>513.0</x>
+        <y>32.0</y>
+      </child>
+    </childList>
+  </activity>
+  <curRevision>true</curRevision>
+  <guid>{2bba021c-16db-4630-9ce8-7aadea4cfea7}</guid>
+  <label> Test </label>
+  <metaVersion>4</metaVersion>
+  <priority>8</priority>
+  <type>User</type>
+</process>

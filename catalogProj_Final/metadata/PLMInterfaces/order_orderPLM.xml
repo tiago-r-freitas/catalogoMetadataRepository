@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<order filenameHash="9c78e5982467a5bdb8d6978ea5b33d5f" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.orderPLM">
+  <extends>mdl_com.conceptwave.system.Model</extends>
+  <guid>{06acb0f0-fe5f-404b-a5d7-2695e0143646}</guid>
+  <label>PLM Order</label>
+  <metaVersion>4</metaVersion>
+  <syncMode>Document</syncMode>
+  <childList>
+    <child name="orderDoc" type="order">
+      <extends>mdl_com.conceptwave.system.Model</extends>
+      <guid>{6cec863a-38f4-4f64-8403-879107e2f246}</guid>
+      <label>orderDoc</label>
+      <mandatory>true</mandatory>
+      <orderItem>doc_PLMInterfaces.orderDoc</orderItem>
+      <orderType>document</orderType>
+      <UserInterface name="UserInterface" type="tree">
+        <autoExpand>true</autoExpand>
+        <defaultFolderImage>undefined</defaultFolderImage>
+        <defaultLeafImage>undefined</defaultLeafImage>
+        <element>order_PLMInterfaces.orderPLM/order_orderDoc</element>
+        <extends>tree_com.conceptwave.system.OrderUserInterface</extends>
+        <variableList>
+          <variable name="model" type="uivar">
+            <label>model</label>
+            <valueType>order_PLMInterfaces.orderPLM/order_orderDoc</valueType>
+          </variable>
+        </variableList>
+        <vformList>
+          <vform name="Forms" type="frmui">
+            <extends>tree_com.conceptwave.system.OrderUserInterface/frmui_Forms</extends>
+          </vform>
+        </vformList>
+      </UserInterface>
+    </child>
+  </childList>
+  <UserInterface name="UserInterface" type="tree">
+    <autoExpand>true</autoExpand>
+    <defaultFolderImage>undefined</defaultFolderImage>
+    <defaultLeafImage>undefined</defaultLeafImage>
+    <element>order_PLMInterfaces.orderPLM</element>
+    <extends>tree_com.conceptwave.system.OrderUserInterface</extends>
+    <label>PLM UserInterface</label>
+    <tableDoc>doc_com.conceptwave.system.TreeDocument</tableDoc>
+    <childList>
+      <child name="orderDocTeste" type="tnOi">
+        <autoExpand>true</autoExpand>
+        <autoSave>true</autoSave>
+        <detailForm>doc_PLMInterfaces.orderDoc/ui_UserInterface/frmui_Forms/exov_Default</detailForm>
+        <detailUI>doc_PLMInterfaces.orderDoc/ui_UserInterface</detailUI>
+        <element>doc_PLMInterfaces.orderDoc</element>
+        <extends>tn_com.conceptwave.system.TreeNode</extends>
+        <label>orderDocTeste</label>
+        <nodeType>4</nodeType>
+        <orderItem>order_PLMInterfaces.orderPLM/order_orderDoc</orderItem>
+        <vformList>
+          <vform name="Forms" type="frmui">
+            <extends>tn_com.conceptwave.system.TreeNode/frmui_Forms</extends>
+          </vform>
+        </vformList>
+      </child>
+    </childList>
+    <variableList>
+      <variable name="model" type="uivar">
+        <label>model</label>
+        <valueType>order_PLMInterfaces.orderPLM</valueType>
+      </variable>
+    </variableList>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>tree_com.conceptwave.system.OrderUserInterface/frmui_Forms</extends>
+      </vform>
+    </vformList>
+  </UserInterface>
+</order>

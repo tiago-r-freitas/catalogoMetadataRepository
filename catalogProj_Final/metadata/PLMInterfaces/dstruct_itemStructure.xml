@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataStructure filenameHash="5f635d60b8dd727ba0f01dc32e6d40fc" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.itemStructure">
+  <container>true</container>
+  <guid>{8afdb378-277e-4cb6-812e-cb801686f175}</guid>
+  <label>itemStructure</label>
+  <metaVersion>4</metaVersion>
+  <childList>
+    <child name="code" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.String</element>
+      <guid>{37bb6fa5-3388-474c-bcec-35505e8b4590}</guid>
+      <label>code</label>
+    </child>
+    <child name="name" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.String</element>
+      <guid>{616fd689-3826-4bd1-9b6a-882ceb8b742d}</guid>
+      <label>name</label>
+    </child>
+    <child name="status" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.String</element>
+      <guid>{be9f1734-99b0-4e21-b8a6-0bd1c07a0de4}</guid>
+      <label>status</label>
+    </child>
+    <child name="startDate" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.Date</element>
+      <guid>{fa1de0d2-f0eb-4a1b-a60d-01249a3ff081}</guid>
+      <label>Start Date</label>
+    </child>
+    <child name="EndDate" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.Date</element>
+      <guid>{cb2f13cd-a0c5-4b37-8b9f-e44d3aca1a98}</guid>
+      <label>End Date</label>
+    </child>
+    <child name="label" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.String</element>
+      <guid>{b42e6d7e-8e2c-4403-a942-768022a5cb71}</guid>
+      <label>label</label>
+    </child>
+    <child name="image" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.String</element>
+      <guid>{2d758d0e-43b4-442d-825d-2c158ec727d8}</guid>
+      <label>image</label>
+    </child>
+    <child name="itemType" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.String</element>
+      <guid>{84f95668-9981-422a-a687-8fe594e57570}</guid>
+      <label>itemType</label>
+    </child>
+    <child name="description" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_catalogManagement.String10000</element>
+      <guid>{ebcf6780-79ce-4c35-a29d-8d015a2a6f39}</guid>
+      <label>description</label>
+    </child>
+  </childList>
+  <UserInterface name="UserInterface" type="tree">
+    <defaultFolderImage>undefined</defaultFolderImage>
+    <defaultLeafImage>undefined</defaultLeafImage>
+    <element>dstruct_PLMInterfaces.itemStructure</element>
+    <extends>tree_com.conceptwave.system.DataStructureUserInterface</extends>
+    <tableDoc>doc_com.conceptwave.system.TreeDocument</tableDoc>
+    <variableList>
+      <variable name="model" type="uivar">
+        <label>model</label>
+        <valueType>dstruct_PLMInterfaces.itemStructure</valueType>
+      </variable>
+    </variableList>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>tree_com.conceptwave.system.DataStructureUserInterface/frmui_Forms</extends>
+      </vform>
+    </vformList>
+  </UserInterface>
+</dataStructure>

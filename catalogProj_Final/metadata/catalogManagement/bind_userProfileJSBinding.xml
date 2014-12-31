@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<binding filenameHash="2b8b25e2ba02ea01b689da9ddd64ebda" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.userProfileJSBinding">
+  <extensionList>
+    <extension name="login" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = new DataStructure("cwt_pcmaintapi:response");
+
+          try{
+              UserProfile.login(input.userId, input.externalUserPWD);
+              res.message = UserProfile.isActive(input.userId);
+          }
+          catch(Exception){
+              res.message = false;
+          }
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="getUserProfile" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var userDoc = UserProfile.getUserProfile(input.userId);
+
+          return userDoc;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="logout" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          UserProfile.logout();
+          return true;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="switchUser" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = new DataStructure("cwt_pcmaintapi:response");
+
+          try{
+              UserProfile.switchUser(input.userId, input.userId);
+              res.message = true;
+          }
+          catch(Exception){
+              res.message = false;
+          }
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="verifyUser" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = new DataStructure("cwt_pcmaintapi:response");
+          res.message = UserProfile.verifyUser(input.userId,input.externalUserPWD);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="createUser" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = new DataStructure("cwt_pcmaintapi.response");
+
+          try{
+              //catalogManagement.insertUserOnDB(input);
+              UserProfile.addUser(input,input.externalUserPWD);
+              UserProfile.addUserGroup(input.userGroups,input);
+              res.message = true;
+          }
+          catch(e){
+              res.message = false;
+          }
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+  </extensionList>
+  <interface>iface_catalogManagement.userProfileFunctions</interface>
+  <label>User Profile JS Binding</label>
+  <metaVersion>4</metaVersion>
+  <provider>prov_cwf.jsprov</provider>
+</binding>

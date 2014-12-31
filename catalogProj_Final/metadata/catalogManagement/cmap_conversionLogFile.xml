@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<conversionMap filenameHash="56582fc7cea9aedcfedc775deff74388" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.conversionLogFile">
+  <itemMapList>
+    <itemMap name="0" type="mapItem">
+      <sourcePath name="source" type="mapPath">
+        <pathList>
+          <path>dstruct_catalogManagement.logSearchResponseStructure</path>
+          <path>dstruct_catalogManagement.logSearchResponseStructure/dstruct_description</path>
+        </pathList>
+      </sourcePath>
+      <targetPath name="target" type="mapPath">
+        <pathList>
+          <path>doc_cwf_oe.CWPROCESSEVENTLOG</path>
+          <path>doc_cwf_oe.CWPROCESSEVENTLOG/leaf_DESCRIPTION</path>
+        </pathList>
+      </targetPath>
+    </itemMap>
+    <itemMap name="2" type="mapItem">
+      <sourcePath name="source" type="mapPath">
+        <pathList>
+          <path>dstruct_catalogManagement.logSearchResponseStructure</path>
+          <path>dstruct_catalogManagement.logSearchResponseStructure/dstruct_nodeID</path>
+        </pathList>
+      </sourcePath>
+      <targetPath name="target" type="mapPath">
+        <pathList>
+          <path>doc_cwf_oe.CWPROCESSEVENTLOG</path>
+          <path>doc_cwf_oe.CWPROCESSEVENTLOG/leaf_NodeId</path>
+        </pathList>
+      </targetPath>
+    </itemMap>
+    <itemMap name="3" type="mapItem">
+      <sourcePath name="source" type="mapPath">
+        <pathList>
+          <path>dstruct_catalogManagement.logSearchResponseStructure</path>
+          <path>dstruct_catalogManagement.logSearchResponseStructure/dstruct_eventID</path>
+        </pathList>
+      </sourcePath>
+      <targetPath name="target" type="mapPath">
+        <pathList>
+          <path>doc_cwf_oe.CWPROCESSEVENTLOG</path>
+          <path>doc_cwf_oe.CWPROCESSEVENTLOG/leaf_EventID</path>
+        </pathList>
+      </targetPath>
+    </itemMap>
+    <itemMap name="4" type="mapItem">
+      <sourcePath name="source" type="mapPath">
+        <pathList>
+          <path>dstruct_catalogManagement.logSearchResponseStructure</path>
+          <path>dstruct_catalogManagement.logSearchResponseStructure/dstruct_SOURCE</path>
+        </pathList>
+      </sourcePath>
+      <targetPath name="target" type="mapPath">
+        <pathList>
+          <path>doc_cwf_oe.CWPROCESSEVENTLOG</path>
+          <path>doc_cwf_oe.CWPROCESSEVENTLOG/leaf_EVENT_SOURCE</path>
+        </pathList>
+      </targetPath>
+    </itemMap>
+    <itemMap name="5" type="mapItem">
+      <sourcePath name="source" type="mapPath">
+        <pathList>
+          <path>dstruct_catalogManagement.logSearchResponseStructure</path>
+          <path>dstruct_catalogManagement.logSearchResponseStructure/dstruct_SEVERITY</path>
+        </pathList>
+      </sourcePath>
+      <targetPath name="target" type="mapPath">
+        <pathList>
+          <path>doc_cwf_oe.CWPROCESSEVENTLOG</path>
+          <path>doc_cwf_oe.CWPROCESSEVENTLOG/leaf_EVENT_SEVERITY</path>
+        </pathList>
+      </targetPath>
+    </itemMap>
+    <itemMap name="1" type="mapItem">
+      <sourcePath name="source" type="mapPath">
+        <pathList>
+          <path>dstruct_catalogManagement.logSearchResponseStructure</path>
+          <path>dstruct_catalogManagement.logSearchResponseStructure/dstruct_logTime</path>
+        </pathList>
+      </sourcePath>
+      <targetPath name="target" type="mapPath">
+        <pathList>
+          <path>doc_cwf_oe.CWPROCESSEVENTLOG</path>
+          <path>doc_cwf_oe.CWPROCESSEVENTLOG/leaf_EVENT_TIME</path>
+        </pathList>
+      </targetPath>
+    </itemMap>
+  </itemMapList>
+  <label>conversionLogFile</label>
+  <metaVersion>4</metaVersion>
+  <source>dstruct_catalogManagement.logSearchResponseStructure</source>
+  <target>doc_cwf_oe.CWPROCESSEVENTLOG</target>
+</conversionMap>

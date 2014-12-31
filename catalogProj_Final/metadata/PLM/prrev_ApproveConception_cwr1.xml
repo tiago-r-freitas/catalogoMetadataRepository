@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process__revision filenameHash="4196832c9623cfb049c7289d7a5fa578" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.ApproveConception_cwr1">
+  <activity name="Start" type="seqActivity">
+    <guid>{8ac6136a-93fe-443c-b68f-27e67b61279f}</guid>
+    <label>Start</label>
+    <x>0.0</x>
+    <y>0.0</y>
+    <childList>
+      <child name="End" type="completeActivity">
+        <guid>{29ba24d4-ee04-4dcb-af9f-c193a7dcc7ac}</guid>
+        <label>End</label>
+        <x>0.0</x>
+        <y>100.0</y>
+      </child>
+    </childList>
+  </activity>
+  <curRevision>true</curRevision>
+  <label>ApproveConception</label>
+  <metaVersion>4</metaVersion>
+  <priority>8</priority>
+  <process>proc_PLM.ApproveConception</process>
+  <type>User</type>
+</process__revision>

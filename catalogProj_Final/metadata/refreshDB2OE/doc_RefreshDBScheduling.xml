@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document filenameHash="47272c9065e4150550d0262e6150594e" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="refreshDB2OE.RefreshDBScheduling">
+  <dbSchema>CATALOG</dbSchema>
+  <extends>doc_com.conceptwave.system.Document</extends>
+  <generatedKey>true</generatedKey>
+  <guid>{f142100e-9f87-4932-a0bd-f9408c24d250}</guid>
+  <label>RefreshDBScheduling</label>
+  <metaVersion>4</metaVersion>
+  <variableList>
+    <variable name="message" type="leaf">
+      <label>message</label>
+      <valueType>dtype_refreshDB2OE.message</valueType>
+    </variable>
+    <variable name="scheduling" type="leaf">
+      <label>scheduling</label>
+      <valueType>dtype_refreshDB2OE.scheduling</valueType>
+    </variable>
+    <variable name="version" type="leaf">
+      <label>Version</label>
+      <valueType>dtype_cwt_pcdd.version</valueType>
+    </variable>
+    <variable name="cwDocId" type="leaf">
+      <key>1</key>
+      <label>System document ID</label>
+      <valueType>dtype_cwf.cwDocId</valueType>
+    </variable>
+  </variableList>
+  <UserInterface name="UserInterface" type="ui">
+    <extends>doc_com.conceptwave.system.Document/ui_UserInterface</extends>
+    <variableList>
+      <variable name="model" type="uivar">
+        <label>model</label>
+        <valueType>doc_refreshDB2OE.RefreshDBScheduling</valueType>
+      </variable>
+    </variableList>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>doc_com.conceptwave.system.Document/ui_UserInterface/frmui_Forms</extends>
+      </vform>
+    </vformList>
+  </UserInterface>
+</document>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process filenameHash="e33c159cf120144875b5b0e2fed7db0a" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.evaluationFlow">
+  <activity name="Start" type="seqActivity">
+    <guid>{ebe7010d-b9f0-40e5-be56-079e18c76307}</guid>
+    <label>Start</label>
+    <x>76.0</x>
+    <y>25.0</y>
+    <childList>
+      <child name="sendManualTask" type="opActivity">
+        <element>iface_PLMInterfaces.plmEvaluation/oper_manualTaskEvaluation</element>
+        <guid>{ba76e2c7-f347-4c19-baee-347c44e5ed76}</guid>
+        <label>sendManualTask</label>
+        <participant>part_PLMInterfaces.evaluationUser</participant>
+        <x>69.0</x>
+        <y>152.0</y>
+        <childList>
+          <child name="proceed" type="seqActivity">
+            <guid>{0a480f25-ac21-4154-b837-0d095f9ba676}</guid>
+            <label>proceed</label>
+            <x>92.0</x>
+            <y>260.0</y>
+            <childList>
+              <child name="approveEvaluation" type="choiceActivity">
+                <guid>{e2f01f23-4b0e-452d-8eea-1567cdfbe5f3}</guid>
+                <label>Approve Evaluation ?</label>
+                <x>293.0</x>
+                <y>212.0</y>
+                <childList>
+                  <child name="approve" type="opActivity">
+                    <element>iface_PLMInterfaces.plmEvaluation/oper_Approve</element>
+                    <guid>{51be2cfe-f34b-4719-b3df-71b678db5363}</guid>
+                    <label>Approve</label>
+                    <participant>part_PLMInterfaces.evaluationUser</participant>
+                    <x>193.0</x>
+                    <y>383.0</y>
+                    <childList>
+                      <child name="complete" type="completeActivity">
+                        <guid>{cdbfbd56-160b-4da3-86c4-4baa5263c974}</guid>
+                        <label>complete</label>
+                        <x>193.0</x>
+                        <y>483.0</y>
+                      </child>
+                    </childList>
+                  </child>
+                  <child name="cancel" type="opActivity">
+                    <element>iface_PLMInterfaces.plmEvaluation/oper_Cancel</element>
+                    <guid>{a0d2537a-e0d5-495e-9a65-129472cc80b1}</guid>
+                    <label>cancel</label>
+                    <participant>part_PLMInterfaces.evaluationUser</participant>
+                    <x>433.0</x>
+                    <y>384.0</y>
+                    <childList>
+                      <child name="complete" type="completeActivity">
+                        <guid>{b7af683e-9445-44bb-bbcc-246fb3fda136}</guid>
+                        <label>complete</label>
+                        <x>558.0</x>
+                        <y>384.0</y>
+                      </child>
+                    </childList>
+                  </child>
+                </childList>
+              </child>
+            </childList>
+          </child>
+        </childList>
+      </child>
+      <child name="evaluationUser" type="participantActivity">
+        <guid>{1ab66991-febf-4da8-88c2-7ca93f0867df}</guid>
+        <label>evaluationUser</label>
+        <participant>part_PLMInterfaces.evaluationUser</participant>
+        <x>358.0</x>
+        <y>32.0</y>
+      </child>
+    </childList>
+  </activity>
+  <curRevision>true</curRevision>
+  <document>doc_com.conceptwave.system.Document</document>
+  <guid>{4ba51fa5-bb87-4e24-ac1f-c07f44cd884b}</guid>
+  <label>Evaluation</label>
+  <metaVersion>4</metaVersion>
+  <priority>8</priority>
+  <type>User</type>
+</process>

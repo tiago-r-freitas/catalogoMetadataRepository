@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<userInterface filenameHash="979371a34791036d1d4fcb264418b314" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.PLM_Presentation">
+  <extends>ui_com.conceptwave.system.Application</extends>
+  <label>PLM_Presentation</label>
+  <metaVersion>4</metaVersion>
+  <worklist>findDoc_cwf_pm.BaseWorklistFinder</worklist>
+  <vformList>
+    <vform name="Forms" type="frmui">
+      <extends>ui_com.conceptwave.system.Application/frmui_Forms</extends>
+      <overlayList>
+        <overlay name="Menu" type="exov">
+          <base>ui_com.conceptwave.system.Application/frmui_Forms/exov_Menu</base>
+          <extends>ui_com.conceptwave.system.Application/frmui_Forms/exov_Menu</extends>
+          <label>Menu</label>
+        </overlay>
+        <overlay name="productCreditForm" type="vform">
+          <label>productCreditForm</label>
+          <root name="HorizontalLayout" type="elhlt">
+            <visible type="varPath">
+              <variablePathList>
+                <variablePath>ui_PLMInterfaces.PLM_Presentation/permMethod_creditAnalysisUserOnly</variablePath>
+              </variablePathList>
+            </visible>
+            <elementList>
+              <element name="GridLayout" type="elgrd">
+                <elementList>
+                  <element name="ButtonTeste" type="elbtn"/>
+                </elementList>
+              </element>
+            </elementList>
+          </root>
+        </overlay>
+        <overlay name="productManagerForm" type="vform">
+          <label>productManagerForm</label>
+          <root name="HorizontalLayout" type="elhlt">
+            <visible type="varPath">
+              <variablePathList>
+                <variablePath>ui_PLMInterfaces.PLM_Presentation/permMethod_productManagerUsersOnly</variablePath>
+              </variablePathList>
+            </visible>
+          </root>
+        </overlay>
+        <overlay name="productCreatorForm" type="vform">
+          <label>productCreatorForm</label>
+          <root name="HorizontalLayout" type="elhlt">
+            <visible type="varPath">
+              <variablePathList>
+                <variablePath>ui_PLMInterfaces.PLM_Presentation/permMethod_productCreatorUsersOnly</variablePath>
+              </variablePathList>
+            </visible>
+          </root>
+        </overlay>
+        <overlay name="productChargeForm" type="vform">
+          <label>productChargeForm</label>
+          <root name="HorizontalLayout" type="elhlt"/>
+        </overlay>
+        <overlay name="productApprovalForm" type="vform">
+          <label>productApprovalForm</label>
+          <root name="GridLayout" type="elgrd">
+            <visible type="varPath">
+              <variablePathList>
+                <variablePath>ui_PLMInterfaces.PLM_Presentation/permMethod_productApprovalUsersOnly</variablePath>
+              </variablePathList>
+            </visible>
+            <elementList>
+              <element name="DateTime" type="eldatetime">
+                <visible type="varPath">
+                  <variablePathList>
+                    <variablePath>ui_PLMInterfaces.PLM_Presentation/permMethod_productApprovalUsersOnly</variablePath>
+                  </variablePathList>
+                </visible>
+              </element>
+            </elementList>
+          </root>
+        </overlay>
+      </overlayList>
+    </vform>
+  </vformList>
+  <methodList>
+    <method name="creditAnalysisUserOnly" type="permMethod">
+      <privilegesList>
+        <privileges type="ppriv">
+          <privilege>pricingEconomics</privilege>
+        </privileges>
+        <privileges type="ppriv">
+          <privilege>WTakeOn</privilege>
+        </privileges>
+        <privileges type="ppriv">
+          <privilege>WLAdmin</privilege>
+        </privileges>
+      </privilegesList>
+      <privilegesType>SOME</privilegesType>
+    </method>
+    <method name="ITusersOnly" type="permMethod">
+      <privilegesList>
+        <privileges type="ppriv">
+          <privilege>itSupport</privilege>
+        </privileges>
+      </privilegesList>
+      <privilegesType>SOME</privilegesType>
+    </method>
+    <method name="productApprovalUsersOnly" type="permMethod">
+      <privilegesList>
+        <privileges type="ppriv">
+          <privilege>ApproveChange</privilege>
+        </privileges>
+      </privilegesList>
+      <privilegesType>SOME</privilegesType>
+    </method>
+    <method name="productCreatorUsersOnly" type="permMethod">
+      <privilegesList>
+        <privileges type="ppriv">
+          <privilege>prodDevelopment</privilege>
+        </privileges>
+      </privilegesList>
+      <privilegesType>SOME</privilegesType>
+    </method>
+    <method name="productManagerUsersOnly" type="permMethod">
+      <privilegesList>
+        <privileges type="ppriv">
+          <privilege>productManager</privilege>
+        </privileges>
+      </privilegesList>
+      <privilegesType>SOME</privilegesType>
+    </method>
+  </methodList>
+</userInterface>

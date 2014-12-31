@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process filenameHash="91cb3bee6906a765e70f8ad7f5647b37" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.Marketing">
+  <activity name="Start" type="seqActivity">
+    <guid>{0e12d423-a15d-4eb0-bf7d-bb241535794b}</guid>
+    <label>Start</label>
+    <x>0.0</x>
+    <y>0.0</y>
+    <childList>
+      <child name="Complete" type="completeActivity">
+        <guid>{145243f8-5ed1-444b-9056-d835d8a47ad4}</guid>
+        <label>Complete</label>
+        <x>0.0</x>
+        <y>100.0</y>
+      </child>
+    </childList>
+  </activity>
+  <curRevision>true</curRevision>
+  <guid>{defab02a-bace-4542-a0fc-cef6d89e6803}</guid>
+  <label>Marketing</label>
+  <metaVersion>4</metaVersion>
+  <priority>8</priority>
+  <type>User</type>
+</process>

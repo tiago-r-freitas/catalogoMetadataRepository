@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<participant filenameHash="df27b4a4fca70c995e494c53221160fd" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.evaluationUser">
+  <distributionType>Shared</distributionType>
+  <duration type="dur">
+    <length>P0Y0M2DT22H2M0S</length>
+  </duration>
+  <guid>{b43a28e5-e14d-4dbe-9461-cb3d976dd76d}</guid>
+  <interface>iface_PLMInterfaces.plmEvaluation</interface>
+  <label>evaluationUser</label>
+  <metaVersion>4</metaVersion>
+  <operationConditionsList>
+    <operationConditions type="opco">
+      <operation>iface_PLMInterfaces.plmEvaluation/oper_Approve</operation>
+      <methodList>
+        <method name="cwOnPartOpCond" type="action">
+          <system>true</system>
+          <script>return true;</script>
+        </method>
+      </methodList>
+    </operationConditions>
+  </operationConditionsList>
+  <privilege>approveTask</privilege>
+  <UserInterface name="UserInterface" type="ui">
+    <extends>ui_com.conceptwave.system.WLTaskUserInterface</extends>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>ui_com.conceptwave.system.WLTaskUserInterface/frmui_Forms</extends>
+      </vform>
+    </vformList>
+  </UserInterface>
+</participant>

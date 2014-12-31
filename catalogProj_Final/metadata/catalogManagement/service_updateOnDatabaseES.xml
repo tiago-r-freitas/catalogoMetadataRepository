@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<externalService filenameHash="4ff01192ca09d7801aaa443928d5b2e2" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.updateOnDatabaseES">
+  <label>Update On Database External Service</label>
+  <metaVersion>4</metaVersion>
+  <portList>
+    <port name="updateSOAPPort" type="port">
+      <binding>bind_catalogManagement.updateSOAPBinding</binding>
+      <label>Update SOAP Port</label>
+      <listener>true</listener>
+      <recover>5</recover>
+    </port>
+    <port name="updateJSPort" type="port">
+      <binding>bind_catalogManagement.updateJSBinding</binding>
+      <label>Update JS Port</label>
+      <recover>5</recover>
+    </port>
+  </portList>
+</externalService>

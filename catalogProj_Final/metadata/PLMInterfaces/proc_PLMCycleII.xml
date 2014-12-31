@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process filenameHash="7305c381afee3f7d41c38b0cdd83703e" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.PLMCycleII">
+  <activity name="Start" type="seqActivity">
+    <guid>{7ad17a7d-574d-4140-a6bf-19b73ce2b68f}</guid>
+    <label>Start</label>
+    <x>76.0</x>
+    <y>25.0</y>
+    <childList>
+      <child name="CreateItem" type="spawnActivity">
+        <element>proc_PLM.createItem</element>
+        <guid>{11d50a6c-5d27-4f58-9d89-dd28f7897e81}</guid>
+        <label>Create Item Flow</label>
+        <syc>true</syc>
+        <x>67.0</x>
+        <y>125.0</y>
+      </child>
+      <child name="sequence" type="seqActivity">
+        <guid>{6fb21b8b-eb72-4a4e-ace1-bb1d86871fce}</guid>
+        <label>sequence</label>
+        <x>76.0</x>
+        <y>238.0</y>
+        <childList>
+          <child name="CP1" type="compensateActivity">
+            <guid>{002e3af2-ccf5-47da-a400-3e729769f8df}</guid>
+            <label>Compensation Point 1</label>
+            <x>77.0</x>
+            <y>329.0</y>
+            <childList>
+              <child name="CP1" type="scriptActivity">
+                <guid>{8f5ca69c-9e4d-4a1d-a195-6ddbae4e222d}</guid>
+                <label>CP1</label>
+                <x>255.0</x>
+                <y>377.0</y>
+                <methodList>
+                  <method name="cwOnProcActBefore" type="action">
+                    <category>before</category>
+                    <system>true</system>
+                    <script>return;</script>
+                  </method>
+                </methodList>
+              </child>
+            </childList>
+          </child>
+          <child name="approveItemFlow" type="spawnActivity">
+            <element>proc_PLM.productApprovalFlow</element>
+            <guid>{1602f098-b51e-4990-9d99-23a98a64d896}</guid>
+            <label>Approve Item Flow</label>
+            <syc>true</syc>
+            <x>240.0</x>
+            <y>230.0</y>
+          </child>
+        </childList>
+      </child>
+      <child name="start" type="seqActivity">
+        <guid>{6c7ccfdd-a1db-4dc7-a373-bd0e123dc3d5}</guid>
+        <label>Sequence Approval</label>
+        <x>383.0</x>
+        <y>230.0</y>
+        <childList>
+          <child name="managerFlow" type="spawnActivity">
+            <element>proc_PLM.productManagerFlow</element>
+            <guid>{f15a4c55-9c25-41d8-8dd2-7d852cdfae31}</guid>
+            <label>managerFlow</label>
+            <syc>true</syc>
+            <x>503.0</x>
+            <y>230.0</y>
+          </child>
+        </childList>
+      </child>
+      <child name="ExecuteFlows" type="scriptActivity">
+        <guid>{be83e477-8793-486e-a2e8-9d3571dd4a68}</guid>
+        <label>ExecuteFlows</label>
+        <x>658.0</x>
+        <y>230.0</y>
+        <methodList>
+          <method name="cwOnProcActBefore" type="action">
+            <category>before</category>
+            <system>true</system>
+            <script>PLMInterfaces.phasesStatusScritp();</script>
+          </method>
+        </methodList>
+      </child>
+      <child name="complete" type="completeActivity">
+        <guid>{e45cc31d-0e29-4634-b6f1-410bd57d9624}</guid>
+        <label>complete</label>
+        <x>797.0</x>
+        <y>230.0</y>
+      </child>
+    </childList>
+  </activity>
+  <curRevision>true</curRevision>
+  <document>doc_PLM.orderStructure</document>
+  <guid>{116f65af-680a-42d3-9915-23acf9ea9824}</guid>
+  <label>PLM Cycle Teste Flow</label>
+  <metaVersion>4</metaVersion>
+  <priority>8</priority>
+  <type>User</type>
+</process>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<externalService filenameHash="d43e2c6dbacf83b48eb562fe124da85f" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="refreshDB2OE.refreshDB2OEService">
+  <label>refreshDB2OEService</label>
+  <metaVersion>4</metaVersion>
+  <portList>
+    <port name="refreshDB2OEportSOAP" type="port">
+      <binding>bind_refreshDB2OE.refreshDB2OE_biding_SOAP</binding>
+      <label>refreshDB2OEportSOAP</label>
+      <listener>true</listener>
+      <recover>5</recover>
+    </port>
+    <port name="refreshDB2OEportJS" type="port">
+      <binding>bind_refreshDB2OE.refreshDB2OE_biding_JS</binding>
+      <label>refreshDB2OEportJS</label>
+      <recover>5</recover>
+    </port>
+  </portList>
+</externalService>

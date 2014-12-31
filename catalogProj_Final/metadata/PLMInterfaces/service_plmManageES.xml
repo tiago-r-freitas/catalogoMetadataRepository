@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<externalService filenameHash="a91399c83516ef05432d4e20d07b06e6" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.plmManageES">
+  <label>PLM Manage ES</label>
+  <metaVersion>4</metaVersion>
+  <portList>
+    <port name="plmManageSOAPPort" type="port">
+      <binding>bind_PLMInterfaces.plmManageSOAP</binding>
+      <label>PLM Manage SOAP Port</label>
+      <listener>true</listener>
+      <recover>5</recover>
+      <script>script_PLMInterfaces.plmManageScript</script>
+    </port>
+    <port name="plmManageJSPort" type="port">
+      <binding>bind_PLMInterfaces.plmManageJS</binding>
+      <label>PLM Manage JS Port</label>
+      <recover>5</recover>
+    </port>
+  </portList>
+</externalService>

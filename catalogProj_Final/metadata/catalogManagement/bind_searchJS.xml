@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<binding filenameHash="e7efa0d322d02ffd3a3c927058227a2b" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.searchJS">
+  <extensionList>
+    <extension name="searchItem" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.itemSearch(input, updated, expired);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchAttribute" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.attributeSearch(input, updated, expired);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchCatalogRule" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+
+          var res = cwt_pcmaintapi.catalogRuleSearch(input, updated);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchChargeType" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+
+          var res = cwt_pcmaintapi.chargeTypeSearch(input, updated);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchChargeTypeVersion" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.chargeTypeVersionSearch(input, updated, expired);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchContextAttribute" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+
+          var res = cwt_pcmaintapi.contextAttributeSearch(input, updated);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchContext" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.contextSearch(input, updated, expired);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchInfoModelAttribute" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+
+          var res = cwt_pcmaintapi.infoModelAttributeSearch(input, updated);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchInfoModel" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.itemSearch(input, updated, expired);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchInfoTable" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.infoTableSearch(input, updated, expired);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchItemAttachment" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.itemAttachmentSearch(input, updated, expired);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchItemAttribute" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.itemAttributeSearch(input, updated, expired);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchItemChargeVersion" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.itemChargeVersionSearch(input, updated, expired);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchItemDescription" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.itemDescriptionSearch(input, updated, expired);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchItemGroup" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.itemGroupSearch(input, updated, expired);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchItemGroupTarget" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.itemGroupTargetSearch(input, updated);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchItemHierarchy" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.itemHierarchySearch(input, updated, expired);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchItemImage" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.itemImageSearch(input, updated, expired);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchItemRelation" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.itemRelationSearch(input, updated, expired);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchItemRule" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.itemRuleSearch(input, updated, expired);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchProjectAssignment" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.projectAssignmentSearch(input, updated, expired);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchProject" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+
+          var res = cwt_pcmaintapi.projectSearch(input, updated);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchRelationAttribute" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.relationAttributeSearch(input, updated, expired);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchRelationTypeAttribute" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.relationTypeAttributeSearch(input, updated);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchRelationType" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.relationTypeSearch(input, updated, expired);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchRestriction" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.restrictionSearch(input, updated, expired);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchRuleParameters" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+
+          var res = cwt_pcmaintapi.ruleParametersSearch(input, updated);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchSystemIdentifier" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+
+          var res = cwt_pcmaintapi.systemIdentifierSearch(input, updated);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchTaxModelItem" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+
+          var res = cwt_pcmaintapi.taxModelItemSearch(input, updated);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchTaxModel" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+
+          var res = cwt_pcmaintapi.taxModelSearch(input, updated);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchTaxModelVersion" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.taxModelVersionSearch(input, updated, expired);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchTax" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+
+          var res = cwt_pcmaintapi.taxSearch(input, updated);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchTaxVersion" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var updated = new Date();
+          var expired = new Date();
+
+          var res = cwt_pcmaintapi.taxVersionSearch(input, updated, expired);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchCodeTable" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_common.codeTableExportSearch(input.name);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchCatalogRuleVersion" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.catalogRuleVersionSearch(input, null, null);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchitemimage" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.itemImageSearch(input,null,null);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchLogFile" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          catalogManagement.dummy();
+
+          var res = catalogManagement.logFileSearchScript(input,null,null);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="searchManualTasks" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          catalogManagement.dummy();
+
+          var res = catalogManagement.manualTasksArchiveSearchScript(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+  </extensionList>
+  <interface>iface_catalogManagement.searchOnDatabase</interface>
+  <label>Search JS</label>
+  <metaVersion>4</metaVersion>
+  <provider>prov_cwf.jsprov</provider>
+</binding>

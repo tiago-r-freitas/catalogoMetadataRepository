@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process filenameHash="d7dd47f2e65e791d74c86849baf253cb" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.productFeasiability">
+  <activity name="Start" type="seqActivity">
+    <guid>{019a6712-b1a4-4051-920b-6d925a88e799}</guid>
+    <label>Start</label>
+    <x>0.0</x>
+    <y>0.0</y>
+    <childList>
+      <child name="End" type="completeActivity">
+        <guid>{29ba24d4-ee04-4dcb-af9f-c193a7dcc7ac}</guid>
+        <label>End</label>
+        <x>0.0</x>
+        <y>100.0</y>
+      </child>
+    </childList>
+  </activity>
+  <curRevision>true</curRevision>
+  <guid>{be7eb96f-fb90-4a93-93da-5a17734c742e}</guid>
+  <label>productFeasiability</label>
+  <metaVersion>4</metaVersion>
+  <priority>8</priority>
+  <type>User</type>
+</process>

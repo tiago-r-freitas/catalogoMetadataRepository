@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<script filenameHash="f59d5759fe9fc314c8d1c42554388e5d" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.setPhasesStatusToDB">
+  <label>setPhasesStatusToDB</label>
+  <metaVersion>4</metaVersion>
+  <parameterList>
+    <parameter name="inputArgument" type="rifp">
+      <type>dstruct_catalogManagement.setPhasesStatusToDBStructure</type>
+    </parameter>
+  </parameterList>
+  <script><![CDATA[
+    /**
+     *
+     * Created: 4 Dez 2014 - Tiago Freitas
+     *
+     * */
+
+    var faultDS = new DataStructure("cwt_pcmaintapi:Fault");
+    var createStatusDS = new DataStructure("catalogManagement.setPhasesStatusToDBStructure");
+    var doc = new Document("PLM.phasesStatus");
+    var response = new DataStructure("cwt_pcmaintapi:response");
+
+    //Condition to get Error
+    if (!createStatusDS && !createStatusDS.getConceptionStatus && !createStatusDS.getEvaluationStatus && !createStatusDS.getDefinitionStatus &&
+        !createStatusDS.getBuildStatus && !createStatusDS.getTestingStatus && !createStatusDS.getLaunchProductStatus){
+
+             faultDS.code = "DATA_NOT_FOUND";
+             faultDS.message = "Please check your request. \n ";
+
+             return faultDS;
+    }
+
+    //Save data to Document
+    try {
+          doc.projectID = inputArgument.projectId;
+          doc.statusConception = inputArgument.getConceptionStatus;
+          doc.statusEvaluation = inputArgument.getEvaluationStatus;
+          doc.statusDefinition = inputArgument.getDefinitionStatus;
+          doc.statusBuild = inputArgument.getBuildStatus;
+          doc.statusTesting = inputArgument.getTestingStatus;
+          doc.statusLaunchProduct = inputArgument.getLaunchProductStatus;
+
+          doc.save();
+
+          //Response
+          response.id = inputArgument.projectId;
+          response.message = "Status successfully save";
+
+          return response;
+
+    } catch(e) {
+          faultDS.code ="INTERNAL_EXCEPTION";
+          faultDS.message = e.message;
+          return faultDS;
+    }
+  ]]></script>
+</script>

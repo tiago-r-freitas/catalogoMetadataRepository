@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process__revision filenameHash="8d5fb5a9a652d704dac6f9c3d8639ff5" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.AnalyseConception_cwr1">
+  <activity name="Start" type="seqActivity">
+    <guid>{3c0cae7a-a6bd-4a67-b74d-48e59e88dbc2}</guid>
+    <label>Start</label>
+    <x>0.0</x>
+    <y>0.0</y>
+    <childList>
+      <child name="End" type="completeActivity">
+        <guid>{29ba24d4-ee04-4dcb-af9f-c193a7dcc7ac}</guid>
+        <label>End</label>
+        <x>0.0</x>
+        <y>100.0</y>
+      </child>
+    </childList>
+  </activity>
+  <curRevision>true</curRevision>
+  <label>AnalyseConception</label>
+  <metaVersion>4</metaVersion>
+  <priority>8</priority>
+  <process>proc_PLM.AnalyseConception</process>
+  <type>User</type>
+</process__revision>

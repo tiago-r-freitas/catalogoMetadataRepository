@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataType filenameHash="c27878c70862d95e7e88f604908d3e2e" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="refreshDB2OE.scheduling">
+  <description>scheduling</description>
+  <extends>dtype_com.conceptwave.system.DateTime</extends>
+  <label>scheduling</label>
+  <metaVersion>4</metaVersion>
+  <pattern>dd-mm-yyyy</pattern>
+</dataType>

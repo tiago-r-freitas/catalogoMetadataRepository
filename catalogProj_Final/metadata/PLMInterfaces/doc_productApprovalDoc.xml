@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document filenameHash="da09482a807e84e4e26870e8ae9022ba" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.productApprovalDoc">
+  <extends>doc_com.conceptwave.system.Document</extends>
+  <guid>{e1834558-b551-448d-9267-fdd70403a5d9}</guid>
+  <label>productApprovalDoc</label>
+  <metaVersion>4</metaVersion>
+  <methodList>
+    <method name="productApprovalUsersOnly" type="permMethod">
+      <privilegesList>
+        <privileges type="ppriv">
+          <privilege>ApproveChange</privilege>
+        </privileges>
+      </privilegesList>
+      <privilegesType>SOME</privilegesType>
+    </method>
+  </methodList>
+  <UserInterface name="UserInterface" type="ui">
+    <extends>doc_com.conceptwave.system.Document/ui_UserInterface</extends>
+    <variableList>
+      <variable name="model" type="uivar">
+        <label>model</label>
+        <valueType>doc_PLMInterfaces.productApprovalDoc</valueType>
+      </variable>
+    </variableList>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>doc_com.conceptwave.system.Document/ui_UserInterface/frmui_Forms</extends>
+      </vform>
+    </vformList>
+  </UserInterface>
+</document>

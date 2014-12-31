@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<script filenameHash="c49db2013fcf21d34a7fc81e1b257e03" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.manualTasksArchiveSearchScript">
+  <label>manualTasksArchiveSearchScript</label>
+  <metaVersion>4</metaVersion>
+  <script><![CDATA[
+    /**
+     *
+     * Created: 17 Dez 2014 - Tiago Freitas
+     *
+     * */
+
+    var manualTasksDS =  new DataStructure("catalogManagement.manualTasksResponseStructure");
+    var faultDS = new DataStructure("cwt_pcmaintapi:Fault");
+
+    if (!manualTasksDS) {
+          faultDS.code ="DATA_NOT_FOUND";
+          faultDS.message = "Please check your request. \n ";
+          return faultDS;
+    }
+
+    try {
+         var finderManualTasks = Finder.runSearch("cwf_pm:WorklistArchiveFinder");
+         //var finderTasks = Finder.runSearch("cwf_pm:GetSelectTasks");
+
+         var response  = new DataStructure("catalogManagement.manualTasksResponseStructureParent");
+
+         for(var i = 0; i < finderManualTasks.length; i++){
+
+              response.manualTasksStructureResponseChild[i].priority = finderManualTasks[i].Priority;
+              response.manualTasksStructureResponseChild[i].order_id = finderManualTasks[i].ORDER_ID;
+              response.manualTasksStructureResponseChild[i].operation = finderManualTasks[i].Operation;
+              response.manualTasksStructureResponseChild[i].participant = finderManualTasks[i].PARTICIPANT_TYPE;
+              response.manualTasksStructureResponseChild[i].userid = finderManualTasks[i].USER_ID;
+              response.manualTasksStructureResponseChild[i].creationDate = finderManualTasks[i].CREATION_DATE;
+              response.manualTasksStructureResponseChild[i].duedate = finderManualTasks[i].DUE_DATE;
+         }
+
+        return response;
+
+    } catch(e) {
+          faultDS.code = "INTERNAL_EXCEPTION";
+          faultDS.message = e.message;
+          return faultDS;
+    }
+  ]]></script>
+</script>

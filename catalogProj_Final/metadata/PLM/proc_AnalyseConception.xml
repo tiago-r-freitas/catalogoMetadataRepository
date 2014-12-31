@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process filenameHash="cdf9cdeeec3bf1f093d2c71fdb6c46b8" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.AnalyseConception">
+  <activity name="Start" type="seqActivity">
+    <guid>{3c0cae7a-a6bd-4a67-b74d-48e59e88dbc2}</guid>
+    <label>Start</label>
+    <x>0.0</x>
+    <y>0.0</y>
+    <childList>
+      <child name="End" type="completeActivity">
+        <guid>{29ba24d4-ee04-4dcb-af9f-c193a7dcc7ac}</guid>
+        <label>End</label>
+        <x>0.0</x>
+        <y>100.0</y>
+      </child>
+    </childList>
+  </activity>
+  <curRevision>true</curRevision>
+  <guid>{eca84557-fc79-4020-9af2-421dab7c7721}</guid>
+  <label>AnalyseConception</label>
+  <metaVersion>4</metaVersion>
+  <priority>8</priority>
+  <type>User</type>
+</process>

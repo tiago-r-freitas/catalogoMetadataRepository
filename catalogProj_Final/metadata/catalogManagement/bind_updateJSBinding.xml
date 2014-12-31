@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<binding filenameHash="8ea10084420cd37b4d9058a845dda26a" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.updateJSBinding">
+  <extensionList>
+    <extension name="updateTax" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.taxUpdate(input, null);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="updateProject" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.projectUpdate(input, null);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="updateItemCharge" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.itemChargeVersionUpdate(input);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="updateChargeType" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.chargeTypeUpdate(input);cwt_pcmaintapi.chargeTypeUpdate(input, null);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="updateChargeTypeVersion" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.chargeTypeVersionUpdate(input);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="updateCodeTable" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_common.codeTableUpdate(input);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="updateRules" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var ruleV = new DataStructure("cwt_pcmaintapi.catalogRuleVersion");
+          var res = null;
+
+          ruleV.ruleName = input.ruleName;
+          ruleV.name = input.name;
+          ruleV.startDate = input.startDate;
+          ruleV.endDate = input.endDate;
+          ruleV.label = input.label;
+          ruleV.description = input.description;
+          ruleV.status = input.status;
+          ruleV.ruleScript = input.ruleScript;
+          ruleV.orgChartName = input.orgChartName;
+          ruleV.projectCode = input.projectCode;
+          ruleV.language = input.language;
+
+          input.catalogRuleVersions[0] = ruleV;
+
+          res = cwt_pcmaintapi.catalogRuleUpdate(input,null);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="updateRelations" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.relationTypeUpdate(input, null);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="updateitemimage" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.itemImageUpdate(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="updateItem" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.itemUpdate(input,null);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="updateAttribute" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.attributeUpdate(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="updateItemRelation" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.itemRelationUpdate(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="updateItemRelationVersion" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.itemChargeVersionUpdate(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="updateItemAttribute" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.itemAttributeUpdate(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+  </extensionList>
+  <interface>iface_catalogManagement.updateOnDatabase</interface>
+  <label>Update JS Binding</label>
+  <metaVersion>4</metaVersion>
+  <provider>prov_cwf.jsprov</provider>
+</binding>

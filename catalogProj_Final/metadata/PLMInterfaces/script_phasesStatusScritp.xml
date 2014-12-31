@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<script filenameHash="e61281fa3e4f0e36c4464b7e32041141" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.phasesStatusScritp">
+  <label>phasesStatusScritp</label>
+  <metaVersion>4</metaVersion>
+  <parameterList>
+    <parameter name="input" type="rifp">
+      <type>dstruct_catalogManagement.setPhasesStatusToDBStructure</type>
+    </parameter>
+  </parameterList>
+  <script><![CDATA[
+    /**
+     *
+     * Created: Dez 2014 - Tiago Freitas
+     *
+     * */
+
+    //ToDelete
+    catalogManagement.dummy();
+
+    var order = new Order("PLMInterfaces.orderPLM");
+    var doc = new Document("PLM.phasesStatus");
+
+
+    //get data from table
+    var conception = doc.statusConception;
+    var evaluation = doc.statusEvaluation;
+    var definition = doc.statusDefinition;
+    var build = doc.statusBuild;
+    var testing = doc.statusTesting;
+    var launch = doc.statusLaunchProduct;
+
+    //Start conditions to Flow
+    if (conception != null){
+        Process.startProcess("PLM.conceptionFlow",order.id);
+        order.save();
+    }
+
+    if (evaluation == null){
+        Process.startProcess("PLM.evaluationFlow",order.id);
+        order.save();
+    }
+    if (definition == null){
+        Process.startProcess("PLM.definitionFlow",order.id);
+        order.save();
+    }
+
+    if (build != null){
+        Process.startProcess("PLM.build", order.id);
+        order.save();
+    }
+
+    if (testing != null){
+        Process.startProcess("PLM.Testing", order.id);
+        order.save();
+    }
+
+    if (launch == null){
+        Process.startProcess("PLM.launchFlow", order.id);
+        order.save();
+    }
+
+    return;
+  ]]></script>
+</script>

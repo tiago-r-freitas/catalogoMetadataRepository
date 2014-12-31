@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataType filenameHash="56d2bc15b6646c459343c9c84a08486d" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.plm_operation">
+  <extends>dtype_com.conceptwave.system.String</extends>
+  <label>plm_operation</label>
+  <length>200</length>
+  <metaVersion>4</metaVersion>
+</dataType>

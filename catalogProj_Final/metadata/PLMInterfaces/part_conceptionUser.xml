@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<participant filenameHash="58bc4a38047c3e172d81cfeffb4393c4" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.conceptionUser">
+  <distributionType>Shared</distributionType>
+  <duration type="dur">
+    <length>P0Y0M1DT1H1M0S</length>
+  </duration>
+  <guid>{828bdea9-2e8c-465a-9dfa-7ba88668e846}</guid>
+  <interface>iface_PLMInterfaces.plmConception</interface>
+  <label>conceptionUser</label>
+  <metaVersion>4</metaVersion>
+  <privilege>approveTask</privilege>
+  <UserInterface name="UserInterface" type="ui">
+    <extends>ui_com.conceptwave.system.WLTaskUserInterface</extends>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>ui_com.conceptwave.system.WLTaskUserInterface/frmui_Forms</extends>
+      </vform>
+    </vformList>
+  </UserInterface>
+</participant>

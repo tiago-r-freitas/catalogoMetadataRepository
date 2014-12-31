@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<binding filenameHash="8a2a9b537d79aadb3059f47bb2734dd0" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.plmCreateJS">
+  <interface>iface_PLMInterfaces.plmCreate</interface>
+  <label>PLM Create JS</label>
+  <metaVersion>4</metaVersion>
+  <provider>prov_cwf.jsprov</provider>
+</binding>

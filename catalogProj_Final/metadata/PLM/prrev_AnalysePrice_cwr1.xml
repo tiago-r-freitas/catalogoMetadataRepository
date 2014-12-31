@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process__revision filenameHash="d909f3d365e37cf4b9726720520ca528" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.AnalysePrice_cwr1">
+  <activity name="Start" type="seqActivity">
+    <guid>{463b8f61-2713-4f97-a0ec-f78d6d00cafc}</guid>
+    <label>Start</label>
+    <x>40.0</x>
+    <y>18.0</y>
+    <childList>
+      <child name="End" type="completeActivity">
+        <guid>{29ba24d4-ee04-4dcb-af9f-c193a7dcc7ac}</guid>
+        <label>End</label>
+        <x>84.0</x>
+        <y>98.0</y>
+      </child>
+    </childList>
+  </activity>
+  <curRevision>true</curRevision>
+  <label>AnalysePrice</label>
+  <metaVersion>4</metaVersion>
+  <priority>8</priority>
+  <process>proc_PLM.AnalysePrice</process>
+  <type>User</type>
+</process__revision>

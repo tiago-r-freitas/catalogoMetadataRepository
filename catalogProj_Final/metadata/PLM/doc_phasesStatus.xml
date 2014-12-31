@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document filenameHash="864b7984138177882527d5823ad18d1b" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.phasesStatus">
+  <dbSchema>ORDER</dbSchema>
+  <extends>doc_com.conceptwave.system.Document</extends>
+  <generatedKey>true</generatedKey>
+  <guid>{c5a71054-87b8-4c7f-87f5-f4d25fbc8230}</guid>
+  <label>phasesStatus</label>
+  <metaVersion>4</metaVersion>
+  <variableList>
+    <variable name="cwDocId" type="leaf">
+      <column>CWDOCID</column>
+      <key>1</key>
+      <label>System document ID</label>
+      <table>phasesStatus</table>
+      <valueType>dtype_cwf.cwDocId</valueType>
+    </variable>
+    <variable name="projectID" type="leaf">
+      <column>PROJECTID</column>
+      <label>projectID</label>
+      <table>phasesStatus</table>
+      <valueType>dtype_PLM.projectID</valueType>
+    </variable>
+    <variable name="statusConception" type="leaf">
+      <column>STATUSCONCEPTION</column>
+      <label>statusConception</label>
+      <table>phasesStatus</table>
+      <valueType>dtype_PLM.statusConception</valueType>
+    </variable>
+    <variable name="statusEvaluation" type="leaf">
+      <column>STATUSEVALUATION</column>
+      <label>statusEvaluation</label>
+      <table>phasesStatus</table>
+      <valueType>dtype_PLM.statusEvaluation</valueType>
+    </variable>
+    <variable name="statusDefinition" type="leaf">
+      <column>STATUSDEFINITION</column>
+      <label>statusDefinition</label>
+      <table>phasesStatus</table>
+      <valueType>dtype_PLM.statusDefinition</valueType>
+    </variable>
+    <variable name="statusBuild" type="leaf">
+      <column>STATUSBUILD</column>
+      <label>statusBuild</label>
+      <table>phasesStatus</table>
+      <valueType>dtype_PLM.statusBuild</valueType>
+    </variable>
+    <variable name="statusTesting" type="leaf">
+      <column>STATUSTESTING</column>
+      <label>statusTesting</label>
+      <table>phasesStatus</table>
+      <valueType>dtype_PLM.statusTesting</valueType>
+    </variable>
+    <variable name="statusLaunchProduct" type="leaf">
+      <column>STATUSLAUNCHPRODUCT</column>
+      <label>statusLaunchProduct</label>
+      <table>phasesStatus</table>
+      <valueType>dtype_PLM.statusLaunchProduct</valueType>
+    </variable>
+  </variableList>
+  <UserInterface name="UserInterface" type="ui">
+    <extends>doc_com.conceptwave.system.Document/ui_UserInterface</extends>
+    <variableList>
+      <variable name="model" type="uivar">
+        <label>model</label>
+        <valueType>doc_PLM.phasesStatus</valueType>
+      </variable>
+    </variableList>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>doc_com.conceptwave.system.Document/ui_UserInterface/frmui_Forms</extends>
+      </vform>
+    </vformList>
+  </UserInterface>
+</document>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process filenameHash="5155656b25718e99da92defdb62ad3c3" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.definitionFlow">
+  <activity name="Start" type="seqActivity">
+    <guid>{d14cdb12-32fa-401f-b93d-63cbf521697b}</guid>
+    <label>Start</label>
+    <x>60.0</x>
+    <y>35.0</y>
+    <childList>
+      <child name="manualTask" type="opActivity">
+        <element>iface_PLMInterfaces.plmDefinition/oper_manualTaskDefinition</element>
+        <guid>{716ef1ae-35a9-4d6e-85b4-379456473094}</guid>
+        <label>manualTask</label>
+        <participant>part_PLMInterfaces.definitionUser</participant>
+        <x>62.0</x>
+        <y>170.0</y>
+        <childList>
+          <child name="proceed" type="seqActivity">
+            <guid>{ed6f1314-e8cf-4442-9a11-4e3a2204fe46}</guid>
+            <label>proceed</label>
+            <x>72.0</x>
+            <y>285.0</y>
+            <childList>
+              <child name="define" type="choiceActivity">
+                <guid>{ab791176-5389-4341-93e5-784af8e644d6}</guid>
+                <label>Define Item ?</label>
+                <x>229.0</x>
+                <y>275.0</y>
+                <childList>
+                  <child name="Yes" type="opActivity">
+                    <element>iface_PLMInterfaces.plmDefinition/oper_Approve</element>
+                    <guid>{a1d09635-fa8a-434a-ad7a-c43b6badb8be}</guid>
+                    <label>Yes</label>
+                    <participant>part_PLMInterfaces.definitionUser</participant>
+                    <x>390.0</x>
+                    <y>169.0</y>
+                    <childList>
+                      <child name="sequenceDefinition" type="seqActivity">
+                        <guid>{f3898fcf-b0af-4b5c-957d-2416a79a7233}</guid>
+                        <label>sequenceDefinition</label>
+                        <x>500.0</x>
+                        <y>172.0</y>
+                        <childList>
+                          <child name="script" type="scriptActivity">
+                            <guid>{c24ab219-b657-49e5-bd41-c18279bcbaf6}</guid>
+                            <label>script</label>
+                            <x>620.0</x>
+                            <y>168.0</y>
+                          </child>
+                        </childList>
+                      </child>
+                    </childList>
+                  </child>
+                  <child name="no" type="opActivity">
+                    <element>iface_PLMInterfaces.plmDefinition/oper_Cancel</element>
+                    <guid>{7ef4fe8c-f2f0-4322-bb59-2815071671f2}</guid>
+                    <label>No</label>
+                    <participant>part_PLMInterfaces.definitionUser</participant>
+                    <x>393.0</x>
+                    <y>404.0</y>
+                    <childList>
+                      <child name="complete" type="completeActivity">
+                        <guid>{fc3a0824-931c-41f5-baa3-f83739846f17}</guid>
+                        <label>complete</label>
+                        <x>531.0</x>
+                        <y>405.0</y>
+                      </child>
+                    </childList>
+                  </child>
+                </childList>
+              </child>
+            </childList>
+          </child>
+        </childList>
+      </child>
+      <child name="complete" type="completeActivity">
+        <guid>{c5bd88df-0425-4f53-b16d-92df5722f012}</guid>
+        <label>complete</label>
+        <x>701.0</x>
+        <y>168.0</y>
+      </child>
+      <child name="definitionUser" type="participantActivity">
+        <guid>{cb4d8971-76e4-4612-a9b8-a4d14a56c8b0}</guid>
+        <label>definitionUser</label>
+        <participant>part_PLMInterfaces.definitionUser</participant>
+        <x>225.0</x>
+        <y>15.0</y>
+      </child>
+    </childList>
+  </activity>
+  <curRevision>true</curRevision>
+  <document>doc_com.conceptwave.system.Document</document>
+  <guid>{2e996027-dcec-4ae9-a4e1-3de62202887e}</guid>
+  <label>Definition</label>
+  <metaVersion>4</metaVersion>
+  <priority>8</priority>
+  <type>User</type>
+</process>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<binding filenameHash="4065845e1e5673d5889dfc1652e6b0fd" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.searchSOAP">
+  <interface>iface_catalogManagement.searchOnDatabase</interface>
+  <label>Search SOAP</label>
+  <metaVersion>4</metaVersion>
+  <provider>prov_cwf.soapprov</provider>
+</binding>

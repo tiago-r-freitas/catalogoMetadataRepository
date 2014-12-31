@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataStructure filenameHash="22cad6cea3c6db9fb419f6a6c41d5a1f" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.logSearchResponseStructureParent">
+  <container>true</container>
+  <guid>{eb9069f9-8c7b-485b-8693-f0a2cfc73e07}</guid>
+  <label>logSearchResponseStructureParent</label>
+  <metaVersion>4</metaVersion>
+  <childList>
+    <child name="logSearchResponseStructureChild" type="dstruct">
+      <array>true</array>
+      <element>dstruct_catalogManagement.logSearchResponseStructure</element>
+      <guid>{62cd33d2-dcf7-4147-9c0b-c5d45a78637b}</guid>
+      <label>logSearchResponseStructureChild</label>
+      <maxInstance>-1</maxInstance>
+    </child>
+  </childList>
+  <UserInterface name="UserInterface" type="tree">
+    <defaultFolderImage>undefined</defaultFolderImage>
+    <defaultLeafImage>undefined</defaultLeafImage>
+    <element>dstruct_catalogManagement.logSearchResponseStructureParent</element>
+    <extends>tree_com.conceptwave.system.DataStructureUserInterface</extends>
+    <tableDoc>doc_com.conceptwave.system.TreeDocument</tableDoc>
+    <variableList>
+      <variable name="model" type="uivar">
+        <label>model</label>
+        <valueType>dstruct_catalogManagement.logSearchResponseStructureParent</valueType>
+      </variable>
+    </variableList>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>tree_com.conceptwave.system.DataStructureUserInterface/frmui_Forms</extends>
+      </vform>
+    </vformList>
+  </UserInterface>
+</dataStructure>

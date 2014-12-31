@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<script filenameHash="9e8da418ff25047e3b668988a0a07ec1" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.logFileSearchScript">
+  <label>logFileSearchScript</label>
+  <metaVersion>4</metaVersion>
+  <script><![CDATA[
+    /**
+     *
+     * Created: 3 Dez 2014 - Tiago Freitas
+     *
+     * */
+
+    catalogManagement.dummy();
+    var logListDS =  new DataStructure("catalogManagement:logSearchResponseStructure");
+    var faultDS = new DataStructure("cwt_pcmaintapi:Fault");
+
+    if (!logListDS) {
+          faultDS.code ="DATA_NOT_FOUND";
+          faultDS.message = "Please check your request. \n ";
+          return faultDS;
+    }
+
+    try {
+         var finderLog = Finder.runSearch("cwf_oe:EventLogFinder");
+         //var response  = new Array("catalogManagement:logSearchResponseStructureChild");
+         var response  = new DataStructure("catalogManagement.logSearchResponseStructureParent");
+
+         for(var i = 0; i < finderLog.length; i++){
+              response.logSearchResponseStructureChild[i].eventID = finderLog[i].EventID ;
+              response.logSearchResponseStructureChild[i].nodeID = finderLog[i].NodeId ;
+              response.logSearchResponseStructureChild[i].SOURCE = finderLog[i].EVENT_SOURCE;
+              response.logSearchResponseStructureChild[i].SEVERITY = finderLog[i].EVENT_SEVERITY;
+              response.logSearchResponseStructureChild[i].logTime = finderLog[i].EVENT_TIME;
+              response.logSearchResponseStructureChild[i].description = finderLog[i].DESCRIPTION;
+
+         }
+
+        return response;
+
+    } catch(e) {
+          faultDS.code = "INTERNAL_EXCEPTION";
+          faultDS.message = e.message;
+          return faultDS;
+    }
+  ]]></script>
+</script>

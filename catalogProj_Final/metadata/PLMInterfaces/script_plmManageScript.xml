@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<script filenameHash="84f6a77668c10fc48a5fd721e86c06f6" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.plmManageScript">
+  <label>plmManageScript</label>
+  <metaVersion>4</metaVersion>
+  <parameterList>
+    <parameter name="input" type="rifp">
+      <type>dstruct_PLMInterfaces.plmManageStruct</type>
+    </parameter>
+  </parameterList>
+  <script><![CDATA[
+    /**
+     *
+     * Created: Dez 2014 - Tiago Freitas
+     *
+     * */
+
+
+
+    var response = new DataStructure("PLMInterfaces:plmManageStructResponse");
+    var faultDS = new DataStructure("cwt_pcmaintapi:Fault");
+
+        if (input.approveValue == null && input.cancelValue == null && input.submitValue == null){
+              response.response ="DATA_NOT_FOUND";
+              response.dateResponse = Date();
+            return response;
+        }
+        else if(input.approveValue == "ok" || input.approveValue == "OK" || input.approveValue == "Ok"){
+               response.response = "Approve";
+               response.dateResponse = Date();
+
+            return response;
+        }
+        else if(input.cancelValue == "ok"|| input.cancelValue == "OK" || input.cancelValue == "Ok"){
+                response.response = "Cancel";
+                response.dateResponse = Date();
+
+            return response;
+        }else if(input.submitValue == "ok" || input.submitValue == "OK" || input.submitValue == "Ok"){
+            response.response = "Submit";
+            response.dateResponse = Date();
+
+           //ToDELETE
+            catalogManagement.dummy();
+            Process.startProcess("PLM.AnalyseConception");
+
+           return response;
+        }
+
+    return true;
+  ]]></script>
+</script>

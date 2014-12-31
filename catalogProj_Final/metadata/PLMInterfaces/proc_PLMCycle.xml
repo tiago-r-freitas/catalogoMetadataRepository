@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process filenameHash="deec559ceb0637aa8eb49238522d01b7" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.PLMCycle">
+  <activity name="Start" type="seqActivity">
+    <guid>{67ec6581-7961-46b5-96af-3fbc021fa6cd}</guid>
+    <label>Start</label>
+    <x>76.0</x>
+    <y>25.0</y>
+    <childList>
+      <child name="CreateItem" type="spawnActivity">
+        <element>proc_PLM.createItem</element>
+        <guid>{b0e422e2-bc8c-4858-a037-02229958feda}</guid>
+        <label>Create Item Flow</label>
+        <syc>true</syc>
+        <x>67.0</x>
+        <y>125.0</y>
+      </child>
+      <child name="sequence" type="seqActivity">
+        <guid>{a3d5301c-7ccf-4bb4-a1cb-b85caa324281}</guid>
+        <label>sequence</label>
+        <x>77.0</x>
+        <y>229.0</y>
+        <childList>
+          <child name="sendApprove" type="opActivity">
+            <element>iface_PLMInterfaces.plmApprove/oper_manualTaskApprove</element>
+            <guid>{31e9fcc6-f4ef-47a7-8904-0627d9c7ae15}</guid>
+            <label>Send for Approvation</label>
+            <participant>part_PLMInterfaces.produtApproval</participant>
+            <x>186.0</x>
+            <y>227.0</y>
+            <childList>
+              <child name="waitForApproval" type="choiceActivity">
+                <guid>{0b0940bd-c2ea-477c-b366-2952269be4c6}</guid>
+                <label>Wait For Approval</label>
+                <x>326.0</x>
+                <y>227.0</y>
+                <childList>
+                  <child name="Approved" type="opActivity">
+                    <element>iface_PLMInterfaces.plmApprove/oper_Approve</element>
+                    <guid>{e1087224-e29c-412b-b426-914ea7e5654f}</guid>
+                    <label>Approved</label>
+                    <participant>part_PLMInterfaces.produtApproval</participant>
+                    <x>452.0</x>
+                    <y>125.0</y>
+                    <childList>
+                      <child name="sequence" type="seqActivity">
+                        <guid>{7ce96013-b31f-4150-8c90-192a4f546de9}</guid>
+                        <label>sequence approved</label>
+                        <x>576.0</x>
+                        <y>125.0</y>
+                        <childList>
+                          <child name="sendForActivation" type="opActivity">
+                            <element>iface_PLMInterfaces.plmManage/oper_manualTaskManage</element>
+                            <guid>{52d3526b-d567-4166-8fd7-c91091107d5b}</guid>
+                            <label>Send For Activation</label>
+                            <participant>part_PLMInterfaces.produtManager</participant>
+                            <x>686.0</x>
+                            <y>122.0</y>
+                            <childList>
+                              <child name="waitForActivation" type="choiceActivity">
+                                <guid>{b5ee145a-8a91-4998-8450-0247b0b70891}</guid>
+                                <label>Wait For Activation</label>
+                                <x>826.0</x>
+                                <y>223.0</y>
+                                <childList>
+                                  <child name="Active" type="opActivity">
+                                    <element>iface_PLMInterfaces.plmManage/oper_approve</element>
+                                    <guid>{916ff802-4928-487d-8634-1fbcd5758b1a}</guid>
+                                    <label>Approve</label>
+                                    <participant>part_PLMInterfaces.produtManager</participant>
+                                    <x>687.0</x>
+                                    <y>340.0</y>
+                                    <childList>
+                                      <child name="proceed" type="seqActivity">
+                                        <guid>{68d54bff-404f-4da7-ad94-5336613d5069}</guid>
+                                        <label>proceed to Start Flows</label>
+                                        <x>680.0</x>
+                                        <y>458.0</y>
+                                        <childList>
+                                          <child name="startFlows" type="scriptActivity">
+                                            <guid>{e542e9b7-9fd7-433c-890b-8de8883eab91}</guid>
+                                            <label>startFlows</label>
+                                            <x>686.0</x>
+                                            <y>571.0</y>
+                                          </child>
+                                          <child name="Complete" type="completeActivity">
+                                            <guid>{5858e70b-87e2-4010-b733-9a40acc090fc}</guid>
+                                            <label>Complete</label>
+                                            <x>835.0</x>
+                                            <y>571.0</y>
+                                          </child>
+                                        </childList>
+                                      </child>
+                                    </childList>
+                                  </child>
+                                  <child name="Cancel" type="opActivity">
+                                    <element>iface_PLMInterfaces.plmManage/oper_cancel</element>
+                                    <guid>{87991078-cde9-4c8e-899d-63e284cb388f}</guid>
+                                    <label>Cancel</label>
+                                    <participant>part_PLMInterfaces.produtManager</participant>
+                                    <x>841.0</x>
+                                    <y>363.0</y>
+                                    <childList>
+                                      <child name="cancelled" type="completeActivity">
+                                        <guid>{9b0e3684-cc44-496f-ad43-eee77fce2f93}</guid>
+                                        <label>Cancelled</label>
+                                        <x>833.0</x>
+                                        <y>503.0</y>
+                                      </child>
+                                    </childList>
+                                  </child>
+                                  <child name="productManagerSubmit" type="opActivity">
+                                    <element>iface_PLMInterfaces.plmManage/oper_submit</element>
+                                    <guid>{6dd86686-4bb6-49c5-98f8-3caf6194cd14}</guid>
+                                    <label>Submit</label>
+                                    <participant>part_PLMInterfaces.produtManager</participant>
+                                    <x>969.0</x>
+                                    <y>364.0</y>
+                                    <childList>
+                                      <child name="proceed" type="seqActivity">
+                                        <guid>{3967792e-a714-4514-b853-2416bcf4fcae}</guid>
+                                        <label>proceed</label>
+                                        <x>966.0</x>
+                                        <y>470.0</y>
+                                        <childList>
+                                          <child name="complete" type="completeActivity">
+                                            <guid>{3a0add1f-7e8c-41c8-8df4-710d689f0b2c}</guid>
+                                            <label>Complete</label>
+                                            <x>905.0</x>
+                                            <y>572.0</y>
+                                          </child>
+                                        </childList>
+                                      </child>
+                                    </childList>
+                                  </child>
+                                </childList>
+                              </child>
+                            </childList>
+                          </child>
+                        </childList>
+                      </child>
+                    </childList>
+                  </child>
+                  <child name="rejected" type="opActivity">
+                    <element>iface_PLMInterfaces.plmApprove/oper_Reject</element>
+                    <guid>{51325558-9159-4fa3-9cbe-6c9736e7a741}</guid>
+                    <label>Rejected</label>
+                    <participant>part_PLMInterfaces.produtApproval</participant>
+                    <x>468.0</x>
+                    <y>334.0</y>
+                    <childList>
+                      <child name="sequence" type="seqActivity">
+                        <guid>{5d596dcb-4161-4f60-8307-f3f930eb80c4}</guid>
+                        <label>Rejected Sequence</label>
+                        <x>469.0</x>
+                        <y>453.0</y>
+                        <childList>
+                          <child name="changeItem" type="opActivity">
+                            <element>iface_PLMInterfaces.plmCharge/oper_manualTaskCharge</element>
+                            <guid>{5c3c8db6-2681-411e-a330-cce2347ee42c}</guid>
+                            <label>charge Item</label>
+                            <participant>part_PLMInterfaces.produtCharge</participant>
+                            <x>363.0</x>
+                            <y>453.0</y>
+                            <childList>
+                              <child name="ChangeItem" type="choiceActivity">
+                                <guid>{0724b2e6-768b-40a4-bea3-b15eddc71859}</guid>
+                                <label>Charge Item ?</label>
+                                <x>362.0</x>
+                                <y>551.0</y>
+                                <childList>
+                                  <child name="accept" type="opActivity">
+                                    <element>iface_PLMInterfaces.plmCharge/oper_Approve</element>
+                                    <guid>{b600d68d-1361-4bb1-a885-be201070b8ea}</guid>
+                                    <label>Submit Item</label>
+                                    <participant>part_PLMInterfaces.produtCharge</participant>
+                                    <x>261.0</x>
+                                    <y>665.0</y>
+                                    <childList>
+                                      <child name="repeat" type="repeatActivity">
+                                        <element>proc_PLMInterfaces.PLMCycle/seqActivity_Start/seqActivity_sequence</element>
+                                        <guid>{2469de8a-e031-41f1-bb53-42164edd2e5f}</guid>
+                                        <label>Rollback to Send Item</label>
+                                        <x>62.0</x>
+                                        <y>665.0</y>
+                                      </child>
+                                    </childList>
+                                  </child>
+                                  <child name="reject" type="opActivity">
+                                    <element>iface_PLMInterfaces.plmCharge/oper_Reject</element>
+                                    <guid>{5abfd728-bacb-4152-a375-4301a313d3df}</guid>
+                                    <label>Reject Charge Item</label>
+                                    <participant>part_PLMInterfaces.produtCharge</participant>
+                                    <x>474.0</x>
+                                    <y>667.0</y>
+                                    <childList>
+                                      <child name="cancelled" type="completeActivity">
+                                        <guid>{116f6c14-ffde-4d3a-b574-64c3fe18ea58}</guid>
+                                        <label>Cancelled</label>
+                                        <x>567.0</x>
+                                        <y>683.0</y>
+                                      </child>
+                                    </childList>
+                                  </child>
+                                </childList>
+                              </child>
+                            </childList>
+                          </child>
+                        </childList>
+                      </child>
+                    </childList>
+                  </child>
+                </childList>
+              </child>
+            </childList>
+          </child>
+          <child name="CP1" type="compensateActivity">
+            <guid>{4b379e6d-8322-4704-8475-c71c895ce4ae}</guid>
+            <label>Compensation Point 1</label>
+            <x>77.0</x>
+            <y>329.0</y>
+            <childList>
+              <child name="CP1" type="scriptActivity">
+                <guid>{4c0ac128-e8d9-4e9c-ba06-a7545106dc8c}</guid>
+                <label>CP1</label>
+                <x>126.0</x>
+                <y>390.0</y>
+                <methodList>
+                  <method name="cwOnProcActBefore" type="action">
+                    <category>before</category>
+                    <system>true</system>
+                    <script>return;</script>
+                  </method>
+                </methodList>
+              </child>
+            </childList>
+          </child>
+        </childList>
+      </child>
+      <child name="produtApproval" type="participantActivity">
+        <guid>{2646c54e-9869-43dd-bfae-2f3a185cc8f0}</guid>
+        <label>produtApproval</label>
+        <participant>part_PLMInterfaces.produtApproval</participant>
+        <x>272.0</x>
+        <y>29.0</y>
+      </child>
+      <child name="produtManager" type="participantActivity">
+        <guid>{1dac30c1-49cc-49b9-9932-1b3276379e1b}</guid>
+        <label>produtManager</label>
+        <participant>part_PLMInterfaces.produtManager</participant>
+        <x>803.0</x>
+        <y>33.0</y>
+      </child>
+      <child name="produtCharge" type="participantActivity">
+        <guid>{00419e9b-32ad-42e3-9310-a16b27119bc3}</guid>
+        <label>produtCharge</label>
+        <participant>part_PLMInterfaces.produtCharge</participant>
+        <x>151.0</x>
+        <y>458.0</y>
+      </child>
+    </childList>
+  </activity>
+  <curRevision>true</curRevision>
+  <document>doc_com.conceptwave.system.Document</document>
+  <guid>{2c752755-bd7c-4b96-aa81-1ec26a325508}</guid>
+  <label>PLMCycle</label>
+  <metaVersion>4</metaVersion>
+  <priority>8</priority>
+  <type>User</type>
+</process>

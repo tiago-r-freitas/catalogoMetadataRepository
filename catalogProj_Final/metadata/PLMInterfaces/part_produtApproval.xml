@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<participant filenameHash="481d1eb0926e1abd3d26fe1268ebb04b" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.produtApproval">
+  <distributionType>Shared</distributionType>
+  <duration type="dur">
+    <length>P0Y0M100DT0H0M0S</length>
+  </duration>
+  <guid>{6d42c5eb-3519-44be-87bf-96045abc4a03}</guid>
+  <interface>iface_PLMInterfaces.plmApprove</interface>
+  <label>produtApproval</label>
+  <metaVersion>4</metaVersion>
+  <operationConditionsList>
+    <operationConditions type="opco">
+      <operation>iface_PLMInterfaces.plmApprove/oper_Approve</operation>
+      <methodList>
+        <method name="cwOnPartOpCond" type="action">
+          <system>true</system>
+          <script>return true;</script>
+        </method>
+      </methodList>
+    </operationConditions>
+    <operationConditions type="opco">
+      <operation>iface_PLMInterfaces.plmApprove/oper_Reject</operation>
+      <methodList>
+        <method name="cwOnPartOpCond" type="action">
+          <system>true</system>
+          <script>return true;</script>
+        </method>
+      </methodList>
+    </operationConditions>
+  </operationConditionsList>
+  <privilege>ApproveChange</privilege>
+  <UserInterface name="UserInterface" type="ui">
+    <extends>ui_com.conceptwave.system.WLTaskUserInterface</extends>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>ui_com.conceptwave.system.WLTaskUserInterface/frmui_Forms</extends>
+      </vform>
+    </vformList>
+  </UserInterface>
+</participant>

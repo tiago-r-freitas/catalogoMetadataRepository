@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process filenameHash="3f91ecf4c6a18d8269fe51ec4b054158" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.build">
+  <activity name="Start" type="seqActivity">
+    <guid>{48750f73-88f0-491a-ac4e-cb2bcaf74233}</guid>
+    <label>Start</label>
+    <x>53.0</x>
+    <y>31.0</y>
+    <childList>
+      <child name="manualTask" type="opActivity">
+        <element>iface_PLMInterfaces.plmBuild/oper_manualTaskBuild</element>
+        <guid>{1a8db5e3-602d-45f3-99a7-97308b92e4da}</guid>
+        <label>manualTask</label>
+        <participant>part_PLMInterfaces.buildUser</participant>
+        <x>55.0</x>
+        <y>138.0</y>
+        <childList>
+          <child name="builProduct" type="choiceActivity">
+            <guid>{56e709ac-18c2-4a28-b7eb-3d0feb25d3cc}</guid>
+            <label>builProduct</label>
+            <x>243.0</x>
+            <y>139.0</y>
+            <childList>
+              <child name="Approve" type="opActivity">
+                <element>iface_PLMInterfaces.plmBuild/oper_Approve</element>
+                <guid>{eb407c94-4e41-4fe2-9064-e84524ce7d6a}</guid>
+                <label>Approve</label>
+                <participant>part_PLMInterfaces.buildUser</participant>
+                <x>128.0</x>
+                <y>248.0</y>
+                <childList>
+                  <child name="proceed" type="seqActivity">
+                    <guid>{d4bd3c3c-eb3c-4e71-9e72-f7062ecae95e}</guid>
+                    <label>proceed</label>
+                    <x>128.0</x>
+                    <y>348.0</y>
+                    <childList>
+                      <child name="createItem" type="spawnActivity">
+                        <element>proc_PLM.createItem</element>
+                        <guid>{33a90024-79bf-44f5-b7f9-478e40d415e1}</guid>
+                        <label>createItem</label>
+                        <x>48.0</x>
+                        <y>437.0</y>
+                      </child>
+                    </childList>
+                  </child>
+                </childList>
+              </child>
+              <child name="cancel" type="opActivity">
+                <element>iface_PLMInterfaces.plmBuild/oper_Cancel</element>
+                <guid>{c49157c6-72e8-4304-81e5-97c2c1c6afbe}</guid>
+                <label>cancel</label>
+                <participant>part_PLMInterfaces.buildUser</participant>
+                <x>344.0</x>
+                <y>248.0</y>
+                <childList>
+                  <child name="complete" type="completeActivity">
+                    <guid>{aaa60143-129a-47fe-af99-43d95c86cd0b}</guid>
+                    <label>complete</label>
+                    <x>344.0</x>
+                    <y>348.0</y>
+                  </child>
+                </childList>
+              </child>
+            </childList>
+          </child>
+        </childList>
+      </child>
+      <child name="complete" type="completeActivity">
+        <guid>{7ff85e22-6d9d-4be8-87c3-57310933a065}</guid>
+        <label>complete</label>
+        <x>166.0</x>
+        <y>436.0</y>
+      </child>
+      <child name="buildUser" type="participantActivity">
+        <guid>{35a35967-f3ac-4065-a20d-83f49273e86b}</guid>
+        <label>buildUser</label>
+        <participant>part_PLMInterfaces.buildUser</participant>
+        <x>246.0</x>
+        <y>16.0</y>
+      </child>
+    </childList>
+  </activity>
+  <curRevision>true</curRevision>
+  <document>doc_com.conceptwave.system.Document</document>
+  <guid>{b494e8e3-888a-4704-939b-da72266df01e}</guid>
+  <label>Build</label>
+  <metaVersion>4</metaVersion>
+  <priority>8</priority>
+  <type>User</type>
+</process>

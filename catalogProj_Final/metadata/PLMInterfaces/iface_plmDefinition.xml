@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface filenameHash="7e49d029f54dafb7405164197617df30" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.plmDefinition">
+  <guid>{0e699f49-6c5a-485a-ad1b-0ac5a5bed8b2}</guid>
+  <label> PLM Definition</label>
+  <metaVersion>4</metaVersion>
+  <operationList>
+    <operation name="Approve" type="oper">
+      <description>Approve</description>
+      <label>Approve</label>
+      <type>Notification</type>
+    </operation>
+    <operation name="Cancel" type="oper">
+      <description>Cancel</description>
+      <label>Cancel</label>
+      <type>Notification</type>
+    </operation>
+    <operation name="manualTaskDefinition" type="oper">
+      <label>manualTaskDefinition</label>
+      <type>One-Way</type>
+    </operation>
+  </operationList>
+  <revision>1</revision>
+</interface>

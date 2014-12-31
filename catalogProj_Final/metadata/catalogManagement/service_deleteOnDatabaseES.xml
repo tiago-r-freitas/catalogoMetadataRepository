@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<externalService filenameHash="ff7017c7822480f9acad4b650d5fec82" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.deleteOnDatabaseES">
+  <label>Delete On Database External Service</label>
+  <metaVersion>4</metaVersion>
+  <portList>
+    <port name="deleteSOAPPort" type="port">
+      <binding>bind_catalogManagement.deleteSOAP</binding>
+      <label>Delete SOAP Port</label>
+      <listener>true</listener>
+      <recover>5</recover>
+    </port>
+    <port name="deleteJSPort" type="port">
+      <binding>bind_catalogManagement.deleteJS</binding>
+      <label>Delete JS Port</label>
+      <recover>5</recover>
+    </port>
+  </portList>
+</externalService>

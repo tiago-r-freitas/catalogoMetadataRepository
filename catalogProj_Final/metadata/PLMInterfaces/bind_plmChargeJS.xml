@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<binding filenameHash="ba73e98238e5f184f145d2454d7354b4" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.plmChargeJS">
+  <interface>iface_PLMInterfaces.plmCharge</interface>
+  <label>PLM Charge JS</label>
+  <metaVersion>4</metaVersion>
+  <provider>prov_cwf.jsprov</provider>
+</binding>

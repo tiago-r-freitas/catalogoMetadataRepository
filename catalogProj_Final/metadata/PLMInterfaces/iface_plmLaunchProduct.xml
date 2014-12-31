@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface filenameHash="c244e83a06cd61f40f4106b357175509" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.plmLaunchProduct">
+  <guid>{75ee3a15-962f-48e5-82fa-c0e6c3b43584}</guid>
+  <label> PLM Launch Product</label>
+  <metaVersion>4</metaVersion>
+  <operationList>
+    <operation name="Approve" type="oper">
+      <description>Approve</description>
+      <label>Approve</label>
+      <type>Notification</type>
+    </operation>
+    <operation name="Cancel" type="oper">
+      <description>Cancel</description>
+      <label>Cancel</label>
+      <type>Notification</type>
+    </operation>
+    <operation name="manualTaskLaunchProduct" type="oper">
+      <label>manualTaskLaunchProduct</label>
+      <type>One-Way</type>
+    </operation>
+  </operationList>
+  <revision>1</revision>
+</interface>

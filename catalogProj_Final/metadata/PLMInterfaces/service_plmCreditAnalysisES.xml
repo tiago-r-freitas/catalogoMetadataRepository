@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<externalService filenameHash="14e146f99fe2f883a4afcd2b94d7421d" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.plmCreditAnalysisES">
+  <label>plmCreditAnalysisES</label>
+  <metaVersion>4</metaVersion>
+  <portList>
+    <port name="plmCreditAnalysisJSPort" type="port">
+      <binding>bind_PLMInterfaces.creditAnalysisJS</binding>
+      <label>plmCreditAnalysisJSPort</label>
+      <recover>5</recover>
+    </port>
+    <port name="plmCreditAnalysisSOAPPort" type="port">
+      <binding>bind_PLMInterfaces.creditAnalysisSOAP</binding>
+      <label>plmCreditAnalysisSOAPPort</label>
+      <listener>true</listener>
+      <recover>5</recover>
+    </port>
+  </portList>
+</externalService>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<binding filenameHash="6cb10cb3201e30cdf38a70cfdbd0d9d2" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.creditAnalysisSOAP">
+  <extensionList>
+    <extension name="assignCredit$Input" type="ext">
+      <element>Message</element>
+      <elementItemMap>
+        <elementItem key="use">literal</elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="assignCredit$Output" type="ext">
+      <element>Message</element>
+      <elementItemMap>
+        <elementItem key="use">literal</elementItem>
+      </elementItemMap>
+    </extension>
+  </extensionList>
+  <interface>iface_PLMInterfaces.plmCreditAnalysisInterface</interface>
+  <label>PLM Credit SOAP</label>
+  <metaVersion>4</metaVersion>
+  <provider>prov_cwf.soapprov</provider>
+</binding>

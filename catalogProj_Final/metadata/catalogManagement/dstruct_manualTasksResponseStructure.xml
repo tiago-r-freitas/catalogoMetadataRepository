@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataStructure filenameHash="e8968739a0017b0f3192dcb593d3f470" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.manualTasksResponseStructure">
+  <container>true</container>
+  <guid>{14e8497f-d950-4f69-8e8e-eba403ec6517}</guid>
+  <label>manualTasksResponseStructure</label>
+  <metaVersion>4</metaVersion>
+  <childList>
+    <child name="order_id" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.String</element>
+      <guid>{1697fa7d-f66b-462e-a942-ab6de375e75f}</guid>
+      <label>order_id</label>
+    </child>
+    <child name="userid" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_cwf.userId</element>
+      <guid>{e1571204-ea98-46f6-94da-5db88e2847d1}</guid>
+      <label>userid</label>
+    </child>
+    <child name="priority" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.Integer</element>
+      <guid>{875303d7-d15e-4ef9-a81d-5d22d15b6b7d}</guid>
+      <label>priority</label>
+    </child>
+    <child name="participant" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.String</element>
+      <guid>{e207439b-806c-437f-81ea-707dac2b5329}</guid>
+      <label>participant</label>
+    </child>
+    <child name="creationDate" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.DateTime</element>
+      <guid>{7093fb23-5a45-434b-9102-deeb303030f0}</guid>
+      <label>creationDate</label>
+    </child>
+    <child name="duedate" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.DateTime</element>
+      <guid>{224da426-ecc0-4b7d-b7da-f14703aba5af}</guid>
+      <label>duedate</label>
+    </child>
+    <child name="operation" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_com.conceptwave.system.String</element>
+      <guid>{a1949d56-502b-405a-846a-7138a2466932}</guid>
+      <label>operation</label>
+    </child>
+  </childList>
+  <UserInterface name="UserInterface" type="tree">
+    <defaultFolderImage>undefined</defaultFolderImage>
+    <defaultLeafImage>undefined</defaultLeafImage>
+    <element>dstruct_catalogManagement.manualTasksResponseStructure</element>
+    <extends>tree_com.conceptwave.system.DataStructureUserInterface</extends>
+    <tableDoc>doc_com.conceptwave.system.TreeDocument</tableDoc>
+    <variableList>
+      <variable name="model" type="uivar">
+        <label>model</label>
+        <valueType>dstruct_catalogManagement.manualTasksResponseStructure</valueType>
+      </variable>
+    </variableList>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>tree_com.conceptwave.system.DataStructureUserInterface/frmui_Forms</extends>
+      </vform>
+    </vformList>
+  </UserInterface>
+</dataStructure>

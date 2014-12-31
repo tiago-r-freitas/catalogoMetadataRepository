@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<participant filenameHash="a23961cc4c99cb024ccc7d70a78c047e" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.ITAnalysis">
+  <distributionType>Shared</distributionType>
+  <duration type="dur">
+    <length>P0Y0M1DT1H1M0S</length>
+  </duration>
+  <guid>{b814d1e1-218b-410b-a164-c68020fc0755}</guid>
+  <interface>iface_PLMInterfaces.plmITAnalysis</interface>
+  <label>ITAnalysis</label>
+  <metaVersion>4</metaVersion>
+  <operationConditionsList>
+    <operationConditions type="opco">
+      <operation>iface_PLMInterfaces.plmITAnalysis/oper_Approve</operation>
+      <methodList>
+        <method name="cwOnPartOpCond" type="action">
+          <system>true</system>
+          <script>return true;</script>
+        </method>
+      </methodList>
+    </operationConditions>
+    <operationConditions type="opco">
+      <operation>iface_PLMInterfaces.plmITAnalysis/oper_Cancel</operation>
+      <methodList>
+        <method name="cwOnPartOpCond" type="action">
+          <system>true</system>
+          <script>return;</script>
+        </method>
+      </methodList>
+    </operationConditions>
+  </operationConditionsList>
+  <privilege>itSupport</privilege>
+  <UserInterface name="UserInterface" type="ui">
+    <extends>ui_com.conceptwave.system.WLTaskUserInterface</extends>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>ui_com.conceptwave.system.WLTaskUserInterface/frmui_Forms</extends>
+      </vform>
+    </vformList>
+  </UserInterface>
+</participant>

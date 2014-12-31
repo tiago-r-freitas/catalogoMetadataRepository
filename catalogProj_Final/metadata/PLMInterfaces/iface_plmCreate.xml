@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface filenameHash="e4b370436e05164a36738b73edaf6293" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.plmCreate">
+  <guid>{da8e7363-6e3f-4ed5-b124-ad7d9800fc63}</guid>
+  <label>PLM Create</label>
+  <metaVersion>4</metaVersion>
+  <operationList>
+    <operation name="Cancel" type="oper">
+      <description>Cancel</description>
+      <label>Cancel</label>
+      <type>Notification</type>
+    </operation>
+    <operation name="Submit" type="oper">
+      <description>Submit</description>
+      <label>Submit</label>
+      <type>Notification</type>
+    </operation>
+    <operation name="manualTaskCreate" type="oper">
+      <label>Product Create Manual Task</label>
+      <type>One-Way</type>
+    </operation>
+  </operationList>
+  <revision>4</revision>
+</interface>

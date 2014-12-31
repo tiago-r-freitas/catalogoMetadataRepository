@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<binding filenameHash="9321960105d491ea7c3b383ab388b092" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="refreshDB2OE.refreshDB2OE_biding_JS">
+  <extensionList>
+    <extension name="sendNotificationRefreshDB" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          catalogManagement.dummy();
+          var res = new DataStructure("cwt_pcmaintapi.response");
+          var doc = new Document("refreshDB2OE.RefreshDBScheduling");
+
+          //doc.message = input.message;
+          //doc.version = input.version;
+          //var d = new Date(2014, 12, 12, 12, 12, 12, 12);
+          //doc.scheduling = input.scheduling;
+          //doc.save();
+
+          var inputstring = input.toString();
+
+
+          try{
+              //catalogManagement.insertUserOnDB(input);
+              //UserProfile.addUser(input,input.externalUserPWD);
+              //UserProfile.addUserGroup(input.userGroups,input);
+              res.message = "Notificação Enviada -White Team dez 2014";
+          }
+          catch(e){
+              res.message = "erro... watch out!";
+          }
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+  </extensionList>
+  <interface>iface_refreshDB2OE.refreshDB2OE</interface>
+  <label>refreshDB2OE_biding_JS</label>
+  <metaVersion>4</metaVersion>
+  <provider>prov_cwf.jsprov</provider>
+</binding>

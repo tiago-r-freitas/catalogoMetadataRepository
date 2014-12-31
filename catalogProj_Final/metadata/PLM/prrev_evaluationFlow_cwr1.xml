@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process__revision filenameHash="88f4c50f5d2319cfbe4887a0344e0fa" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.evaluationFlow_cwr1">
+  <activity name="Start" type="seqActivity">
+    <guid>{ebe7010d-b9f0-40e5-be56-079e18c76307}</guid>
+    <label>Start</label>
+    <x>55.0</x>
+    <y>38.0</y>
+    <childList>
+      <child name="complete" type="completeActivity">
+        <guid>{68632b6a-bef6-4dd4-8439-a1a974f6664b}</guid>
+        <label>complete</label>
+        <x>177.0</x>
+        <y>140.0</y>
+      </child>
+    </childList>
+  </activity>
+  <curRevision>true</curRevision>
+  <document>doc_com.conceptwave.system.Document</document>
+  <label>Evaluation</label>
+  <metaVersion>4</metaVersion>
+  <priority>8</priority>
+  <process>proc_PLM.evaluationFlow</process>
+  <type>User</type>
+</process__revision>

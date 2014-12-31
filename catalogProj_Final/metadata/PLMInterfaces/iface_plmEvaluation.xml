@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface filenameHash="46d5724c5435113df12c6ae206261237" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.plmEvaluation">
+  <guid>{93f82a4c-19c8-4767-81e6-4d0f3e2a42a6}</guid>
+  <label> PLM Evaluation User</label>
+  <metaVersion>4</metaVersion>
+  <operationList>
+    <operation name="Approve" type="oper">
+      <description>Approve</description>
+      <label>Approve</label>
+      <type>Notification</type>
+    </operation>
+    <operation name="Cancel" type="oper">
+      <description>Cancel</description>
+      <label>Cancel</label>
+      <type>Notification</type>
+    </operation>
+    <operation name="manualTaskEvaluation" type="oper">
+      <label>manualTaskEvaluation</label>
+      <type>One-Way</type>
+    </operation>
+  </operationList>
+  <revision>1</revision>
+</interface>

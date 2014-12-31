@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface filenameHash="98e274dd33eab93a5291d60f6396c14" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.createOnDatabase">
+  <guid>{30fb7d2a-b4ce-4ec6-be9f-9dcf1b115f09}</guid>
+  <label>Create On Database</label>
+  <metaVersion>4</metaVersion>
+  <operationList>
+    <operation name="createAttribute" type="oper">
+      <input>dstruct_cwt_pcmaintapi.attribute</input>
+      <label>Create Attribute</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="createCatalogDomain" type="oper">
+      <input>dstruct_cwt_pcmaintapi.catalogDomain</input>
+      <label>Create Catalog Domain</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="createCatalogHierarchy" type="oper">
+      <input>dstruct_cwt_pcmaintapi.catalogHierarchy</input>
+      <label>Create Catalog Hierarchy</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="createTax" type="oper">
+      <input>dstruct_cwt_pcmaintapi.tax</input>
+      <label>Create Tax</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="createCodeTable" type="oper">
+      <input>dstruct_cwt_common.cTable</input>
+      <label>Create Code Table</label>
+      <output>dstruct_cwt_common.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="createProject" type="oper">
+      <input>dstruct_cwt_pcmaintapi.project</input>
+      <label>Create Project</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="createItemCharge" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemChargeVersion</input>
+      <label>Create Item Charge</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="createChargeType" type="oper">
+      <input>dstruct_cwt_pcmaintapi.chargeType</input>
+      <label>Create Charge Type</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="createChargeTypeVersion" type="oper">
+      <input>dstruct_cwt_pcmaintapi.chargeTypeVersion</input>
+      <label>Create Charge Type Version</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="createCatalogRule" type="oper">
+      <input>dstruct_cwt_pcmaintapi.catalogRule</input>
+      <label>Create Catalog Rule</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="createRelationType" type="oper">
+      <input>dstruct_cwt_pcmaintapi.relationType</input>
+      <label>Create Relation Type</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="createItemImage" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemImage</input>
+      <label>Create Item Image</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="createitem" type="oper">
+      <input>dstruct_cwt_pcmaintapi.item</input>
+      <label>Create Item</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="createItemRelation" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemRelation</input>
+      <label>Create Item Relation</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="createItemChargeVersion" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemChargeVersion</input>
+      <label>Create Item Charge Version</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="createItemAttribute" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemAttribute</input>
+      <label>Create Item Attribute</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="createPhaseStatus" type="oper">
+      <input>dstruct_catalogManagement.setPhasesStatusToDBStructure</input>
+      <label>Create Status</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+  </operationList>
+  <revision>13</revision>
+</interface>

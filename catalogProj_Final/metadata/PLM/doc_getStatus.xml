@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document filenameHash="8fd6378fee397fee39473a4cceb6e3be" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.getStatus">
+  <dbSchema>CATALOG</dbSchema>
+  <extends>doc_com.conceptwave.system.Document</extends>
+  <generatedKey>true</generatedKey>
+  <guid>{d2520f16-d759-4ecc-b0ff-61829908dabf}</guid>
+  <label>getStatus</label>
+  <metaVersion>4</metaVersion>
+  <variableList>
+    <variable name="associationTypeStatus" type="leaf">
+      <column>ASSOCIATIONTYPESTATUS</column>
+      <label>associationTypeStatus</label>
+      <table>getStatus</table>
+      <valueType>dtype_PLM.associationTypeStatus</valueType>
+    </variable>
+    <variable name="attributeStatus" type="leaf">
+      <column>ATTRIBUTESTATUS</column>
+      <label>attributeStatus</label>
+      <table>getStatus</table>
+      <valueType>dtype_PLM.attributeStatus</valueType>
+    </variable>
+    <variable name="catalogHierarchyStatus" type="leaf">
+      <column>CATALOGHIERARCHYSTATUS</column>
+      <label>catalogHierarchyStatus</label>
+      <table>getStatus</table>
+      <valueType>dtype_PLM.catalogHierarchyStatus</valueType>
+    </variable>
+    <variable name="catalogRuleStatus" type="leaf">
+      <column>CATALOGRULESTATUS</column>
+      <label>catalogRuleStatus</label>
+      <table>getStatus</table>
+      <valueType>dtype_PLM.catalogRuleStatus</valueType>
+    </variable>
+    <variable name="chargeTypeStatus" type="leaf">
+      <column>CHARGETYPESTATUS</column>
+      <label>chargeTypeStatus</label>
+      <table>getStatus</table>
+      <valueType>dtype_PLM.chargeTypeStatus</valueType>
+    </variable>
+    <variable name="codeTableStatus" type="leaf">
+      <column>CODETABLESTATUS</column>
+      <label>codeTableStatus</label>
+      <table>getStatus</table>
+      <valueType>dtype_PLM.codeTableStatus</valueType>
+    </variable>
+    <variable name="infoModelStatus" type="leaf">
+      <column>INFOMODELSTATUS</column>
+      <label>infoModelStatus</label>
+      <table>getStatus</table>
+      <valueType>dtype_PLM.infoModelStatus</valueType>
+    </variable>
+    <variable name="infoTableStatus" type="leaf">
+      <column>INFOTABLESTATUS</column>
+      <label>infoTableStatus</label>
+      <table>getStatus</table>
+      <valueType>dtype_PLM.infoTableStatus</valueType>
+    </variable>
+    <variable name="itemStatus" type="leaf">
+      <column>ITEMSTATUS</column>
+      <label>itemStatus</label>
+      <table>getStatus</table>
+      <valueType>dtype_PLM.itemStatus</valueType>
+    </variable>
+    <variable name="projectStatus" type="leaf">
+      <column>PROJECTSTATUS</column>
+      <label>projectStatus</label>
+      <table>getStatus</table>
+      <valueType>dtype_PLM.projectStatus</valueType>
+    </variable>
+    <variable name="taxModelStatus" type="leaf">
+      <column>TAXMODELSTATUS</column>
+      <label>taxModelStatus</label>
+      <table>getStatus</table>
+      <valueType>dtype_PLM.taxModelStatus</valueType>
+    </variable>
+    <variable name="taxStatus" type="leaf">
+      <column>TAXSTATUS</column>
+      <table>getStatus</table>
+      <valueType>dtype_PLM.taxStatus</valueType>
+    </variable>
+    <variable name="cwDocId" type="leaf">
+      <column>CWDOCID</column>
+      <key>1</key>
+      <label>System document ID</label>
+      <table>getStatus</table>
+      <valueType>dtype_cwf.cwDocId</valueType>
+    </variable>
+  </variableList>
+  <UserInterface name="UserInterface" type="ui">
+    <extends>doc_com.conceptwave.system.Document/ui_UserInterface</extends>
+    <variableList>
+      <variable name="model" type="uivar">
+        <label>model</label>
+        <valueType>doc_PLM.getStatus</valueType>
+      </variable>
+    </variableList>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>doc_com.conceptwave.system.Document/ui_UserInterface/frmui_Forms</extends>
+      </vform>
+    </vformList>
+  </UserInterface>
+</document>

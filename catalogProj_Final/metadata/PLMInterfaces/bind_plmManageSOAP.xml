@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<binding filenameHash="b658d039fa8aafffb13572ea5ca13a" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.plmManageSOAP">
+  <interface>iface_PLMInterfaces.plmManage</interface>
+  <label>PLM Manage SOAP</label>
+  <metaVersion>4</metaVersion>
+  <provider>prov_cwf.soapprov</provider>
+</binding>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface filenameHash="b0c7962180c063325c4887f7762af250" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.deleteOnDatabase">
+  <guid>{bf1ada8f-450a-44e4-83e9-98984a44cce4}</guid>
+  <label>Delete On Database</label>
+  <metaVersion>4</metaVersion>
+  <operationList>
+    <operation name="deleteTax" type="oper">
+      <input>dstruct_cwt_pcmaintapi.taxSearchDS</input>
+      <label>Delete Tax</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="deleteCodeTable" type="oper">
+      <input>dstruct_cwt_common.codeTableName</input>
+      <label>Delete Code Table</label>
+      <output>dstruct_cwt_common.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="deleteChargeType" type="oper">
+      <input>dstruct_cwt_pcmaintapi.chargeTypeSearchDS</input>
+      <label>Delete Charge Type</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="deleteRules" type="oper">
+      <input>dstruct_cwt_pcmaintapi.catalogRuleSearchDS</input>
+      <label>Delete Rules</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="deleteRelations" type="oper">
+      <input>dstruct_cwt_pcmaintapi.relationTypeSearchDS</input>
+      <label>Delete Relations</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="deleteItemImage" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemImageSearchDS</input>
+      <label>Delete Item Image</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="deleteItem" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemSearchDS</input>
+      <label>Delete Item</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="deleteItemRelation" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemRelationSearchDS</input>
+      <label>Delete Item Relation</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="deleteItemChargeVersion" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemChargeVersionSearchDS</input>
+      <label>Delete Item Charge Version</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="deleteItemAttribute" type="oper">
+      <input>dstruct_cwt_pcmaintapi.itemAttributeSearchDS</input>
+      <label>Delete Item Attribute</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="deleteAttribute" type="oper">
+      <input>dstruct_cwt_pcmaintapi.attributeSearchDS</input>
+      <label>Delete Attribute</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="deleteproject" type="oper">
+      <input>dstruct_cwt_pcmaintapi.projectSearchDS</input>
+      <label>Delete Project</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+  </operationList>
+  <revision>12</revision>
+</interface>

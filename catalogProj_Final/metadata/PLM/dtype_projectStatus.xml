@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataType filenameHash="263fa444794a377f7f91b15bf07b2fec" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.projectStatus">
+  <enumeration type="enum">
+    <valueList>
+      <value name="Definition" type="enumItem" code="DEF"/>
+      <value name="Active" type="enumItem" code="ACT"/>
+    </valueList>
+  </enumeration>
+  <extends>dtype_com.conceptwave.system.String</extends>
+  <label>projectStatus</label>
+  <length>3</length>
+  <metaVersion>4</metaVersion>
+</dataType>

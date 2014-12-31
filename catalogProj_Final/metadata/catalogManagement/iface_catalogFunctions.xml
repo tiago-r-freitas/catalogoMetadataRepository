@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface filenameHash="255ca7699c9d0bbaa44d5cda30cb50d9" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.catalogFunctions">
+  <guid>{6a29e5cc-0b9a-48aa-9249-fdb9e74e03c9}</guid>
+  <label>Catalog Functions</label>
+  <metaVersion>4</metaVersion>
+  <operationList>
+    <operation name="importCatalog" type="oper">
+      <input>dstruct_cwt_pcmaintapi.importCatalogDS</input>
+      <label>Import Catalog</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="exportCatalog" type="oper">
+      <input>dstruct_cwt_common.object</input>
+      <label>Export Catalog</label>
+      <output>dstruct_cwt_pcmaintapi.importCatalogAPI</output>
+      <type>Request-Response</type>
+    </operation>
+  </operationList>
+  <revision>1</revision>
+</interface>

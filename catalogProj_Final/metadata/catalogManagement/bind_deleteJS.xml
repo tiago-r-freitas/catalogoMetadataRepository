@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<binding filenameHash="4b3a0dfe577b6c15c4f7af2fa5321216" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.deleteJS">
+  <extensionList>
+    <extension name="deleteTax" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.taxDelete(input);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="deleteCodeTable" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          catalogManagement.dummy();
+
+          var res = cwt_common.codeTableDelete(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="deleteChargeType" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.chargeTypeDelete(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="deleteRules" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.catalogRuleDelete(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="deleteRelations" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.relationTypeDelete(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="deleteItemImage" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.itemImageDelete(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="deleteItem" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.itemDelete(input);
+
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="deleteItemRelation" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.itemRelationDelete(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="deleteItemChargeVersion" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.itemChargeVersionDelete(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="deleteItemAttribute" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.itemAttributeDelete(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="deleteAttribute" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.attributeDelete(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="deleteproject" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.projectDelete(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+  </extensionList>
+  <interface>iface_catalogManagement.deleteOnDatabase</interface>
+  <label>Delete JS</label>
+  <metaVersion>4</metaVersion>
+  <provider>prov_cwf.jsprov</provider>
+</binding>

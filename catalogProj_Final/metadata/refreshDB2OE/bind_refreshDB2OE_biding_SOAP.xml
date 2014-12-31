@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<binding filenameHash="a4bb7ca1ef61985f7820e796b870b3b0" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="refreshDB2OE.refreshDB2OE_biding_SOAP">
+  <extensionList>
+    <extension name="sendNotificationRefreshDB" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="soapAction">sendNotificationRefreshDB</elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="sendNotificationRefreshDB$Input" type="ext">
+      <element>Message</element>
+      <elementItemMap>
+        <elementItem key="use">literal</elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="sendNotificationRefreshDB$Output" type="ext">
+      <element>Message</element>
+      <elementItemMap>
+        <elementItem key="use">literal</elementItem>
+      </elementItemMap>
+    </extension>
+  </extensionList>
+  <interface>iface_refreshDB2OE.refreshDB2OE</interface>
+  <label>refreshDB2OE_biding_SOAP</label>
+  <metaVersion>4</metaVersion>
+  <provider>prov_cwf.soapprov</provider>
+</binding>

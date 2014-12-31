@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process filenameHash="4c9a4eed1ed25e71b734967d279de7ef" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.productManagerFlow">
+  <activity name="sequence" type="seqActivity">
+    <guid>{d9e9c3d3-220d-4b27-b416-25f2d71d0851}</guid>
+    <label>Start Approvation</label>
+    <x>336.0</x>
+    <y>39.0</y>
+    <childList>
+      <child name="sendForActivation" type="opActivity">
+        <element>iface_PLMInterfaces.plmManage/oper_manualTaskManage</element>
+        <guid>{614e552b-344b-4991-9c0d-39272480bcdc}</guid>
+        <label>Send For Activation</label>
+        <participant>part_PLMInterfaces.produtManager</participant>
+        <x>353.0</x>
+        <y>162.0</y>
+        <childList>
+          <child name="waitForActivation" type="choiceActivity">
+            <guid>{084b31a2-5de1-4baa-b93c-e5f0161d4f7e}</guid>
+            <label>Wait For Activation</label>
+            <x>552.0</x>
+            <y>162.0</y>
+            <childList>
+              <child name="Active" type="opActivity">
+                <element>iface_PLMInterfaces.plmManage/oper_approve</element>
+                <guid>{c1c06a7f-9cea-4a55-9fd0-3d7da4b31591}</guid>
+                <label>Approve</label>
+                <participant>part_PLMInterfaces.produtManager</participant>
+                <x>377.0</x>
+                <y>308.0</y>
+                <childList>
+                  <child name="proceed" type="seqActivity">
+                    <guid>{c8a08aa9-59e0-45f8-abca-bf2c63900030}</guid>
+                    <label>proceed to Start Flows</label>
+                    <x>369.0</x>
+                    <y>443.0</y>
+                    <childList>
+                      <child name="startFlows" type="scriptActivity">
+                        <guid>{f3c6d764-8432-45ef-98ed-994612b0a94d}</guid>
+                        <label>startFlows</label>
+                        <x>372.0</x>
+                        <y>572.0</y>
+                      </child>
+                      <child name="Complete" type="completeActivity">
+                        <guid>{ccd4fb33-648d-4b2d-a34e-c9f00cb5aeca}</guid>
+                        <label>Complete</label>
+                        <x>479.0</x>
+                        <y>572.0</y>
+                      </child>
+                    </childList>
+                  </child>
+                </childList>
+              </child>
+              <child name="Cancel" type="opActivity">
+                <element>iface_PLMInterfaces.plmManage/oper_cancel</element>
+                <guid>{66dc2a11-6558-40da-980d-f544636b665d}</guid>
+                <label>Cancel</label>
+                <participant>part_PLMInterfaces.produtManager</participant>
+                <x>574.0</x>
+                <y>322.0</y>
+                <childList>
+                  <child name="cancelled" type="completeActivity">
+                    <guid>{45aa0ebc-084a-4f37-9dcc-45479bfb412b}</guid>
+                    <label>Cancelled</label>
+                    <x>566.0</x>
+                    <y>441.0</y>
+                  </child>
+                </childList>
+              </child>
+              <child name="productManagerSubmit" type="opActivity">
+                <element>iface_PLMInterfaces.plmManage/oper_submit</element>
+                <guid>{3286e803-4cd0-49d8-8073-257fd7e0c8db}</guid>
+                <label>Submit</label>
+                <participant>part_PLMInterfaces.produtManager</participant>
+                <x>766.0</x>
+                <y>255.0</y>
+                <childList>
+                  <child name="proceed" type="seqActivity">
+                    <guid>{37d46090-5079-428f-892f-6849932c1fd1}</guid>
+                    <label>proceed</label>
+                    <x>762.0</x>
+                    <y>417.0</y>
+                    <childList>
+                      <child name="complete" type="completeActivity">
+                        <guid>{9f31f076-db2b-46e9-8bab-e06b1917b196}</guid>
+                        <label>Complete</label>
+                        <x>759.0</x>
+                        <y>524.0</y>
+                      </child>
+                    </childList>
+                  </child>
+                </childList>
+              </child>
+            </childList>
+          </child>
+        </childList>
+      </child>
+      <child name="produtManager" type="participantActivity">
+        <guid>{7a9b6756-c084-4122-8ded-70acaa5bc89d}</guid>
+        <label>produtManager</label>
+        <participant>part_PLMInterfaces.produtManager</participant>
+        <x>662.0</x>
+        <y>48.0</y>
+      </child>
+    </childList>
+  </activity>
+  <curRevision>true</curRevision>
+  <document>doc_PLM.orderStructure</document>
+  <guid>{542b4e21-132b-4ec8-ab70-fc8e221ded01}</guid>
+  <label>productManagerFlow</label>
+  <metaVersion>4</metaVersion>
+  <priority>8</priority>
+  <type>User</type>
+</process>

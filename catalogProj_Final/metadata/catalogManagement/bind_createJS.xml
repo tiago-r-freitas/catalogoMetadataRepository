@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<binding filenameHash="30f516a3f873ba02d009779a6a607c06" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.createJS">
+  <extensionList>
+    <extension name="createAttribute" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.attributeCreate(input);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="createCatalogDomain" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.catalogDomainCreate(input);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="createTax" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var i=0;
+
+          catalogManagement.dummy();
+
+          input.createDate = new Date();
+          input.updateDate = new Date();
+
+          /*var tax_v = new DataStructure("cwt_pcmaintapi:taxVersion");
+          tax_v.taxCode = input.taxCode;
+          tax_v.name = input.name;
+          tax_v.status = input.status;
+          tax_v.startDate = input.startDate;
+          tax_v.endDate = input.endDate;
+          tax_v.percentage = input.percentage;
+          tax_v.orgChartName = input.orgChartName;
+          tax_v.label = input.label;
+          tax_v.description = input.description;
+          tax_v.projectCode = input.projectCode;
+
+          var cenas = input.taxVersions.Array;*/
+
+          var res = cwt_pcmaintapi.taxCreate(input, null);
+          //res = cwt_pcmaintapi.taxVersionCreate(tax_v);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="createCodeTable" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          catalogManagement.dummy();
+
+          input.sortOrder = null;
+
+          var res = cwt_common.codeTableCreate(input);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="createProject" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.projectCreate(input, null);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="createItemCharge" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.itemChargeVersionCreate(input);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="createChargeType" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.chargeTypeCreate(input);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="createChargeTypeVersion" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.chargeTypeVersionCreate(input);
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="createCatalogRule" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          catalogManagement.dummy();
+
+          var ruleV = new DataStructure("cwt_pcmaintapi.catalogRuleVersion");
+          var res = null;
+
+          ruleV.ruleName = input.ruleName;
+          ruleV.name = input.name;
+          ruleV.startDate = input.startDate;
+          ruleV.endDate = input.endDate;
+          ruleV.label = input.label;
+          ruleV.description = input.description;
+          ruleV.status = input.status;
+          ruleV.ruleScript = input.ruleScript;
+          ruleV.orgChartName = input.orgChartName;
+          ruleV.projectCode = input.projectCode;
+          ruleV.language = input.language;
+
+          input.catalogRuleVersions[0] = ruleV;
+
+          res = cwt_pcmaintapi.catalogRuleCreate(input, null);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="createRelationType" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          catalogManagement.dummy();
+
+          var res = cwt_pcmaintapi.relationTypeCreate(input, null);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="createItemImage" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.itemImageCreate(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="createitem" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.itemCreate(input,null);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="createItemRelation" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.itemRelationCreate(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="createItemChargeVersion" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.itemChargeVersionCreate(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="createItemAttribute" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          var res = cwt_pcmaintapi.itemAttributeCreate(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+    <extension name="createPhaseStatus" type="ext">
+      <element>Operation</element>
+      <elementItemMap>
+        <elementItem key="script"><![CDATA[
+          //ToDelete
+          catalogManagement.dummy();
+
+          var res = catalogManagement.setPhasesStatusToDB(input);
+
+          return res;
+        ]]></elementItem>
+      </elementItemMap>
+    </extension>
+  </extensionList>
+  <interface>iface_catalogManagement.createOnDatabase</interface>
+  <label>Create JS</label>
+  <metaVersion>4</metaVersion>
+  <provider>prov_cwf.jsprov</provider>
+</binding>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataType filenameHash="6e5cc95d0b049732227cae52a76903a7" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.plm_priority">
+  <extends>dtype_com.conceptwave.system.Integer</extends>
+  <label>plm_priority</label>
+  <length>2</length>
+  <maxValue>2</maxValue>
+  <metaVersion>4</metaVersion>
+  <minValue>1</minValue>
+</dataType>

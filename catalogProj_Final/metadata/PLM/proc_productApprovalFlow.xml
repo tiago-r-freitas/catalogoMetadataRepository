@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process filenameHash="9a5e4db6eed265fec277f20d7a982697" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLM.productApprovalFlow">
+  <activity name="Start" type="seqActivity">
+    <guid>{e92b3666-31fd-45fe-8690-935d6d08c5e5}</guid>
+    <label>Start</label>
+    <x>55.0</x>
+    <y>37.0</y>
+    <childList>
+      <child name="sendOrderToApproval" type="opActivity">
+        <element>iface_PLMInterfaces.plmApprove/oper_manualTaskApprove</element>
+        <guid>{08de9e98-081e-40e4-b17c-079176458189}</guid>
+        <label>Send Order to Approval</label>
+        <participant>part_PLMInterfaces.produtApproval</participant>
+        <x>58.0</x>
+        <y>160.0</y>
+        <childList>
+          <child name="sequence" type="seqActivity">
+            <guid>{e0eea13a-fa8e-4534-9bc2-1525348e9a7c}</guid>
+            <label>sequence</label>
+            <x>230.0</x>
+            <y>177.0</y>
+            <childList>
+              <child name="choice" type="choiceActivity">
+                <guid>{8a9ae9a1-058a-48e0-a3ef-34d14e5e5b07}</guid>
+                <label>Approve Order ?</label>
+                <x>236.0</x>
+                <y>277.0</y>
+                <childList>
+                  <child name="Approve" type="opActivity">
+                    <element>iface_PLMInterfaces.plmApprove/oper_Approve</element>
+                    <guid>{cb2ca366-c8ab-47b5-b853-70e4e4b0d4cb}</guid>
+                    <label>Approve</label>
+                    <participant>part_PLMInterfaces.produtApproval</participant>
+                    <x>76.0</x>
+                    <y>377.0</y>
+                    <childList>
+                      <child name="complete" type="completeActivity">
+                        <guid>{0ec8dd5c-0ae6-41d9-a051-8baf0f20b025}</guid>
+                        <label>complete</label>
+                        <x>73.0</x>
+                        <y>478.0</y>
+                      </child>
+                    </childList>
+                  </child>
+                  <child name="Reject" type="opActivity">
+                    <element>iface_PLMInterfaces.plmApprove/oper_Reject</element>
+                    <guid>{93e8aca6-fb46-43da-a7b5-f09633285d5c}</guid>
+                    <label>Reject</label>
+                    <participant>part_PLMInterfaces.produtApproval</participant>
+                    <x>395.0</x>
+                    <y>358.0</y>
+                    <childList>
+                      <child name="sequence" type="seqActivity">
+                        <guid>{8d5e000c-20eb-4f4e-9421-005bbd8b3afd}</guid>
+                        <label>sequence</label>
+                        <x>391.0</x>
+                        <y>468.0</y>
+                        <childList>
+                          <child name="startCharge" type="spawnActivity">
+                            <element>proc_PLM.productChargeFlow</element>
+                            <guid>{daed5edd-6a53-4f66-b82a-e12c0a913af5}</guid>
+                            <label>start Change</label>
+                            <x>517.0</x>
+                            <y>464.0</y>
+                          </child>
+                        </childList>
+                      </child>
+                    </childList>
+                  </child>
+                </childList>
+              </child>
+            </childList>
+          </child>
+        </childList>
+      </child>
+      <child name="produtApproval" type="participantActivity">
+        <guid>{06f7805d-cb69-4e7a-b1be-9ee694a490e9}</guid>
+        <label>produtApproval</label>
+        <participant>part_PLMInterfaces.produtApproval</participant>
+        <x>515.0</x>
+        <y>33.0</y>
+      </child>
+    </childList>
+  </activity>
+  <curRevision>true</curRevision>
+  <document>doc_PLM.orderStructure</document>
+  <guid>{c8b415ea-bafd-4af6-a37e-4972cb78900d}</guid>
+  <label>productApprovalFlow</label>
+  <metaVersion>4</metaVersion>
+  <priority>8</priority>
+  <type>User</type>
+</process>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<binding filenameHash="9da3398617755ada74a486e1c73d19a4" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.ITAnalysisJS">
+  <interface>iface_PLMInterfaces.plmITAnalysis</interface>
+  <label>PLM IT JS</label>
+  <metaVersion>4</metaVersion>
+  <provider>prov_cwf.jsprov</provider>
+</binding>

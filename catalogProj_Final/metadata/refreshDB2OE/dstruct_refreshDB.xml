@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataStructure filenameHash="b9420e78b2277ad822d65b067d4bb3b3" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="refreshDB2OE.refreshDB">
+  <container>true</container>
+  <description>refreshDB</description>
+  <guid>{8c9533ca-e9e1-442a-ac78-37be107c665a}</guid>
+  <label>refreshDB</label>
+  <metaVersion>4</metaVersion>
+  <xmlMap type="xmap">
+    <includeXsiType>true</includeXsiType>
+  </xmlMap>
+  <childList>
+    <child name="version" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_refreshDB2OE.version</element>
+      <guid>{65e6536f-6304-47fb-97f2-787dfdf1ff9a}</guid>
+      <label>version</label>
+    </child>
+    <child name="message" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_refreshDB2OE.message</element>
+      <guid>{27f71d4b-fcdf-4f82-9f58-fcacf7353fc7}</guid>
+      <label>message</label>
+    </child>
+    <child name="scheduling" type="dstruct">
+      <datatype>true</datatype>
+      <element>dtype_refreshDB2OE.scheduling</element>
+      <guid>{301c9ba7-bc60-4b61-8746-ac600b003cf7}</guid>
+      <label>scheduling</label>
+    </child>
+  </childList>
+  <UserInterface name="UserInterface" type="tree">
+    <defaultFolderImage>undefined</defaultFolderImage>
+    <defaultLeafImage>undefined</defaultLeafImage>
+    <element>dstruct_refreshDB2OE.refreshDB</element>
+    <extends>tree_com.conceptwave.system.DataStructureUserInterface</extends>
+    <tableDoc>doc_com.conceptwave.system.TreeDocument</tableDoc>
+    <variableList>
+      <variable name="model" type="uivar">
+        <label>model</label>
+        <valueType>dstruct_refreshDB2OE.refreshDB</valueType>
+      </variable>
+    </variableList>
+    <vformList>
+      <vform name="Forms" type="frmui">
+        <extends>tree_com.conceptwave.system.DataStructureUserInterface/frmui_Forms</extends>
+      </vform>
+    </vformList>
+  </UserInterface>
+</dataStructure>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<binding filenameHash="b91950f3241d7c8328ae68dc1b0cf856" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.deleteSOAP">
+  <interface>iface_catalogManagement.deleteOnDatabase</interface>
+  <label>Delete SOAP</label>
+  <metaVersion>4</metaVersion>
+  <provider>prov_cwf.soapprov</provider>
+</binding>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface filenameHash="7b75931326f386defcb1f6164e6d56cb" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.plmManage">
+  <guid>{a2309126-8515-43a1-a05c-c40849c73282}</guid>
+  <label>PLM Manage</label>
+  <metaVersion>4</metaVersion>
+  <operationList>
+    <operation name="approve" type="oper">
+      <input>dstruct_PLMInterfaces.plmManageStruct</input>
+      <label>approve</label>
+      <output>dstruct_PLMInterfaces.plmManageStructResponse</output>
+      <type>Notification</type>
+    </operation>
+    <operation name="cancel" type="oper">
+      <input>dstruct_PLMInterfaces.plmManageStruct</input>
+      <label>cancel</label>
+      <output>dstruct_PLMInterfaces.plmManageStructResponse</output>
+      <type>Notification</type>
+    </operation>
+    <operation name="submit" type="oper">
+      <input>dstruct_PLMInterfaces.plmManageStruct</input>
+      <label>submit</label>
+      <output>dstruct_PLMInterfaces.plmManageStructResponse</output>
+      <type>Notification</type>
+    </operation>
+    <operation name="manualTaskManage" type="oper">
+      <label>Product Manage Manual Task</label>
+      <type>One-Way</type>
+    </operation>
+  </operationList>
+  <revision>13</revision>
+</interface>

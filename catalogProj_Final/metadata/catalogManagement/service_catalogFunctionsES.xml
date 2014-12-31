@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<externalService filenameHash="f14e8181c9592911a46f249a22a5c95f" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.catalogFunctionsES">
+  <label>Catalog Functions ES</label>
+  <metaVersion>4</metaVersion>
+  <portList>
+    <port name="catalogJSPort" type="port">
+      <binding>bind_catalogManagement.catalogFunctionsJS</binding>
+      <label>Catalog JS Port</label>
+      <recover>5</recover>
+    </port>
+    <port name="catalogSOAPPort" type="port">
+      <binding>bind_catalogManagement.catalogFunctionsSOAP</binding>
+      <label>Catalog SOAP Port</label>
+      <listener>true</listener>
+      <recover>5</recover>
+    </port>
+  </portList>
+</externalService>

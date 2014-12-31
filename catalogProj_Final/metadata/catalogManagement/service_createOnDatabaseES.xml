@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<externalService filenameHash="f0f4c0b10025cfdef8942f3e02c36ffa" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.createOnDatabaseES">
+  <label>Create On Database ES</label>
+  <metaVersion>4</metaVersion>
+  <portList>
+    <port name="createPort" type="port">
+      <binding>bind_catalogManagement.createSOAP</binding>
+      <label>Create Port</label>
+      <listener>true</listener>
+      <recover>5</recover>
+    </port>
+    <port name="JSPort" type="port">
+      <binding>bind_catalogManagement.createJS</binding>
+      <label>JS Port</label>
+      <recover>5</recover>
+    </port>
+  </portList>
+</externalService>

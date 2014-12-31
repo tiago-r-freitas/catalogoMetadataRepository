@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface filenameHash="cf9e6d59693569aa60f1d25e4bd52e85" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.userProfileFunctions">
+  <guid>{a876c83c-3f58-4985-85c6-1db091ee15b5}</guid>
+  <label>User Profile Functions</label>
+  <metaVersion>4</metaVersion>
+  <operationList>
+    <operation name="login" type="oper">
+      <input>doc_cwf_up.userProfile</input>
+      <label>Login</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="getUserProfile" type="oper">
+      <input>doc_cwf_up.userProfile</input>
+      <label>Get User Profile</label>
+      <output>doc_cwf_up.userProfile</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="logout" type="oper">
+      <label>Logout</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="switchUser" type="oper">
+      <input>doc_cwf_up.userProfile</input>
+      <label>Switch User</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="userIsActive" type="oper">
+      <input>doc_cwf_up.userProfile</input>
+      <label>User Is Active</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="verifyUser" type="oper">
+      <input>doc_cwf_up.userProfile</input>
+      <label>Verify User</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+    <operation name="createUser" type="oper">
+      <input>doc_cwf_up.userProfile</input>
+      <label>Create User</label>
+      <output>dstruct_cwt_pcmaintapi.response</output>
+      <type>Request-Response</type>
+    </operation>
+  </operationList>
+  <revision>5</revision>
+</interface>

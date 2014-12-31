@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface filenameHash="5dd78e009d994ff380a3860d7f6b67a" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.plmConception">
+  <guid>{af28c0ab-04a8-4a2c-ae17-a1def49da155}</guid>
+  <label> PLM Conception User</label>
+  <metaVersion>4</metaVersion>
+  <operationList>
+    <operation name="Approve" type="oper">
+      <description>Approve</description>
+      <label>Approve</label>
+      <type>Notification</type>
+    </operation>
+    <operation name="Cancel" type="oper">
+      <description>Cancel</description>
+      <label>Cancel</label>
+      <type>Notification</type>
+    </operation>
+    <operation name="manualTaskConception" type="oper">
+      <label>manualTaskConception</label>
+      <type>One-Way</type>
+    </operation>
+  </operationList>
+  <revision>1</revision>
+</interface>

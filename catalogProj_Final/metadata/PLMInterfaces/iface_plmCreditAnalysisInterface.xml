@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface filenameHash="91716986b6bcce0371128efea67154f8" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.plmCreditAnalysisInterface">
+  <guid>{290cceac-5a55-40cb-a1cf-4abb7fa02b47}</guid>
+  <label> PLM Credit Analysis</label>
+  <metaVersion>4</metaVersion>
+  <operationList>
+    <operation name="Approve" type="oper">
+      <description>Approve</description>
+      <input>dstruct_PLMInterfaces.plmManageStruct</input>
+      <label>Approve</label>
+      <output>dstruct_PLMInterfaces.plmManageStructResponse</output>
+      <type>Notification</type>
+    </operation>
+    <operation name="Reject" type="oper">
+      <description>Reject</description>
+      <input>dstruct_PLMInterfaces.plmManageStruct</input>
+      <label>Reject</label>
+      <type>Notification</type>
+    </operation>
+    <operation name="manualTaskCredit" type="oper">
+      <input>dstruct_PLMInterfaces.plmManageStruct</input>
+      <label>manualTaskCredit</label>
+      <type>One-Way</type>
+    </operation>
+  </operationList>
+  <privilegeList>
+    <privilege>pricingEconomics</privilege>
+  </privilegeList>
+  <revision>9</revision>
+</interface>

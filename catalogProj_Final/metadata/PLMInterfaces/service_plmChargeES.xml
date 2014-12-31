@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<externalService filenameHash="187630519f6ce07ce923d954f0cc046c" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="PLMInterfaces.plmChargeES">
+  <label>PLM Charge ES</label>
+  <metaVersion>4</metaVersion>
+  <portList>
+    <port name="plmChargeSOAPPort" type="port">
+      <binding>bind_PLMInterfaces.plmChargeSOAP</binding>
+      <label>PLM Charge SOAP Port</label>
+      <listener>true</listener>
+      <recover>5</recover>
+    </port>
+    <port name="plmChargeJSPort" type="port">
+      <binding>bind_PLMInterfaces.plmChargeJS</binding>
+      <label>PLM Charge JS Port</label>
+      <recover>5</recover>
+    </port>
+  </portList>
+</externalService>

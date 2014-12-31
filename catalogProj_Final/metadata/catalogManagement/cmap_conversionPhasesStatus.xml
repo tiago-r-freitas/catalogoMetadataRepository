@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<conversionMap filenameHash="acbbc1bb6d191ebc287172ddc20a7dd9" versionHash="a87ff679a2f3e71d9181a67b7542122c" name="catalogManagement.conversionPhasesStatus">
+  <itemMapList>
+    <itemMap name="0" type="mapItem">
+      <sourcePath name="source" type="mapPath">
+        <pathList>
+          <path>dstruct_catalogManagement.setPhasesStatusToDBStructure</path>
+          <path>dstruct_catalogManagement.setPhasesStatusToDBStructure/dstruct_getBuildStatus</path>
+        </pathList>
+      </sourcePath>
+      <targetPath name="target" type="mapPath">
+        <pathList>
+          <path>doc_PLM.phasesStatus</path>
+          <path>doc_PLM.phasesStatus/leaf_statusBuild</path>
+        </pathList>
+      </targetPath>
+    </itemMap>
+    <itemMap name="1" type="mapItem">
+      <sourcePath name="source" type="mapPath">
+        <pathList>
+          <path>dstruct_catalogManagement.setPhasesStatusToDBStructure</path>
+          <path>dstruct_catalogManagement.setPhasesStatusToDBStructure/dstruct_getConceptionStatus</path>
+        </pathList>
+      </sourcePath>
+      <targetPath name="target" type="mapPath">
+        <pathList>
+          <path>doc_PLM.phasesStatus</path>
+          <path>doc_PLM.phasesStatus/leaf_statusConception</path>
+        </pathList>
+      </targetPath>
+    </itemMap>
+    <itemMap name="2" type="mapItem">
+      <sourcePath name="source" type="mapPath">
+        <pathList>
+          <path>dstruct_catalogManagement.setPhasesStatusToDBStructure</path>
+          <path>dstruct_catalogManagement.setPhasesStatusToDBStructure/dstruct_getDefinitionStatus</path>
+        </pathList>
+      </sourcePath>
+      <targetPath name="target" type="mapPath">
+        <pathList>
+          <path>doc_PLM.phasesStatus</path>
+          <path>doc_PLM.phasesStatus/leaf_statusDefinition</path>
+        </pathList>
+      </targetPath>
+    </itemMap>
+    <itemMap name="3" type="mapItem">
+      <sourcePath name="source" type="mapPath">
+        <pathList>
+          <path>dstruct_catalogManagement.setPhasesStatusToDBStructure</path>
+          <path>dstruct_catalogManagement.setPhasesStatusToDBStructure/dstruct_getEvaluationStatus</path>
+        </pathList>
+      </sourcePath>
+      <targetPath name="target" type="mapPath">
+        <pathList>
+          <path>doc_PLM.phasesStatus</path>
+          <path>doc_PLM.phasesStatus/leaf_statusEvaluation</path>
+        </pathList>
+      </targetPath>
+    </itemMap>
+    <itemMap name="4" type="mapItem">
+      <sourcePath name="source" type="mapPath">
+        <pathList>
+          <path>dstruct_catalogManagement.setPhasesStatusToDBStructure</path>
+          <path>dstruct_catalogManagement.setPhasesStatusToDBStructure/dstruct_getLaunchProductStatus</path>
+        </pathList>
+      </sourcePath>
+      <targetPath name="target" type="mapPath">
+        <pathList>
+          <path>doc_PLM.phasesStatus</path>
+          <path>doc_PLM.phasesStatus/leaf_statusLaunchProduct</path>
+        </pathList>
+      </targetPath>
+    </itemMap>
+    <itemMap name="5" type="mapItem">
+      <sourcePath name="source" type="mapPath">
+        <pathList>
+          <path>dstruct_catalogManagement.setPhasesStatusToDBStructure</path>
+          <path>dstruct_catalogManagement.setPhasesStatusToDBStructure/dstruct_getTestingStatus</path>
+        </pathList>
+      </sourcePath>
+      <targetPath name="target" type="mapPath">
+        <pathList>
+          <path>doc_PLM.phasesStatus</path>
+          <path>doc_PLM.phasesStatus/leaf_statusTesting</path>
+        </pathList>
+      </targetPath>
+    </itemMap>
+  </itemMapList>
+  <label>conversionPhasesStatus</label>
+  <metaVersion>4</metaVersion>
+  <source>dstruct_catalogManagement.setPhasesStatusToDBStructure</source>
+  <target>doc_PLM.phasesStatus</target>
+</conversionMap>
